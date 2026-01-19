@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+    BASIC META
+  ========================================================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="A youth-driven platform rooted in Islamic values, dedicated to leadership, growth, and guiding others on the Straight Path."
+  />
+
+  <!-- =========================================================
+    FAVICON
+    NOTE: Local C:\ paths won't work when hosted online.
+    Use something like: href="assets/icon.png"
+  ========================================================== -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="assets/images/icon.png"
+  />
+
+  <!-- =========================================================
+    ICONS + FONTS
+  ========================================================== -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- =========================================================
+    TITLE + CSS + JS
+  ========================================================== -->
+  <title>Al-Ala Pathfinders | Proactive Me</title>
+  <link rel="stylesheet" href="assets/css/styleproactiveme.css" />
+</head>
+
+<body class="preload">
+
+  <!-- =========================================================
+    STICKY NAVBAR
+  ========================================================== -->
+  <header class="site-header" id="top">
+    <div class="nav-wrap">
+
+      <!-- Brand / Logo -->
+      <a class="brand" href="#top" aria-label="Al-Ala Pathfinders Home">
+        <!-- NOTE: Local C:\ paths won't work when hosted online -->
+        <img
+        class="brand-logo"
+        src="assets/images/logo.png"
+        alt="Al-Ala Pathfinders Logo"
+        />
+        <div class="brand-text">
+          <div class="brand-name">Al-Ala Pathfinders</div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <!-- NOTE: Local file path won't work online; use relative like href="index.html" -->
+         <a class="nav-link" href="index.html">Home</a>
+         <a class="nav-link" href="about.html">About Us</a>
+         <a class="nav-link" href="courses.html">Courses</a>
+         <a class="nav-link" href="events.html">Events</a>
+         <a class="nav-link" href="team.html">Our Team</a>
+         <a class="nav-link" href="contact.html">Contact Us</a>
+      </nav>
+
+      <!-- Burger (Mobile) -->
+      <button
+        class="burger"
+        id="burger"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-card" role="dialog" aria-modal="true" aria-label="Mobile navigation menu">
+        <div class="mobile-head">
+          <div class="mobile-title">Menu</div>
+          <button class="mobile-close" id="closeMenu" aria-label="Close menu">✕</button>
+        </div>
+
+        <!-- Mobile anchor links -->
+        <a class="m-link" href="index.html">Home</a>
+        <a class="m-link" href="about.html">About Us</a>
+        <a class="m-link" href="courses.html">Courses</a>
+        <a class="m-link" href="events.html">Events</a>
+        <a class="m-link" href="team.html">Our Team</a>
+        <a class="m-link" href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- ================= HERO (Banner Image + Title) ================= -->
+  <section class="portal-hero" id="portalHero">
+    <img class="portal-hero__img" id="courseHeroImg" src="assets/images/PMEBanner.jpg" alt="Course banner" />
+    <div class="portal-hero__overlay">
+      <h1 class="portal-hero__title" id="courseTitle">Proactive Me</h1>
+    </div>
+  </section>
+
+  <!-- ================= COURSE INFO ================= -->
+  <section class="portal-info">
+    <div class="portal-info__container">
+      <h2 class="portal-info__heading">What You'll Discover!</h2>
+
+      <div class="portal-info__grid">
+        <!-- Description -->
+        <div class="info-card info-card--wide">
+          <div class="desc-row">
+        <div class="desc-text">
+  <h3 class="desc-heading">Learning Outcomes</h3>
+
+  <ul class="desc-list" id="courseDesc">
+    <li>Loading...</li>
+  </ul>
+</div>
+
+
+  <div class="desc-media">
+    <img class="info-card__img" src="assets/images/desc.png" alt="Course image">
+  </div>
+</div>
+
+        </div>
+
+        <!-- Stars / Teachers -->
+        <div class="info-card">
+          <h3 class="info-card__title">Taught By</h3>
+          <div class="stars" id="courseStars"></div>
+        </div>
+
+        <!-- Syllabus -->
+     <!-- Syllabus (same layout as Taught By) -->
+<div class="info-card">
+  <h3 class="info-card__title">Syllabus</h3>
+  <div class="stars" id="courseSyllabus"></div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DAYS ACCORDION ================= -->
+  <section class="portal-days">
+    <div class="portal-days__container">
+      <h2 class="portal-days__heading">Course Days</h2>
+      <p class="portal-days__sub">Click a day to expand resources (Workbook, PDFs, Recording, Quiz).</p>
+
+      <div class="days" id="daysList"></div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <!-- =========================================================
+    FOOTER
+  ========================================================== -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img
+            src="assets/images/logo.png"
+            width="40"
+            alt="Al-Ala Pathfinders"
+          />
+        </div>
+
+        <div>
+          <div class="footer-name">Al-Ala Pathfinders</div>
+          <p class="footer-desc">
+            A youth-driven platform rooted in Islamic values, dedicated to leadership, growth, and guiding peers on the Straight Path.
+          </p>
+
+          <div class="social">
+            <a class="social-btn" href="https://www.instagram.com/alalapathfinders/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a class="social-btn" href="https://www.facebook.com/profile.php?id=61550043141684" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a class="social-btn" href="https://www.youtube.com/@AlAlaPathfinders" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a class="social-btn" href="mailto:alalapathfinders@gmail.com" aria-label="Gmail"><i class="fa-solid fa-at"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-head">Quick Links</div>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#events">Events</a>
+        <a href="#team">Team</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-head">Get Involved</div>
+        <a href="#join">Join Pathfinders</a>
+        <a href="#team">Leadership Roles</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-head">Contact</div>
+        <div class="footer-line">Al-Ala International Islamic School</div>
+        <div class="footer-line">alalapathfinders@gmail.com</div>
+        <div class="footer-line">+92 336 1230106</div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Al-Ala Pathfinders. All rights reserved.</span>
+      <span class="footer-muted">Part of Al-Ala International Islamic School</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/scriptproactiveme.js" defer></script>
+</body>
+</html>

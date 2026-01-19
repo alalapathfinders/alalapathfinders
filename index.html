@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+    BASIC META
+  ========================================================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="A youth-driven platform rooted in Islamic values, dedicated to leadership, growth, and guiding others on the Straight Path."
+  />
+
+  <!-- =========================================================
+    FAVICON
+    NOTE: Local C:\ paths won't work when hosted online.
+    Use something like: href="assets/icon.png"
+  ========================================================== -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="assets/images/icon.png"
+  />
+
+  <!-- =========================================================
+    ICONS + FONTS
+  ========================================================== -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- =========================================================
+    TITLE + CSS + JS
+  ========================================================== -->
+  <title>Al-Ala Pathfinders | Home</title>
+  <link rel="stylesheet" href="assets/css/stylehome.css" />
+</head>
+
+<body class="preload">
+
+  <!-- =========================================================
+    STICKY NAVBAR
+  ========================================================== -->
+  <header class="site-header" id="top">
+    <div class="nav-wrap">
+
+      <!-- Brand / Logo -->
+      <a class="brand" href="#top" aria-label="Al-Ala Pathfinders Home">
+        <!-- NOTE: Local C:\ paths won't work when hosted online -->
+        <img
+        class="brand-logo"
+        src="assets/images/logo.png"
+        alt="Al-Ala Pathfinders Logo"
+        />
+        <div class="brand-text">
+          <div class="brand-name">Al-Ala Pathfinders</div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <!-- NOTE: Local file path won't work online; use relative like href="index.html" -->
+         <a class="nav-link" href="index.html">Home</a>
+         <a class="nav-link" href="about.html">About Us</a>
+         <a class="nav-link" href="courses.html">Courses</a>
+         <a class="nav-link" href="events.html">Events</a>
+         <a class="nav-link" href="team.html">Our Team</a>
+         <a class="nav-link" href="contact.html">Contact Us</a>
+      </nav>
+
+      <!-- Burger (Mobile) -->
+      <button
+        class="burger"
+        id="burger"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-card" role="dialog" aria-modal="true" aria-label="Mobile navigation menu">
+        <div class="mobile-head">
+          <div class="mobile-title">Menu</div>
+          <button class="mobile-close" id="closeMenu" aria-label="Close menu">✕</button>
+        </div>
+
+        <!-- Mobile anchor links -->
+        <a class="m-link" href="index.html">Home</a>
+        <a class="m-link" href="about.html">About Us</a>
+        <a class="m-link" href="courses.html">Courses</a>
+        <a class="m-link" href="events.html">Events</a>
+        <a class="m-link" href="team.html">Our Team</a>
+        <a class="m-link" href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+    HERO SECTION
+  ========================================================== -->
+  <section class="hero" id="home">
+    <div class="hero__inner">
+      <h1 class="hero__title">
+        Lead The Way<br />
+        <span class="hero__accent">Walk The Path</span>
+      </h1>
+
+      <p class="hero__text">
+        Empowering students to walk the Straight Path and make a difference!
+      </p>
+
+      <div class="hero__actions">
+        <a class="hero__btn hero__btn--primary" href="#events">View Our Journey</a>
+        <a class="hero__btn hero__btn--ghost" href="#join">Stay Connected</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+    IMPACT STATS
+  ========================================================== -->
+  <section class="impact" id="impact">
+    <div class="impact__wrap">
+
+      <div class="impact__item">
+        <i class="fa-solid fa-calendar-check impact__icon" aria-hidden="true"></i>
+        <div class="impact__num"><span class="impact-count" data-count="2">0</span>+</div>
+        <div class="impact__label">Years of Growth</div>
+      </div>
+
+      <div class="impact__item">
+        <i class="fa-solid fa-people-group impact__icon" aria-hidden="true"></i>
+        <div class="impact__num"><span class="impact-count" data-count="25">0</span>+</div>
+        <div class="impact__label">Active Members</div>
+      </div>
+
+      <div class="impact__item">
+        <i class="fa-solid fa-graduation-cap impact__icon" aria-hidden="true"></i>
+        <div class="impact__num"><span class="impact-count" data-count="5">0</span>+</div>
+        <div class="impact__label">Courses Conducted</div>
+      </div>
+
+      <div class="impact__item">
+        <i class="fa-solid fa-medal impact__icon" aria-hidden="true"></i>
+        <div class="impact__num"><span class="impact-count" data-count="4">0</span></div>
+        <div class="impact__label">Events</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+    WHO WE ARE
+  ========================================================== -->
+  <section class="about" id="who-we-are">
+    <div class="about__wrap">
+
+      <!-- Left text -->
+      <div class="about__left">
+        <p class="about__kicker">WHO WE ARE</p>
+
+        <h2 class="about__title">
+          More Than a<br />
+          Student Organization
+        </h2>
+
+        <a class="about__link" href="#about">
+          Learn More About Us <span aria-hidden="true">›</span>
+        </a>
+      </div>
+
+      <!-- Right blocks -->
+      <div class="about__right" aria-label="Who we are highlights">
+        <div class="about__block about__block--green about__block--wide">
+          <div class="about__mini">CORE IDENTITY</div>
+          <div class="about__main">Student-Led</div>
+        </div>
+
+        <div class="about__block about__block--gold">
+          <div class="about__mini">VALUES</div>
+          <div class="about__main">Faith-Guided</div>
+        </div>
+
+        <div class="about__block about__block--orange">
+          <div class="about__mini">MISSION</div>
+          <div class="about__main">Purpose-Driven</div>
+        </div>
+
+        <div class="about__block about__block--olive">
+          <div class="about__mini">WHAT WE DO</div>
+          <div class="about__main">Building Future Leaders</div>
+        </div>
+
+        <div class="about__block about__block--amber">
+          <div class="about__mini">SKILLS</div>
+          <div class="about__main">Developing Real Skills</div>
+        </div>
+
+        <div class="about__block about__block--brown about__block--wide">
+          <div class="about__mini">IMPACT</div>
+          <div class="about__main">Creating Meaningful Impact</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+    TIMELINE
+    FIX: removed invalid <p> inside <p> by using <div class="timeline__desc">
+  ========================================================== -->
+  <section class="timeline" id="events">
+    <div class="timeline__wrap">
+      <div class="timeline__head">
+        <h2 class="timeline__title">Our Journey</h2>
+        <p class="timeline__sub">How we grew, step by step</p>
+      </div>
+
+      <div class="timeline__rail" aria-label="Events timeline">
+
+        <!-- Item 1 (Left) -->
+        <article class="timeline__item timeline__item--left">
+          <div class="timeline__dot" aria-hidden="true"></div>
+
+          <div class="timeline__card">
+            <div class="timeline__meta">
+              <span class="timeline__date">Year 2026</span>
+            </div>
+
+            <h3 class="timeline__cardTitle">The Next Chapter</h3>
+
+            <div class="timeline__desc">
+              <p><strong>Team Formation & Interviews</strong><br />Preparing a new generation of leaders</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 2 (Right) -->
+        <article class="timeline__item timeline__item--right">
+          <div class="timeline__dot" aria-hidden="true"></div>
+
+          <div class="timeline__card timeline__card--orange">
+            <div class="timeline__meta">
+              <span class="timeline__date">Year 2025</span>
+            </div>
+
+            <h3 class="timeline__cardTitle">Reaching Wider Communities</h3>
+
+            <div class="timeline__desc">
+              <p><strong>Community Stall</strong><br /><em>My Ramadan Journal</em> stall @ Al-Ala International Islamic School</p>
+              <p><strong>Children & Youth Courses</strong><br />
+                <em>The Little Quest</em> (5-day course, ages 4-10)<br />
+                <em>Realign: Real Faith, Real Struggles</em> (4-day course, ages 11-18)
+              </p>
+              <p><strong>Interschool Event</strong><br /><em>Interschool DA'WAH-THON 2025</em> Continued annual flagship event</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 3 (Left) -->
+        <article class="timeline__item timeline__item--left">
+          <div class="timeline__dot" aria-hidden="true"></div>
+
+          <div class="timeline__card timeline__card--amber">
+            <div class="timeline__meta">
+              <span class="timeline__date">Year 2024</span>
+            </div>
+
+            <h3 class="timeline__cardTitle">Growth & Expansion</h3>
+
+            <div class="timeline__desc">
+              <p><strong>Major Academic Event</strong><br /><em>Al-Ala MUN 2024</em> posting series</p>
+              <p><strong>Ramadan Initiatives</strong><br /><em>My Ramadan Journal</em> launch<br /><em>Reflections</em> Quran sessions</p>
+              <p><strong>Educational Courses for Children</strong><br />
+                <em>The Enlightened Heart</em> (6-day course, ages 11+)<br />
+                <em>The Little Seekers</em> (6-day course, ages 6-10)
+              </p>
+              <p><strong>Interschool Event</strong><br /><em>Interschool DA'WAH-THON 2024</em></p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 4 (Right) -->
+        <article class="timeline__item timeline__item--right">
+          <div class="timeline__dot" aria-hidden="true"></div>
+
+          <div class="timeline__card">
+            <div class="timeline__meta">
+              <span class="timeline__date">Year 2023</span>
+            </div>
+
+            <h3 class="timeline__cardTitle">The Foundation Year</h3>
+
+            <div class="timeline__desc">
+              <p><strong>Launch of Al-Ala Pathfinders (19 June 2023)</strong></p>
+              <p><strong>Faith-Based Content Series</strong><br /><em>Dhul Hijjah: The Ten Blessed Days</em> posting series</p>
+              <p><strong>Educational Courses for Children</strong><br /><em>Proactive Me</em> (5-day course, ages 7-14)</p>
+              <p><strong>Student Expression & Dawah</strong><br /><em>DA'WAH-THON 2023</em> (speeches, halaqah talks, slam poetry)</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+    WHAT WE DO
+  ========================================================== -->
+  <section class="wedo" id="whatwedo">
+    <div class="wedo__wrap">
+
+      <div class="wedo__head">
+        <p class="wedo__kicker">WHAT WE DO</p>
+        <h2 class="wedo__title">Our Focus</h2>
+      </div>
+
+      <div class="wedo__grid">
+        <article class="wedo__card wedo__card--amber">
+          <div class="wedo__media">
+            <img
+              src="assets/images/DSC_2829.JPG"
+              alt="Students learning new skills"
+            />
+          </div>
+          <h3 class="wedo__cardTitle">Leadership & Skill Building</h3>
+        </article>
+
+        <article class="wedo__card wedo__card--orange">
+          <div class="wedo__media">
+            <img
+              src="assets/images/IMG_7968.png"
+              alt="Teamwork and collaboration"
+            />
+          </div>
+          <h3 class="wedo__cardTitle">Teamwork & Brotherhood</h3>
+        </article>
+
+        <article class="wedo__card wedo__card--green">
+          <div class="wedo__media">
+            <img
+              src="assets/images/DSC_2736.png"
+              alt="Event and activities"
+            />
+          </div>
+          <h3 class="wedo__cardTitle">Faith-Based Events & Activities</h3>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+    WHATSAPP CTA
+  ========================================================== -->
+  <section class="cta" id="join">
+    <div class="cta__wrap">
+      <p class="cta__kicker">STAY CONNECTED</p>
+
+      <h2 class="cta__title">
+        Join Our <span class="cta__accent">WhatsApp Community</span>
+      </h2>
+
+      <p class="cta__text">
+        Stay connected with Al-Ala Pathfinders and get updates on our events, courses, and what we’re doing next.
+      </p>
+
+      <a
+        class="cta__btn"
+        href="https://chat.whatsapp.com/FE4voTfa4hNABgZJDPaML0"
+        target="_blank"
+        rel="noopener"
+      >
+        Click Here <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- =========================================================
+    FOOTER
+  ========================================================== -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img
+            src="assets/images/logo.png"
+            width="40"
+            alt="Al-Ala Pathfinders"
+          />
+        </div>
+
+        <div>
+          <div class="footer-name">Al-Ala Pathfinders</div>
+          <p class="footer-desc">
+            A youth-driven platform rooted in Islamic values, dedicated to leadership, growth, and guiding peers on the Straight Path.
+          </p>
+
+          <div class="social">
+            <a class="social-btn" href="https://www.instagram.com/alalapathfinders/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a class="social-btn" href="https://www.facebook.com/profile.php?id=61550043141684" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a class="social-btn" href="https://www.youtube.com/@AlAlaPathfinders" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a class="social-btn" href="mailto:alalapathfinders@gmail.com" aria-label="Gmail"><i class="fa-solid fa-at"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-head">Quick Links</div>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#events">Events</a>
+        <a href="#team">Team</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-head">Get Involved</div>
+        <a href="#join">Join Pathfinders</a>
+        <a href="#team">Leadership Roles</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-head">Contact</div>
+        <div class="footer-line">Al-Ala International Islamic School</div>
+        <div class="footer-line">alalapathfinders@gmail.com</div>
+        <div class="footer-line">+92 336 1230106</div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Al-Ala Pathfinders. All rights reserved.</span>
+      <span class="footer-muted">Part of Al-Ala International Islamic School</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/scripthome.js" defer></script>
+</body>
+</html>

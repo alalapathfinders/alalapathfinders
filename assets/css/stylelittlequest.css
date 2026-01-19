@@ -31,7 +31,6 @@
   --warm-3:rgba(245,158,11,.35);    /* amber border */
   --warm-ink: rgba(15,23,42,.92);
 
-
     /* Day solid colors (logo-based tints/tones/shades) */
   --day1-bg: #FFE08A;  /* warm yellow tint */
   --day2-bg: #FFC08A;  /* soft orange tint */
@@ -71,6 +70,13 @@
   --space-md: clamp(16px, 3vw, 22px);
   --space-lg: clamp(24px, 5vw, 40px);
 
+    /* UI sizes (use everywhere instead of px) */
+  --fs-xs: clamp(12px, 1.1vw, 13px);
+  --fs-ui: clamp(14px, 1.3vw, 16px);
+  --fs-ui-lg: clamp(16px, 1.6vw, 18px);
+  --fs-title: clamp(20px, 2.2vw, 30px);
+
+
   /* Events page helpers */
   --card:#ffffff;
   --card-border: rgba(15, 23, 42, .08);
@@ -91,6 +97,14 @@ body{
   font-size: var(--fs-base);
   line-height: 1.65;
 }
+
+h1{ font-size: var(--fs-h1); }
+h2{ font-size: var(--fs-h2); }
+h3{ font-size: var(--fs-h3); }
+
+p, li{ font-size: var(--fs-md); }
+small{ font-size: var(--fs-xs); }
+
 
 a{ color: inherit; }
 
@@ -460,11 +474,12 @@ h1, h2, h3, .brand-name, .footer-name, .mobile-title{
 .desc-heading{
   margin: 0 0 10px;
   text-align: left;
-  font-size: 30px;
-  font-weight: 700;
+  font-size: var(--fs-title);
+  font-weight: 900;
   letter-spacing: -0.2px;
   color: rgba(0,0,0,.88);
 }
+
 
 /* Bullet list styling */
 .desc-list{
@@ -475,7 +490,7 @@ h1, h2, h3, .brand-name, .footer-name, .mobile-title{
 }
 
 .desc-list li{
-  font-weight: 600;
+  font-size: var(--fs-md);
   color: rgba(0,0,0,.78);
   line-height: 1.7;
 }
@@ -487,12 +502,13 @@ h1, h2, h3, .brand-name, .footer-name, .mobile-title{
 
 .info-card__title{
   margin: 0 0 10px;
-  font-size: 30px;
-  font-weight: 700;
+  font-size: var(--fs-title);
+  font-weight: 900;
   letter-spacing: -0.2px;
   color: rgba(0,0,0,.88);
   text-align: center;
 }
+
 
 .desc-media .info-card__img{
   margin-top: 0;      /* remove top margin because now it's in a row */
@@ -524,18 +540,6 @@ h1, h2, h3, .brand-name, .footer-name, .mobile-title{
 }
 
 
-
-.star{
-  width: 110px;          /* a bit wider so name looks nice */
-  text-align: center;
-
-  display:flex;
-  flex-direction: column;
-  align-items: center;   /* ✅ center image + text */
-  justify-content: center;
-}
-
-
 .star__img{
   width: 72px;
   height: 72px;
@@ -563,21 +567,14 @@ h1, h2, h3, .brand-name, .footer-name, .mobile-title{
 }
 
 /* ✅ Keep titles neat + consistent wrapping */
-.star__name{
-  margin-top: 10px;
-  line-height: 1.2;
-  text-align: center;
-  max-width: 140px;
-  word-break: break-word;
-}
-
 
 .star__name{
   margin-top: 6px;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: var(--fs-ui);
+  font-weight: 700;
   color: rgba(0,0,0,.84);
 }
+
 
 
 
@@ -595,11 +592,12 @@ h1, h2, h3, .brand-name, .footer-name, .mobile-title{
 .portal-days__heading{
   margin: 0;
   text-align:center;
-  font-size: 60px;
-  font-weight: 700;
+  font-size: clamp(28px, 4.5vw, 60px);
+  font-weight: 900;
   letter-spacing: -1px;
   color:#0f172a;
 }
+
 
 .portal-days__sub{
   text-align:center;
@@ -633,7 +631,7 @@ h1, h2, h3, .brand-name, .footer-name, .mobile-title{
 .day__btn{
   width: 100%;
   padding: 22px 22px;
-  font-size: 20px;
+  font-size: var(--fs-ui-lg);
   font-weight: 700;
   letter-spacing: -0.6px;
   background: transparent;   /* ✅ shows solid day color */
@@ -652,7 +650,7 @@ h1, h2, h3, .brand-name, .footer-name, .mobile-title{
 
 
 .day__chev{
-  font-size: 26px;
+    font-size: clamp(20px, 2.2vw, 26px);
   transform: rotate(0deg);
   transition: transform .18s ease;
 }
@@ -705,7 +703,7 @@ h1, h2, h3, .brand-name, .footer-name, .mobile-title{
 
 .rescard__title{
   font-weight: 600;
-  font-size: 18px;
+  font-size: var(--fs-ui);
   color: rgba(15,23,42,.92);
   margin-bottom: 10px;
 }

@@ -73,7 +73,7 @@ window.addEventListener("load", () => {
     tags: ["7-9", "10-12", "13-15"],
     desc: "Improve your confidence and decision-making through the wisdom of the Quran and the wonders of its teachings.",
     img: "assets/images/PME.png",
-    portal: "/proactiveme.html"
+    portal: "https://alalapathfinders.github.io/alalapathfinders/proactiveme.html"
   },
   {
     title: "The Enlightened Heart",
@@ -100,7 +100,7 @@ window.addEventListener("load", () => {
     tags: ["4-6", "7-9", "10-12"],
     desc: "Embark on a fun-filled journey to discover faith, build confidence, and express your creativity through stories and activities.",
     img: "assets/images/TLQ.png",
-    portal: "/littlequest.html"
+    portal: "https://alalapathfinders.github.io/alalapathfinders/littlequest.html"
   },
   {
     title: "Realign: Real Faith, Real Struggles",

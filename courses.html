@@ -6,315 +6,109 @@
   ========================================================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="A youth-driven platform rooted in Islamic values, dedicated to leadership, growth, and guiding others on the Straight Path."
-  />
-
+  <meta name="description" content="A youth-driven platform rooted in Islamic values, dedicated to leadership, growth, and guiding others on the Straight Path."/>
   <!-- =========================================================
     FAVICON
     NOTE: Local C:\ paths won't work when hosted online.
     Use something like: href="assets/icon.png"
   ========================================================== -->
-  <link
-    rel="icon"
-    type="image/png"
-    href="assets/images/icon.png"
-  />
-
+  <link rel="icon" type="image/png" href="assets/images/icon.png"/>
   <!-- =========================================================
     ICONS + FONTS
   ========================================================== -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-  />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
-    rel="stylesheet"
-  />
-
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"/>
   <!-- =========================================================
     TITLE + CSS + JS
   ========================================================== -->
   <title>Al-Ala Pathfinders | Courses</title>
+  <link rel="stylesheet" href="assets/css/global.css" />
   <link rel="stylesheet" href="assets/css/stylecourses.css" />
 </head>
 
 <body class="preload">
-
-  <!-- =========================================================
-    STICKY NAVBAR
-  ========================================================== -->
-  <header class="site-header" id="top">
-    <div class="nav-wrap">
-
-      <!-- Brand / Logo -->
-      <a class="brand" href="#top" aria-label="Al-Ala Pathfinders Home">
-        <!-- NOTE: Local C:\ paths won't work when hosted online -->
-        <img
-        class="brand-logo"
-        src="assets/images/logo.png"
-        alt="Al-Ala Pathfinders Logo"
-        />
-        <div class="brand-text">
-          <div class="brand-name">Al-Ala Pathfinders</div>
-        </div>
-      </a>
-
-      <!-- Desktop Nav -->
-      <nav class="nav-links" aria-label="Primary Navigation">
-        <!-- NOTE: Local file path won't work online; use relative like href="index.html" -->
-         <a class="nav-link" href="index.html">Home</a>
-         <a class="nav-link" href="about.html">About Us</a>
-         <a class="nav-link" href="courses.html">Courses</a>
-         <a class="nav-link" href="events.html">Events</a>
-         <a class="nav-link" href="team.html">Our Team</a>
-         <a class="nav-link" href="contact.html">Contact Us</a>
-      </nav>
-
-      <!-- Burger (Mobile) -->
-      <button
-        class="burger"
-        id="burger"
-        aria-label="Open menu"
-        aria-expanded="false"
-        aria-controls="mobileMenu"
-      >
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <!-- Mobile Drawer -->
-    <div class="mobile-menu" id="mobileMenu">
-      <div class="mobile-card" role="dialog" aria-modal="true" aria-label="Mobile navigation menu">
-        <div class="mobile-head">
-          <div class="mobile-title">Menu</div>
-          <button class="mobile-close" id="closeMenu" aria-label="Close menu">✕</button>
-        </div>
-
-        <!-- Mobile anchor links -->
-        <a class="m-link" href="index.html">Home</a>
-        <a class="m-link" href="about.html">About Us</a>
-        <a class="m-link" href="courses.html">Courses</a>
-        <a class="m-link" href="events.html">Events</a>
-        <a class="m-link" href="team.html">Our Team</a>
-        <a class="m-link" href="contact.html">Contact Us</a>
-      </div>
-    </div>
-  </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="courses-hero-simple">
-  <div class="courses-hero-simple__container">
-
-    <!-- same gradient + font as Events -->
-    <h1 class="events-title courses-hero-simple__title">Courses</h1>
-
-    <div class="courses-hero-simple__grid">
-      <!-- LEFT TEXT -->
-      <div class="courses-hero-simple__left">
-        <p class="courses-hero-simple__text">
-          Learn with purpose!<br>
-          Grow with direction...
-        </p>
-      </div>
-
-      <!-- RIGHT IMAGE (no frame/card) -->
-      <div class="courses-hero-simple__right">
-        <img
-          class="courses-hero-simple__img"
-          src="assets/images/course1.png"
-          alt="Courses hero illustration"
-        />
-      </div>
-    </div>
-
-  </div>
-</section>
-<section class="ages" id="ages">
-  <div class="ages__container">
-
-    <h2 class="ages__title">Courses for Every Age</h2>
-
-    <div class="ages__grid">
-      <!-- 1 -->
-      <div class="age">
-        <img class="age__img" src="assets/images/1.png" alt="4–6 years">
-        <a class="age__btn" href="#courses-list" data-filter="4-6">4–6 Years</a>
-      </div>
-
-      <!-- 2 -->
-      <div class="age">
-        <img class="age__img" src="assets/images/2.png" alt="7–9 years">
-        <a class="age__btn" href="#courses-list" data-filter="7-9">7–9 Years</a>
-      </div>
-
-      <!-- 3 -->
-      <div class="age">
-        <img class="age__img" src="assets/images/3.png" alt="10-12 years">
-        <a class="age__btn" href="#courses-list" data-filter="10-12">10–12 Years</a>
-      </div>
-
-      <!-- 4 -->
-      <div class="age">
-        <img class="age__img" src="assets/images/4.png" alt="13–15 years">
-        <a class="age__btn" href="#courses-list" data-filter="13-15">13–15 Years</a>
-      </div>
-
-      <!-- 5 -->
-      <div class="age">
-        <img class="age__img" src="assets/images/5.png" alt="16-18+ years">
-        <a class="age__btn" href="#courses-list" data-filter="16-18">16-18+ Years</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-<!-- =========================
-  COURSES LIST (SECTION 3)
-========================= -->
-<section class="courses-list" id="courses-list">
-  <div class="courses-list__container">
-
-    <div class="courses-list__head">
-      <p class="courses-list__kicker">OUR COURSES</p>
-      <h2 class="courses-list__title">
-        Explore Our <span class="courses-list__accent">Courses</span>
-      </h2>
-      <p class="courses-list__sub">
-        Pick an age group to filter, or view everything.
-      </p>
-    </div>
-
-    <!-- Filters (3rd section includes Show All button) -->
-    <div class="courses-filters" aria-label="Course filters">
-      <button class="courses-filter" data-filter="all" type="button">
-        Show All Courses
-      </button>
-
-      <button class="courses-filter" data-filter="4-6" type="button">4–6</button>
-      <button class="courses-filter" data-filter="7-9" type="button">7–9</button>
-      <button class="courses-filter" data-filter="10-12" type="button">10–12</button>
-      <button class="courses-filter" data-filter="13-15" type="button">13–15</button>
-      <button class="courses-filter" data-filter="16-18" type="button">16–18+</button>
-    </div>
-
-    <!-- Cards grid (JS will render here) -->
-    <div class="courses-grid" id="coursesGrid" aria-live="polite"></div>
-
-  </div>
-</section>
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <!-- =========================================================
-    FOOTER
-  ========================================================== -->
-  <footer class="site-footer" id="footer">
-    <div class="footer-wrap">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <img
-            src="assets/images/logo.png"
-            width="40"
-            alt="Al-Ala Pathfinders"
-          />
-        </div>
-
-        <div>
-          <div class="footer-name">Al-Ala Pathfinders</div>
-          <p class="footer-desc">
-            A youth-driven platform rooted in Islamic values, dedicated to leadership, growth, and guiding peers on the Straight Path.
-          </p>
-
-          <div class="social">
-            <a class="social-btn" href="https://www.instagram.com/alalapathfinders/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a class="social-btn" href="https://www.facebook.com/profile.php?id=61550043141684" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-            <a class="social-btn" href="https://www.youtube.com/@AlAlaPathfinders" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            <a class="social-btn" href="mailto:alalapathfinders@gmail.com" aria-label="Gmail"><i class="fa-solid fa-at"></i></a>
+  <div id="siteHeader"></div>
+  <main class="courses-page">
+    <section class="courses-hero-simple">
+      <div class="courses-hero-simple__container">
+        <!-- same gradient + font as Events -->
+        <h1 class="events-title courses-hero-simple__title">Courses</h1>
+        <div class="courses-hero-simple__grid">
+          <!-- LEFT TEXT -->
+          <div class="courses-hero-simple__left">
+            <p class="courses-hero-simple__text">Learn with purpose!<br>Grow with direction...</p>
+          </div>
+          <!-- RIGHT IMAGE (no frame/card) -->
+          <div class="courses-hero-simple__right">
+            <img class="courses-hero-simple__img" src="assets/images/course1.png" alt="Courses hero illustration"/>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="footer-col">
-        <div class="footer-head">Quick Links</div>
-        <a href="#about">About</a>
-        <a href="#programs">Programs</a>
-        <a href="#events">Events</a>
-        <a href="#team">Team</a>
+    <section class="ages" id="ages">
+      <div class="ages__container">
+        <h2 class="ages__title">Courses for Every Age</h2>
+        <div class="ages__grid">
+          <!-- 1 -->
+          <div class="age">
+            <img class="age__img" src="assets/images/1.png" alt="4–6 years">
+            <a class="age__btn" href="#courses-list" data-filter="4-6">4–6 Years</a>
+          </div>
+          <!-- 2 -->
+          <div class="age">
+            <img class="age__img" src="assets/images/2.png" alt="7–9 years">
+            <a class="age__btn" href="#courses-list" data-filter="7-9">7–9 Years</a>
+          </div>
+          <!-- 3 -->
+          <div class="age">
+            <img class="age__img" src="assets/images/3.png" alt="10-12 years">
+            <a class="age__btn" href="#courses-list" data-filter="10-12">10–12 Years</a>
+          </div>
+          <!-- 4 -->
+          <div class="age">
+            <img class="age__img" src="assets/images/4.png" alt="13–15 years">
+            <a class="age__btn" href="#courses-list" data-filter="13-15">13–15 Years</a>
+          </div>
+          <!-- 5 -->
+          <div class="age">
+            <img class="age__img" src="assets/images/5.png" alt="16-18+ years">
+            <a class="age__btn" href="#courses-list" data-filter="16-18">16-18+ Years</a>
+          </div>
+        </div>
       </div>
-
-      <div class="footer-col">
-        <div class="footer-head">Get Involved</div>
-        <a href="#join">Join Pathfinders</a>
-        <a href="#team">Leadership Roles</a>
-        <a href="#contact">Contact Us</a>
+    </section>
+    <!-- =========================
+     COURSES LIST (SECTION 3)
+    ========================= -->
+    <section class="courses-list" id="courses-list">
+      <div class="courses-list__container">
+        <div class="courses-list__head">
+          <p class="courses-list__kicker">OUR COURSES</p>
+          <h2 class="courses-list__title">Explore Our <span class="courses-list__accent">Courses</span></h2>
+          <p class="courses-list__sub">Pick an age group to filter, or view everything.</p>
+        </div>
+        
+        <!-- Filters (3rd section includes Show All button) -->
+        <div class="courses-filters" aria-label="Course filters">
+          <button class="courses-filter" data-filter="all" type="button">Show All Courses</button>
+          <button class="courses-filter" data-filter="4-6" type="button">4–6</button>
+          <button class="courses-filter" data-filter="7-9" type="button">7–9</button>
+          <button class="courses-filter" data-filter="10-12" type="button">10–12</button>
+          <button class="courses-filter" data-filter="13-15" type="button">13–15</button>
+          <button class="courses-filter" data-filter="16-18" type="button">16–18+</button>
+        </div>
+        <!-- Cards grid (JS will render here) -->
+        <div class="courses-grid" id="coursesGrid" aria-live="polite"></div>
       </div>
-
-      <div class="footer-col">
-        <div class="footer-head">Contact</div>
-        <div class="footer-line">Al-Ala International Islamic School</div>
-        <div class="footer-line">alalapathfinders@gmail.com</div>
-        <div class="footer-line">+92 336 1230106</div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <span>© <span id="year"></span> Al-Ala Pathfinders. All rights reserved.</span>
-      <span class="footer-muted">Part of Al-Ala International Islamic School</span>
-    </div>
-  </footer>
-
+    </section>
+  </main>
+  
+  <div id="siteFooter"></div>
+  <script src="assets/js/global.js" defer></script>
   <script src="assets/js/scriptcourses.js" defer></script>
 </body>
 </html>

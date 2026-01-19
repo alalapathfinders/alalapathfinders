@@ -84,7 +84,7 @@
   text-align:center;
   margin: 0 0 18px;
   font-size: clamp(28px, 4.5vw, 60px);
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -1px;
   color: #0f172a;
 }
@@ -121,7 +121,7 @@
   width: 100%;
   height: 180px;
   border-radius: 16px;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -131,7 +131,7 @@
   margin: 0 0 10px;
   text-align: left;
   font-size: clamp(20px, 2.2vw, 30px);
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: -0.2px;
   color: rgba(0,0,0,.88);
 }
@@ -152,7 +152,7 @@
 .info-card__title{
   margin: 0 0 10px;
   font-size: clamp(20px, 2.2vw, 30px);
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: -0.2px;
   color: rgba(0,0,0,.88);
   text-align: center;
@@ -216,7 +216,7 @@
   margin: 0;
   text-align:center;
   font-size: clamp(28px, 4.5vw, 60px);
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -1px;
   color:#0f172a;
 }
@@ -263,7 +263,7 @@
   width: 100%;
   padding: 22px 22px;
   font-size: clamp(16px, 1.8vw, 20px);
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.6px;
   background: transparent;
   border: none;
@@ -342,17 +342,10 @@
   padding: 12px 14px;
   border-radius: 14px;
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 600;
   border: 1px solid rgba(15,23,42,.10);
   background: #f8fafc;
   color: rgba(15,23,42,.92);
-}
-
-.rescard__btn--primary{
-  border: 1px solid rgba(249,115,22,.18);
-  background: var(--amber);
-  color: #111827;
-  box-shadow: 0 16px 28px rgba(249,115,22,.22);
 }
 
 .rescard__btn--disabled{

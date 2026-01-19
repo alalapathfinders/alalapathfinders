@@ -1,328 +1,19 @@
 /* ======================================================================
-  Al-Ala Pathfinders — Home + Events Styles (Complete Corrected CSS)
-  - Page background forced to WHITE
-  - "Walk The Path" style gradient: ORANGE (left) -> YELLOW (right)
-  - Event pill color forced to GREEN
-  - Removed duplicate :root (single source of truth)
+  Al-Ala Pathfinders — COURSES Page Styles (PAGE-ONLY)
+  - Uses global.css for tokens/reset/nav/footer/containers
+  - Consistent spacing + responsiveness with Events + Home
 ====================================================================== */
 
-/* ======================================================================
-  1) THEME VARIABLES + GLOBAL RESETS
-====================================================================== */
-
-/* ---------- Theme Tokens ---------- */
-:root{
-  /* Core */
-  --bg:#ffffff;                 /* ✅ page background WHITE */
-  --text:#0f172a;
-  --muted:#64748b;
-  --border:#e5e7eb;
-
-  /* Brand */
-  --yellow:#fbbf24;
-  --orange:#f97316;
-  --amber:#f59e0b;
-  --green:#22c55e;
-
-  /* Effects */
-  --shadow: 0 18px 50px rgba(2, 6, 23, .10);
-  --shadow2: 0 12px 24px rgba(2, 6, 23, .08);
-  --radius: 18px;
-
-  /* Layout */
-  --container: 1140px;
-
-  /* Base font scaling */
-  --fs-base: clamp(15px, 1.6vw, 17px);
-
-  /* Headings */
-  --fs-h1: clamp(38px, 7vw, 90px);
-  --fs-h2: clamp(32px, 5vw, 64px);
-  --fs-h3: clamp(22px, 3vw, 32px);
-
-  /* Text */
-  --fs-lg: clamp(17px, 2vw, 20px);
-  --fs-md: clamp(15px, 1.6vw, 18px);
-  --fs-sm: clamp(13px, 1.2vw, 14px);
-
-  /* Spacing */
-  --space-sm: clamp(10px, 2vw, 14px);
-  --space-md: clamp(16px, 3vw, 22px);
-  --space-lg: clamp(24px, 5vw, 40px);
-
-  /* Events page helpers */
-  --card:#ffffff;
-  --card-border: rgba(15, 23, 42, .08);
-  --timeline-line: rgba(15,23,42,.10);
-}
-
-/* ---------- Reset / Base ---------- */
-*{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; scrollbar-gutter: stable; }
-
-body{
-  margin:0;
-  font-family: "Titillium Web", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background: var(--bg);        /* ✅ white */
+.courses-page{
+  background: var(--bg);
   color: var(--text);
-  font-size: var(--fs-base);
-  line-height: 1.65;
-}
-
-a{ color: inherit; }
-
-/* ---------- Titillium Font Weights (Global Typographic System) ---------- */
-h1, h2, h3, .brand-name, .footer-name, .mobile-title{
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 900;
-}
-.nav-link, .btn, .footer-head, .m-link{
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 700;
-}
-.brand-tag, .footer-desc, .footer-line, p{
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 400;
-}
-/* NOTE: This targets <p> inside .hero (older hero styles). Your page uses .hero__text. */
-.hero p{
-  font-weight: 300;
 }
 
 /* =========================
-   PREVENT RELOAD "JOLT"
+  1) HERO (same spacing system as Events)
 ========================= */
-.preload *,
-.preload *::before,
-.preload *::after{
-  transition: none !important;
-  animation: none !important;
-}
-.preload .about__block,
-.preload .timeline__card,
-.preload .wedo__card,
-.preload .cta__wrap{
-  opacity: 1 !important;
-  transform: none !important;
-}
-
-/* ======================================================================
-  2) LAYOUT HELPERS (Shared widths)
-====================================================================== */
-.nav-wrap, .footer-wrap, .footer-bottom, .page{
-  width: min(var(--container), calc(100% - 40px));
-  margin: 0 auto;
-}
-
-/* ======================================================================
-  3) NAVBAR (DESKTOP) + MOBILE DRAWER
-  (kept as-is from your file)
-====================================================================== */
-.site-header{
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255,255,255,.80);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(229,231,235,.75);
-}
-
-.nav-wrap{
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  gap: 14px;
-  padding: 14px 0;
-}
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap: 12px;
-  text-decoration:none;
-  color: inherit;
-  min-width: 240px;
-}
-
-.brand-logo{
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-}
-
-.brand-name{
-  font-weight: 700;
-  letter-spacing: -0.4px;
-}
-
-.brand-tag{
-  font-size: 12px;
-  color: var(--muted);
-  margin-top: 2px;
-}
-
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap: 10px;
-}
-
-.nav-link{
-  text-decoration:none;
-  color: rgba(15,23,42,.88);
-  font-weight: 700;
-  padding: 10px 12px;
-  border-radius: 14px;
-  transition: background .15s ease, transform .15s ease;
-}
-
-.nav-link:hover{ background: #FDE543; }
-.nav-link:active{ transform: translateY(1px); }
-
-.burger{
-  display:none;
-  width: 46px;
-  height: 46px;
-  border-radius: 16px;
-  border: 1px solid rgba(229,231,235,.9);
-  background: #fff;
-  box-shadow: var(--shadow2);
-  cursor:pointer;
-  padding: 0;
-}
-
-.burger span{
-  display:block;
-  width: 18px;
-  height: 2px;
-  background: var(--text);
-  margin: 5px auto;
-  border-radius: 99px;
-  transition: transform .18s ease, opacity .18s ease;
-}
-
-.mobile-menu{
-  position: fixed;
-  inset: 0;
-  display: none;
-  z-index: 1200;
-}
-
-.mobile-menu.open{
-  display: grid;
-  place-items: start end;
-}
-
-.mobile-menu::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: rgba(2,6,23,.55);
-}
-
-.mobile-card{
-  position: relative;
-  width: min(360px, calc(100vw - 24px));
-  height: 100%;
-  background: rgba(255,255,255,.96);
-  border-left: 1px solid rgba(229,231,235,.85);
-  box-shadow: var(--shadow);
-  padding: 14px;
-  backdrop-filter: blur(10px);
-  display:flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.mobile-head{
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  padding: 8px 6px 12px;
-  border-bottom: 1px solid rgba(229,231,235,.9);
-}
-
-.mobile-title{
-  font-weight: 700;
-  letter-spacing: -0.2px;
-}
-
-.mobile-close{
-  width: 42px;
-  height: 42px;
-  border-radius: 14px;
-  border: 1px solid rgba(229,231,235,.9);
-  background: #fff;
-  cursor:pointer;
-  font-size: 18px;
-}
-
-.m-link{
-  text-decoration:none;
-  color: rgba(15,23,42,.92);
-  font-weight: 700;
-  padding: 12px 12px;
-  border-radius: 14px;
-  transition: background .15s ease;
-}
-
-.m-link:hover{ background: rgba(249,115,22,.10); }
-
-.m-cta{
-  margin-top: 8px;
-  text-decoration:none;
-  text-align:center;
-  font-weight: 900;
-  padding: 12px 14px;
-  border-radius: 16px;
-  color:#111827;
-
-  /* same orange->yellow gradient */
-  background: linear-gradient(90deg, var(--orange) 0%, var(--yellow) 100%);
-  box-shadow: 0 18px 30px rgba(249,115,22,.22);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =========================
-   COURSES HERO (like your mockup)
-   - no card, no frame
-========================= */
-
 .courses-hero-simple{
-  background: #fff;
-  padding: 30px 0 0px;
+  padding: clamp(26px, 4vw, 40px) 0 clamp(18px, 3vw, 28px);
 }
 
 .courses-hero-simple__container{
@@ -332,68 +23,60 @@ h1, h2, h3, .brand-name, .footer-name, .mobile-title{
 
 .courses-hero-simple__title{
   text-align: center;
-  margin: 14px 0 0;
-    font-weight: 900;
-    letter-spacing: -1px;
-    line-height: 1.05;
-    font-size: clamp(44px, 6vw, 84px);
-    background: linear-gradient(90deg, #f97316 0%, #ff9a1a 30%, #ffc21f 70%, #fbbf24 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
 }
 
-/* same layout feeling as your image */
+/* same layout feel as your image, but fluid + consistent */
 .courses-hero-simple__grid{
-  margin-top: 0px;
+  margin-top: clamp(12px, 2vw, 18px);
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1.15fr;
   align-items: center;
-  gap: 40px;
+  gap: clamp(16px, 3vw, 40px);
 }
 
-/* left text is large and airy */
 .courses-hero-simple__text{
   margin: 0;
-  font-size: 40px;
-  line-height: 1.35;
-  font-weight: 600;
-  color: #0f172a;
+  font-size: clamp(18px, 2.4vw, 34px);
+  line-height: 1.25;
+  font-weight: 800;
+  color: rgba(15,23,42,.92);
 }
 
-/* right image: no card/frame, just clean */
 .courses-hero-simple__img{
-  width: 100%;
-  max-width: 720px;
+  width: min(720px, 100%);
   height: auto;
   display: block;
-  margin-left: auto; /* pushes image to the right like your mock */
+  margin-left: auto;
+  user-select: none;
+  pointer-events: none;
+  filter: drop-shadow(0 18px 26px rgba(2,6,23,.10));
 }
 
-/* responsive: stack */
 @media (max-width: 980px){
   .courses-hero-simple{
-    padding: 58px 0 0;
+    padding-top: 58px; /* matches your other pages behavior under sticky header */
   }
 
   .courses-hero-simple__grid{
     grid-template-columns: 1fr;
-    gap: 22px;
     text-align: left;
   }
 
   .courses-hero-simple__img{
-    max-width: 520px;
     margin: 0 auto;
+    width: min(520px, 100%);
   }
 }
-/* =========================
-   COURSES: AGE GROUPS SECTION
-========================= */
 
+/* =========================
+  2) AGE GROUPS (consistent tokens + spacing)
+========================= */
 .ages{
-  background: #e9f4f6;             /* soft blue like screenshot */
-  padding: 110px 0 150px;
+  background:
+    radial-gradient(900px 380px at 18% 15%, rgba(251,191,36,.14), transparent 60%),
+    radial-gradient(700px 360px at 85% 25%, rgba(249,115,22,.10), transparent 62%),
+    #e9f4f6;
+  padding: clamp(52px, 7vw, 110px) 0 clamp(60px, 9vw, 150px);
 }
 
 .ages__container{
@@ -405,28 +88,25 @@ h1, h2, h3, .brand-name, .footer-name, .mobile-title{
 .ages__title{
   margin: 0;
   font-size: var(--fs-h2);
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: -1px;
-  color: #0f172a;
+  color: rgba(15,23,42,.92);
 }
 
-
-/* kids row */
 .ages__grid{
-  margin-top: 44px;
+  margin-top: clamp(18px, 4vw, 44px);
   display: grid;
   grid-template-columns: repeat(5, minmax(140px, 1fr));
-  gap: 26px;
+  gap: clamp(12px, 2.5vw, 26px);
   align-items: end;
 }
 
 .age{
   display: grid;
   justify-items: center;
-  gap: 0px;
+  gap: 10px;
 }
 
-/* image sizing */
 .age__img{
   width: min(200px, 100%);
   height: auto;
@@ -435,76 +115,60 @@ h1, h2, h3, .brand-name, .footer-name, .mobile-title{
   pointer-events: none;
 }
 
-/* orange pill button */
+/* buttons = same “pill” vibe as Events link, but orange/yellow */
 .age__btn{
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   min-width: 190px;
   height: 54px;
   padding: 0 18px;
-  border-radius: 14px;
-  background: #f59e0b;            /* orange */
-  color: #ffffff;
-  font-weight: 900;
-  font-size: 22px;
-  letter-spacing: .3px;
+
+  border-radius: 16px;
   text-decoration: none;
-  box-shadow: 0 14px 26px rgba(245, 158, 11, .22);
-  transition: transform .18s ease, filter .18s ease;
+
+  color: #111827;
+  font-weight: 900;
+  font-size: clamp(16px, 2vw, 22px);
+
+  background: linear-gradient(90deg, var(--orange), var(--yellow));
+  border: 1px solid rgba(15,23,42,.06);
+  box-shadow: 0 16px 30px rgba(249,115,22,.18);
+
+  transition: transform .15s ease, box-shadow .15s ease;
 }
 
 .age__btn:hover{
   transform: translateY(-2px);
-  filter: brightness(1.03);
+  box-shadow: 0 22px 44px rgba(249,115,22,.22);
 }
 
-.age__btn:active{
-  transform: translateY(0);
-}
+.age__btn:active{ transform: translateY(0); }
 
-/* RESPONSIVE */
 @media (max-width: 1100px){
-  .ages__grid{
-    grid-template-columns: repeat(3, minmax(160px, 1fr));
-    gap: 22px;
-  }
+  .ages__grid{ grid-template-columns: repeat(3, minmax(160px, 1fr)); }
 }
 
 @media (max-width: 720px){
-  .ages{
-    padding: 52px 0 60px;
-  }
-
-  .ages__grid{
-    grid-template-columns: repeat(2, minmax(150px, 1fr));
-    gap: 18px;
-  }
-
-  .age__btn{
-    min-width: 170px;
-    height: 50px;
-    font-size: 20px;
-  }
+  .ages__grid{ grid-template-columns: repeat(2, minmax(150px, 1fr)); }
+  .age__btn{ min-width: 170px; height: 50px; }
 }
 
 @media (max-width: 420px){
-  .ages__grid{
-    grid-template-columns: 1fr;
-  }
-
-  .age__btn{
-    width: 100%;
-    max-width: 260px;
-  }
+  .ages__grid{ grid-template-columns: 1fr; }
+  .age__btn{ width: 100%; max-width: 260px; }
 }
-/* =========================
-   COURSES LIST (SECTION 3)
-========================= */
 
+/* =========================
+  3) COURSES LIST (same visual language as Events cards)
+========================= */
 .courses-list{
-  background: #fff;
-  padding: 70px 0 90px;
+  padding: clamp(60px, 8vw, 92px) 0;
+  background:
+    radial-gradient(900px 380px at 18% 15%, rgba(251,191,36,.18), transparent 60%),
+    radial-gradient(700px 360px at 85% 25%, rgba(249,115,22,.14), transparent 62%),
+    #ffffff;
 }
 
 .courses-list__container{
@@ -514,7 +178,7 @@ h1, h2, h3, .brand-name, .footer-name, .mobile-title{
 
 .courses-list__head{
   text-align: center;
-  margin-bottom: 26px;
+  margin-bottom: clamp(16px, 3vw, 26px);
 }
 
 .courses-list__kicker{
@@ -523,7 +187,7 @@ h1, h2, h3, .brand-name, .footer-name, .mobile-title{
   letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--orange);
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .courses-list__title{
@@ -531,11 +195,9 @@ h1, h2, h3, .brand-name, .footer-name, .mobile-title{
   font-size: var(--fs-h2);
   letter-spacing: -1px;
   line-height: 1.05;
-  color: #0f172a;
-  font-weight: 700;
+  color: rgba(15,23,42,.92);
+  font-weight: 900;
 }
-
-
 
 .courses-list__accent{
   background: linear-gradient(90deg, #f97316 0%, #ff9a1a 30%, #ffc21f 70%, #fbbf24 100%);
@@ -545,17 +207,16 @@ h1, h2, h3, .brand-name, .footer-name, .mobile-title{
 }
 
 .courses-list__sub{
-  margin: 14px auto 0;
-  max-width: 70ch;
+  margin: 12px auto 0;
+  max-width: 72ch;
   color: rgba(15,23,42,.70);
-  font-size: clamp(15px, 1.6vw, 18px);
-  font-weight: 500;
+  font-size: clamp(16px, 1.6vw, 18px);
   line-height: 1.8;
 }
 
-/* Filters row */
+/* Filters */
 .courses-filters{
-  margin: 26px auto 28px;
+  margin-top: clamp(14px, 3vw, 22px);
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -563,324 +224,167 @@ h1, h2, h3, .brand-name, .footer-name, .mobile-title{
 }
 
 .courses-filter{
-  cursor: pointer;
+  appearance: none;
   border: 1px solid rgba(15,23,42,.10);
-  background: #fff;
+  background: #ffffff;
   color: rgba(15,23,42,.88);
-  font-weight: 600;
-  border-radius: 14px;
-  padding: 12px 14px;
-  transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
-  box-shadow: 0 10px 22px rgba(2,6,23,.06);
+  font-weight: 800;
+
+  padding: 10px 14px;
+  border-radius: 999px;
+
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(2,6,23,.06);
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
 }
 
 .courses-filter:hover{
-  transform: translateY(-2px);
-  background: rgba(251,191,36,.12);
+  background: rgba(251,191,36,.18);
+  border-color: rgba(251,191,36,.35);
 }
+
+.courses-filter:active{ transform: translateY(1px); }
 
 .courses-filter.is-active{
-  border-color: rgba(15,23,42,.06);
-  background: #fbbf24;
-  color: #111827;
+  background: linear-gradient(90deg, rgba(249,115,22,.18), rgba(251,191,36,.20));
+  border-color: rgba(249,115,22,.28);
 }
 
-/* Grid */
+/* Cards grid */
 .courses-grid{
+  margin-top: clamp(18px, 3vw, 28px);
   display: grid;
-  grid-template-columns: repeat(3, minmax(260px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2.8vw, 28px);
   align-items: stretch;
 }
 
-/* Card */
 .course-card{
-  background: #fff;
+  border-radius: 26px;
+  background: #ffffff;
   border: 1px solid rgba(15,23,42,.10);
-  border-radius: 22px;
-  padding: 22px;
   box-shadow: 0 16px 34px rgba(2,6,23,.07);
+  overflow: hidden;
+  padding: 22px;
   display: grid;
   gap: 12px;
-  position: relative;
-  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
 }
 
-.course-card::before{
-  content:"";
-  position:absolute;
-  left:0; top:0;
-  width:100%;
-  height:6px;
-  background: #FF9233;
+.course-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(2,6,23,.10);
+}
+
+.course-card__media{
+  height: 210px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: rgba(15,23,42,.04);
+  border: 1px solid rgba(15,23,42,.08);
+}
+
+.course-card__media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .course-card__title{
   margin: 6px 0 0;
-  font-size: clamp(18px, 2vw, 22px);
-  letter-spacing: -0.3px;
-  font-weight: 700;
-  color: #0f172a;
+  font-size: clamp(20px, 2vw, 26px);
+  letter-spacing: -0.4px;
+  line-height: 1.15;
+  font-weight: 900;
 }
 
 .course-card__meta{
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
+  gap: 8px;
 }
 
 .course-pill{
-  display: inline-flex;
-  align-items: center;
+  display:inline-flex;
+  align-items:center;
   gap: 8px;
-  padding: 8px 12px;
+
+  padding: 9px 12px;
   border-radius: 999px;
-  font-weight: 600;
+
+  font-weight: 800;
   font-size: 13px;
-  color: #111827;
-  background: rgba(251,191,36,.18);
-  border: 1px solid rgba(251,191,36,.25);
+
+  color: #064e3b;
+  background: rgba(34,197,94,.16);
+  border: 1px solid rgba(34,197,94,.28);
 }
 
 .course-pill--orange{
-  background: rgba(249,115,22,.14);
-  border-color: rgba(249,115,22,.18);
+  color: #7c2d12;
+  background: rgba(249,115,22,.12);
+  border-color: rgba(249,115,22,.22);
 }
 
 .course-card__desc{
   margin: 0;
   color: rgba(15,23,42,.72);
-  line-height: 1.7;
-  font-weight: 500;
+  line-height: 1.75;
+  font-weight: 600;
 }
 
-/* Course card image */
-.course-card__media{
-  border-radius: 18px;
-  height: 190px;
-  overflow: hidden;
-  position: relative;
-  background: rgba(15,23,42,.04);
-}
-
-/* Seamless blend like your pattern */
-.course-card__media img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(1.05) contrast(1.02);
-
-  -webkit-mask-image: radial-gradient(140% 120% at 50% 45%, #000 62%, transparent 100%);
-  mask-image: radial-gradient(140% 120% at 50% 45%, #000 62%, transparent 100%);
-}
-
-.course-card__media::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: radial-gradient(140% 120% at 50% 45%, rgba(255,255,255,0) 55%, rgba(255,255,255,.92) 100%);
-  pointer-events:none;
-  opacity: .30;
-}
-
-/* Actions */
 .course-card__actions{
   margin-top: 6px;
   display: flex;
-  justify-content: flex-start;
 }
 
 .course-card__btn{
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  padding: 8px 10px;
-  border-radius: 14px;
+
+  width: 100%;
+  padding: 12px 14px;
+
+  border-radius: 16px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 900;
+
   color: #111827;
-  background: #fbbf24;
-  border: 1px solid rgba(15,23,42,.08);
-  box-shadow: 0 14px 26px rgba(249,115,22,.18);
-  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+  background: linear-gradient(90deg, var(--orange), var(--yellow));
+  border: 1px solid rgba(15,23,42,.06);
+  box-shadow: 0 16px 32px rgba(249,115,22,.18);
+
+  transition: transform .15s ease, box-shadow .15s ease;
 }
 
 .course-card__btn:hover{
   transform: translateY(-2px);
-  box-shadow: 0 18px 36px rgba(249,115,22,.22);
-  filter: brightness(1.02);
+  box-shadow: 0 22px 44px rgba(249,115,22,.22);
 }
 
-.course-card__btn:active{
-  transform: translateY(0);
-}
+.course-card__btn:active{ transform: translateY(0); }
 
-
-/* Responsive */
+/* Responsive grid */
 @media (max-width: 980px){
-  .courses-grid{ grid-template-columns: repeat(2, minmax(240px, 1fr)); }
+  .courses-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 620px){
   .courses-grid{ grid-template-columns: 1fr; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ======================================================================
-  11) FOOTER (kept as-is)
-====================================================================== */
-.site-footer{
-  margin-top: 70px;
-  background: #0b1411;
-  color: #e5e7eb;
-  padding: 46px 0 18px;
-}
-
-.footer-wrap{
-  display:grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 18px;
-  align-items:start;
-}
-
-.footer-brand{
-  display:flex;
-  gap: 12px;
-  align-items:flex-start;
-}
-
-.footer-logo{
-  width: 110px;
-  height: 50px;
-  border-radius: 100px;
-  display:grid;
-  place-items:center;
-  background: white;
-  color:#111827;
-  font-weight: 900;
-}
-
-.footer-name{
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.footer-desc{
-  margin:0;
-  color: rgba(229,231,235,.75);
-  line-height: 1.7;
-  max-width: 48ch;
-  font-weight: 500;
-}
-
-.footer-col{
-  display:grid;
-  gap: 10px;
-}
-
-.footer-head{
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.site-footer a{
-  color: rgba(229,231,235,.85);
-  text-decoration:none;
-  font-weight: 500;
-}
-
-.footer-line{
-  color: rgba(229,231,235,.75);
-  font-weight: 500;
-}
-
-.social{
-  display:flex;
-  gap: 8px;
-  margin-top: 14px;
-}
-
-.social-btn{
-  width: 38px;
-  height: 38px;
-  border-radius: 14px;
-  display:grid;
-  place-items:center;
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(229,231,235,.12);
-  color: rgba(229,231,235,.9);
-  font-weight: 900;
-  text-decoration:none;
-}
-
-.social-btn:hover{
-  color:white;
-  background: rgba(251, 190, 36, 0.673);
-  border-color: white;
-}
-
-.footer-bottom{
-  margin-top: 26px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(229,231,235,.12);
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  gap: 12px;
-  color: rgba(229,231,235,.70);
-  font-size: 13px;
-}
-
-.footer-muted{ color: rgba(229,231,235,.55); }
-
-/* ======================================================================
-  12) GLOBAL RESPONSIVE (NAV + FOOTER)
-====================================================================== */
-@media (max-width: 960px){
-  .footer-wrap{ grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 820px){
-  .nav-links{ display:none; }
-  .burger{ display:inline-block; }
-
-  .footer-wrap{ grid-template-columns: 1fr; }
-  .footer-bottom{
-    flex-direction: column;
-    align-items:flex-start;
-  }
-}
-
-/* Reduced motion (global) */
 @media (prefers-reduced-motion: reduce){
-  .nav-link, .nav-cta, .burger span{ transition:none; }
+  .courses-filter,
+  .age__btn,
+  .course-card,
+  .course-card__btn{
+    transition: none;
+  }
+  .course-card:hover,
+  .course-card__btn:hover,
+  .age__btn:hover{
+    transform: none;
+  }
 }

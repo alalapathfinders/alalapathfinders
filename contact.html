@@ -29,29 +29,27 @@
   <link rel="stylesheet" href="assets/css/stylecontact.css" />
 </head>
 
+
 <body class="preload">
   <div id="siteHeader"></div>
-  <main class="contact-page">
-    <!-- ================= HERO ================= -->
-    <section class="contact-hero section">
-      <div class="container">
-        <div class="contact-hero__pill">
-          <i class="fa-solid fa-paper-plane"></i>
-          Contact Us
-        </div>
 
+  <main class="contact-page" id="main">
+    <!-- HERO (match Events/Courses style: centered) -->
+    <section class="contact-hero">
+      <div class="contact-container">
         <h1 class="gradient-title">Let’s Talk</h1>
-        <p class="contact-hero__sub">
+        <p class="contact-sub">
           Have a question, want to collaborate, or want to join our events? Send a message — we’ll respond soon.
         </p>
       </div>
     </section>
 
-    <!-- ================= CONTENT ================= -->
-    <section class="contact-content section">
-      <div class="container contact-grid">
+    <!-- CONTENT -->
+    <section class="contact-content">
+      <div class="contact-container contact-grid">
+
         <!-- Left: Info -->
-        <aside class="contact-card contact-card--info" aria-label="Contact information">
+        <aside class="contact-card" aria-label="Contact information">
           <h2 class="contact-card__title">Reach Us</h2>
           <p class="contact-card__desc">
             Al-Ala Pathfinders is a youth-driven platform rooted in Islamic values — leadership, growth, and guiding peers on the Straight Path.
@@ -102,7 +100,7 @@
         </aside>
 
         <!-- Right: Form -->
-        <section class="contact-card contact-card--form" aria-label="Send a message">
+        <section class="contact-card" aria-label="Send a message">
           <h2 class="contact-card__title">Send a Message</h2>
           <p class="contact-card__desc">
             Fill in the form below. Your message will open in your email app (or you can use the email button).
@@ -148,30 +146,7 @@
             <div class="form-success" id="formSuccess" role="status" aria-live="polite"></div>
           </form>
         </section>
-      </div>
-    </section>
 
-    <!-- Optional Map (safe placeholder) -->
-    <section class="contact-map section" aria-label="Map section">
-      <div class="container">
-        <div class="map-card">
-          <div class="map-card__head">
-            <h2 class="map-card__title">Visit Us</h2>
-            <p class="map-card__sub">Al-Ala International Islamic School</p>
-          </div>
-
-          <!-- Replace src with your real Google Maps embed later -->
-          <div class="map-frame" aria-label="Map placeholder">
-            <div class="map-placeholder">
-              <i class="fa-solid fa-map-location-dot"></i>
-              <div>
-                <div class="map-placeholder__title">Map Embed Coming Soon</div>
-                <div class="map-placeholder__text">You can add a Google Maps iframe here later.</div>
-              </div>
-            </div>
-          </div>
-
-        </div>
       </div>
     </section>
   </main>

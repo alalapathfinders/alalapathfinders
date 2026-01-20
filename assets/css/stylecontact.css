@@ -1,6 +1,7 @@
 /* ======================================================================
   CONTACT.CSS — Contact Us page only
   - Uses global.css tokens, container, footer/navbar
+  - Hero style matches Events/Courses (centered)
 ====================================================================== */
 
 .contact-page{
@@ -8,30 +9,30 @@
   color: var(--text);
 }
 
-/* HERO */
+/* Match Events/Courses container behavior */
+.contact-container{
+  width: min(var(--container), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* HERO (match events-hero style) */
 .contact-hero{
-  padding-top: 10px;
+  padding: clamp(26px, 4vw, 40px) 0 clamp(18px, 3vw, 28px);
+  text-align: center;
 }
 
-.contact-hero__pill{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(15,23,42,.10);
-  background: rgba(255,255,255,.8);
-  box-shadow: var(--shadow2);
-  font-weight: 700;
-  color: rgba(15,23,42,.82);
-}
-
-.contact-hero__sub{
-  margin-top: 10px;
-  max-width: 70ch;
+.contact-sub{
+  margin: 16px auto 0;
+  max-width: 72ch;
   color: rgba(15,23,42,.70);
+  font-size: clamp(16px, 1.9vw, 20px);
   font-weight: 600;
   line-height: 1.8;
+}
+
+/* CONTENT */
+.contact-content{
+  padding: clamp(24px, 4vw, 34px) 0 clamp(70px, 9vw, 110px);
 }
 
 /* GRID */
@@ -43,11 +44,11 @@
 }
 
 .contact-card{
-  border-radius: 22px;
-  padding: 26px;
+  border-radius: 30px;
+  padding: clamp(20px, 3.5vw, 34px);
   background: #fff;
   border: 1px solid rgba(15,23,42,.10);
-  box-shadow: 0 18px 45px rgba(2,6,23,.08);
+  box-shadow: var(--shadow2);
 }
 
 .contact-card__title{
@@ -193,7 +194,7 @@
   color: rgba(220,38,38,.95);
 }
 
-/* BUTTONS (page-only variants; doesn’t touch global nav/footer) */
+/* BUTTONS */
 .form-actions{
   display: flex;
   gap: 10px;
@@ -235,74 +236,15 @@
   color: rgba(34,197,94,.95);
 }
 
-/* MAP */
-.map-card{
-  border-radius: 22px;
-  padding: 22px;
-  background: #fff;
-  border: 1px solid rgba(15,23,42,.10);
-  box-shadow: 0 18px 45px rgba(2,6,23,.08);
-}
-
-.map-card__head{
-  display: grid;
-  gap: 4px;
-  margin-bottom: 12px;
-}
-
-.map-card__title{
-  margin: 0;
-  font-size: clamp(20px, 2.4vw, 30px);
-  font-weight: 900;
-  letter-spacing: -0.6px;
-}
-
-.map-card__sub{
-  color: rgba(15,23,42,.65);
-  font-weight: 700;
-}
-
-.map-frame{
-  border-radius: 18px;
-  border: 1px solid rgba(15,23,42,.10);
-  overflow: hidden;
-  min-height: 260px;
-  background: rgba(251,191,36,.08);
-  display: grid;
-  place-items: center;
-}
-
-.map-placeholder{
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  padding: 16px;
-  color: rgba(15,23,42,.75);
-  font-weight: 800;
-}
-
-.map-placeholder i{
-  font-size: 28px;
-}
-
-.map-placeholder__title{
-  font-size: 16px;
-}
-
-.map-placeholder__text{
-  font-size: 13px;
-  font-weight: 700;
-  color: rgba(15,23,42,.60);
-}
-
 /* RESPONSIVE */
 @media (max-width: 900px){
   .contact-grid{ grid-template-columns: 1fr; }
-  .contact-card{ padding: 22px; }
 }
 
 @media (max-width: 520px){
-  .contact-card{ padding: 18px; }
+  .contact-container{
+    width: min(var(--container), calc(100% - 26px));
+  }
   .contact-item{
     grid-template-columns: 44px 1fr;
     border-radius: 16px;

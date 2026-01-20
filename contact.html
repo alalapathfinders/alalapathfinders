@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+    BASIC META
+  ========================================================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A youth-driven platform rooted in Islamic values, dedicated to leadership, growth, and guiding others on the Straight Path."/>
+  <!-- =========================================================
+    FAVICON
+    NOTE: Local C:\ paths won't work when hosted online.
+    Use something like: href="assets/icon.png"
+  ========================================================== -->
+  <link rel="icon" type="image/png" href="assets/images/icon.png"/>
+  <!-- =========================================================
+    ICONS + FONTS
+  ========================================================== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"/>
+  <!-- =========================================================
+    TITLE + CSS + JS
+  ========================================================== -->
+  <title>Al-Ala Pathfinders | Contact Us</title>
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/stylecontact.css" />
+</head>
+
+<body class="preload">
+  <div id="siteHeader"></div>
+  <main class="contact-page">
+    <!-- ================= HERO ================= -->
+    <section class="contact-hero section">
+      <div class="container">
+        <div class="contact-hero__pill">
+          <i class="fa-solid fa-paper-plane"></i>
+          Contact Us
+        </div>
+
+        <h1 class="gradient-title">Let’s Talk</h1>
+        <p class="contact-hero__sub">
+          Have a question, want to collaborate, or want to join our events? Send a message — we’ll respond soon.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= CONTENT ================= -->
+    <section class="contact-content section">
+      <div class="container contact-grid">
+        <!-- Left: Info -->
+        <aside class="contact-card contact-card--info" aria-label="Contact information">
+          <h2 class="contact-card__title">Reach Us</h2>
+          <p class="contact-card__desc">
+            Al-Ala Pathfinders is a youth-driven platform rooted in Islamic values — leadership, growth, and guiding peers on the Straight Path.
+          </p>
+
+          <div class="contact-list">
+            <a class="contact-item" href="mailto:alalapathfinders@gmail.com">
+              <span class="contact-item__icon"><i class="fa-solid fa-envelope"></i></span>
+              <span>
+                <div class="contact-item__label">Email</div>
+                <div class="contact-item__value">alalapathfinders@gmail.com</div>
+              </span>
+            </a>
+
+            <a class="contact-item" href="tel:+923007555777">
+              <span class="contact-item__icon"><i class="fa-solid fa-phone"></i></span>
+              <span>
+                <div class="contact-item__label">Phone</div>
+                <div class="contact-item__value">+92 300 7555777</div>
+              </span>
+            </a>
+
+            <div class="contact-item" role="group" aria-label="Location">
+              <span class="contact-item__icon"><i class="fa-solid fa-location-dot"></i></span>
+              <span>
+                <div class="contact-item__label">Location</div>
+                <div class="contact-item__value">Al-Ala International Islamic School</div>
+              </span>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <a class="contact-social__btn" href="https://www.instagram.com/alalapathfinders/" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a class="contact-social__btn" href="https://www.facebook.com/profile.php?id=61550043141684" target="_blank" rel="noopener" aria-label="Facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a class="contact-social__btn" href="https://www.youtube.com/@AlAlaPathfinders" target="_blank" rel="noopener" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+
+          <div class="contact-note">
+            <i class="fa-solid fa-clock"></i>
+            <span>We usually reply within 24–48 hours.</span>
+          </div>
+        </aside>
+
+        <!-- Right: Form -->
+        <section class="contact-card contact-card--form" aria-label="Send a message">
+          <h2 class="contact-card__title">Send a Message</h2>
+          <p class="contact-card__desc">
+            Fill in the form below. Your message will open in your email app (or you can use the email button).
+          </p>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="field">
+              <label class="field__label" for="name">Full Name</label>
+              <input class="field__input" id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+              <div class="field__error" id="errName" aria-live="polite"></div>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="email">Email</label>
+              <input class="field__input" id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+              <div class="field__error" id="errEmail" aria-live="polite"></div>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="subject">Subject</label>
+              <input class="field__input" id="subject" name="subject" type="text" placeholder="What is this about?" required />
+              <div class="field__error" id="errSubject" aria-live="polite"></div>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="message">Message</label>
+              <textarea class="field__textarea" id="message" name="message" rows="6" placeholder="Write your message..." required></textarea>
+              <div class="field__error" id="errMessage" aria-live="polite"></div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn--primary" type="submit">
+                <i class="fa-solid fa-paper-plane"></i>
+                Send
+              </button>
+
+              <a class="btn btn--ghost" href="mailto:alalapathfinders@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                Email Directly
+              </a>
+            </div>
+
+            <div class="form-success" id="formSuccess" role="status" aria-live="polite"></div>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <!-- Optional Map (safe placeholder) -->
+    <section class="contact-map section" aria-label="Map section">
+      <div class="container">
+        <div class="map-card">
+          <div class="map-card__head">
+            <h2 class="map-card__title">Visit Us</h2>
+            <p class="map-card__sub">Al-Ala International Islamic School</p>
+          </div>
+
+          <!-- Replace src with your real Google Maps embed later -->
+          <div class="map-frame" aria-label="Map placeholder">
+            <div class="map-placeholder">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <div>
+                <div class="map-placeholder__title">Map Embed Coming Soon</div>
+                <div class="map-placeholder__text">You can add a Google Maps iframe here later.</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="assets/js/global.js" defer></script>
+  <script src="assets/js/scriptcontact.js" defer></script>
+</body>
+</html>

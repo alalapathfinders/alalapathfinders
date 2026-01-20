@@ -69,7 +69,7 @@
     window.location.href = mailto;
 
     if (successEl) {
-      successEl.textContent = "Opening your email app… If it didn’t open, please use the Email Directly button.";
+      successEl.textContent = "Opening your email app…";
     }
 
     // Optional reset

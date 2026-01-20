@@ -24,7 +24,7 @@ const course = {
   // Syllabus
   syllabusItems: [
     { name: "Legends of Islam", img: "assets/images/legends.png" },
-    { name: "Names of Allah SWT", img: "assets/images/names.png" },
+    { name: "Names of Allah SWT", img: "assets/images/names.jpg" },
   ],
 
   // Resource icons

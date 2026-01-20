@@ -48,7 +48,7 @@
     tags: ["13-15", "16-18"],
     desc: "Reflect, reconnect, and strengthen your values while navigating challenges of social media, mental health, and life’s choices.",
     img: "assets/images/RLN.png",
-    portal: "https://example.com/realign"
+    portal: "https://alalapathfinders.github.io/alalapathfinders/realign.html"
   },
 ];
 

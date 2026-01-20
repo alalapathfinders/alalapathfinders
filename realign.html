@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+    BASIC META
+  ========================================================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A youth-driven platform rooted in Islamic values, dedicated to leadership, growth, and guiding others on the Straight Path."/>
+  <!-- =========================================================
+    FAVICON
+    NOTE: Local C:\ paths won't work when hosted online.
+    Use something like: href="assets/icon.png"
+  ========================================================== -->
+  <link rel="icon" type="image/png" href="assets/images/icon.png" />
+  <!-- =========================================================
+    ICONS + FONTS
+  ========================================================== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"/>
+  <!-- =========================================================
+    TITLE + CSS + JS
+  ========================================================== -->
+  <title>Al-Ala Pathfinders | Realign: Real Faith, Real Struggles</title>
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/portal.css" />
+</head>
+
+<body class="preload">
+  <div id="siteHeader"></div>
+  <main class="proactiveme-page">
+    <!-- ================= HERO (Banner Image + Title) ================= -->
+    <section class="portal-hero" id="portalHero">
+      <img class="portal-hero__img" id="courseHeroImg" src="assets/images/RRRBanner.png" alt="Course banner" />
+      <div class="portal-hero__overlay">
+        <h1 class="portal-hero__title" id="courseTitle">Realign<br>Real Faith, Real Struggles</h1>
+      </div>
+    </section>
+    
+    <!-- ================= COURSE INFO ================= -->
+    <section class="portal-info">
+      <div class="portal-info__container">
+        <h2 class="portal-info__heading">What You'll Discover!</h2>
+        <div class="portal-info__grid">
+          <!-- Description -->
+           <div class="info-card info-card--wide">
+            <div class="desc-row">
+              <div class="desc-text">
+                <h3 class="desc-heading">Learning Outcomes</h3>
+                <ul class="desc-list" id="courseDesc">
+                  <li>Loading...</li>
+                </ul>
+              </div>
+              <div class="desc-media">
+                <img class="info-card__img" src="assets/images/RRRdesc.png" alt="Course image">
+              </div>
+            </div>
+          </div>
+          <!-- Stars / Teachers -->
+          <div class="info-card">
+            <h3 class="info-card__title">Taught By</h3>
+            <div class="stars" id="courseStars"></div>
+          </div>
+          
+          <!-- Syllabus -->
+          <!-- Syllabus (same layout as Taught By) -->
+          <div class="info-card">
+            <h3 class="info-card__title">Syllabus</h3>
+            <div class="stars" id="courseSyllabus"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ================= DAYS ACCORDION ================= -->
+    <section class="portal-days">
+      <div class="portal-days__container">
+        <h2 class="portal-days__heading">Course Days</h2>
+        <p class="portal-days__sub">Click a day to expand resources (Workbook, PDFs, Recording, Quiz).</p>
+        <div class="days" id="daysList"></div>
+      </div>
+    </section>
+  </main>
+  
+  <div id="siteFooter"></div>
+  <script src="assets/js/global.js" defer></script>
+  <script src="assets/js/scriptproactiveme.js" defer></script>
+
+</body>
+</html>

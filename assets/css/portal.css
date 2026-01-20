@@ -200,7 +200,7 @@
 .star__name{
   margin-top: 8px;
   font-size: clamp(14px, 1.4vw, 16px);
-  font-weight: 700;
+  font-weight: 600;
   color: rgba(0,0,0,.84);
   line-height: 1.2;
   max-width: 140px;

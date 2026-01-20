@@ -14,7 +14,7 @@ window.addEventListener("load", () => {
 
 /* ========= EDIT THIS COURSE OBJECT ========= */
 const course = {
-  title: "Proactive Me",
+  title: "Realign: Real Faith, Real Struggles",
   heroImg: "assets/images/RRRBanner.png", // your top banner image
   description:
   "Encourage self-reflection on identity, purpose, and personal challenges through an Islamic lens.\n\n" +
@@ -44,7 +44,7 @@ const course = {
 
   days: [
     {
-      label: "Day 1 (4 August 2023)",
+      label: "Day 1 (30 July 2025)",
       resources: {
         workbookPdf: "https://drive.google.com/file/d/12yywC51AC-2t4sSmteAn8GQY4dRbETxp/view?usp=sharing",
         starStudentsPdf: "https://drive.google.com/file/d/1M31tFcGIiQVv1sH8a4eS0AGgC4c3WZx4/view?usp=sharing",
@@ -53,7 +53,7 @@ const course = {
       },
     },
     {
-      label: "Day 2 (5 August 2023)",
+      label: "Day 2 (31 July 2025)",
       resources: {
         workbookPdf: "https://drive.google.com/file/d/1jjd2M4KulumsJ_xWyaI9wdZ0qRlKn1z9/view?usp=sharing",
         starStudentsPdf: "https://drive.google.com/file/d/1NMPMooLav8h5el72e78Z3WacWC53I3Li/view?usp=sharing",
@@ -62,7 +62,7 @@ const course = {
       },
     },
     {
-      label: "Day 3 (7 August 2023)",
+      label: "Day 3 (1 August 2025)",
       resources: {
         workbookPdf: "https://drive.google.com/file/d/1bUoPGTSTT_IP9ojh7Q4i-15440AAtPfe/view?usp=sharing",
         starStudentsPdf: "https://drive.google.com/file/d/1sih4BWhdprLqWcPXRGtjZl3GCuVRoS2g/view?usp=sharing",
@@ -71,7 +71,7 @@ const course = {
       },
     },
     {
-      label: "Day 4 (8 August 2023)",
+      label: "Day 4 (2 August 2025)",
       resources: {
         workbookPdf: "https://drive.google.com/file/d/1Ulztrb-SaZpg2q9rDDOP8iz6ZhYS0jhX/view?usp=sharing",
         starStudentsPdf: "#",

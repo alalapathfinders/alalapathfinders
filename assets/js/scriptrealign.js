@@ -1,39 +1,36 @@
-/* Portal page data-driven builder
-   - To make a new portal, copy this file or keep one file and change the "course" object.
-*/
+/* =========================================================
+  PORTAL BUILDER (Reusable)
+  - Works with ANY number of days
+  - Works even if teachers/syllabus are empty
+========================================================= */
 
-window.addEventListener("load", () => {
-  document.body.classList.remove("preload");
-});
-
-// Footer year (if not already handled elsewhere)
-(() => {
-  const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
-})();
+function el(id){ return document.getElementById(id); }
 
 /* ========= EDIT THIS COURSE OBJECT ========= */
 const course = {
   title: "Realign: Real Faith, Real Struggles",
-  heroImg: "assets/images/RRRBanner.png", // your top banner image
+  heroImg: "assets/images/RRRBanner.png",
   description:
-  "Encourage self-reflection on identity, purpose, and personal challenges through an Islamic lens.\n\n" +
-  "Address real-life issues such as social media, mental health, and materialism with faith-based understanding.\n\n" +
-  "Strengthen connection with Allah by realigning values, beliefs, and everyday choices.",
+    "Encourage self-reflection on identity, purpose, and personal challenges through an Islamic lens.\n\n" +
+    "Address real-life issues such as social media, mental health, and materialism with faith-based understanding.\n\n" +
+    "Strengthen connection with Allah by realigning values, beliefs, and everyday choices.",
 
+  // Teachers
   stars: [
-    // use real images later (recommended: 200x200 jpg/png)
     { name: "Dua Azfar", img: "assets/images/dua.png" },
     { name: "Madha Zia", img: "assets/images/madha.png" },
     { name: "Minahil Khan", img: "assets/images/minahil.png" },
   ],
-  syllabusItems: [
-  { name: "Who Am I?", img: "assets/images/whoami.png" },
-  { name: "Social Media, Fame & Validation", img: "assets/images/media.png" },
-  { name: "Mental Health, Depression & Loneliness", img: "assets/images/health.png" },
-  { name: "Money, Greed & Materialism", img: "assets/images/money.png" },
-],
 
+  // Syllabus
+  syllabusItems: [
+    { name: "Who Am I?", img: "assets/images/whoami.png" },
+    { name: "Social Media, Fame & Validation", img: "assets/images/media.png" },
+    { name: "Mental Health, Depression & Loneliness", img: "assets/images/health.png" },
+    { name: "Money, Greed & Materialism", img: "assets/images/money.png" },
+  ],
+
+  // Resource icons
   resourceImages: {
     workbook: "assets/images/book.png",
     star: "assets/images/starstudent.png",
@@ -41,15 +38,15 @@ const course = {
     quiz: "assets/images/quiz.png",
   },
 
-
+  // Days (add/remove freely)
   days: [
     {
       label: "Day 1 (30 July 2025)",
       resources: {
         workbookPdf: "https://drive.google.com/file/d/12yywC51AC-2t4sSmteAn8GQY4dRbETxp/view?usp=sharing",
         starStudentsPdf: "https://drive.google.com/file/d/1M31tFcGIiQVv1sH8a4eS0AGgC4c3WZx4/view?usp=sharing",
-        recordingUrl: "https://youtu.be/JtPEjcjvGWo?si=RMKnWkFthEpG37f-",      // or Google Drive share link
-        quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSffLMld27_ktN8aiyZKc3jo9PZ-2bJsllMv1cxlwCvob0bBxQ/viewform?usp=dialog",             // Google Form
+        recordingUrl: "https://youtu.be/JtPEjcjvGWo?si=RMKnWkFthEpG37f-",
+        quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSffLMld27_ktN8aiyZKc3jo9PZ-2bJsllMv1cxlwCvob0bBxQ/viewform?usp=dialog",
       },
     },
     {
@@ -67,7 +64,7 @@ const course = {
         workbookPdf: "https://drive.google.com/file/d/1bUoPGTSTT_IP9ojh7Q4i-15440AAtPfe/view?usp=sharing",
         starStudentsPdf: "https://drive.google.com/file/d/1sih4BWhdprLqWcPXRGtjZl3GCuVRoS2g/view?usp=sharing",
         recordingUrl: "https://youtu.be/_9TFEii696E?si=cSDAG3lApzvCuA9Q",
-        quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc8AtOXrvpHM2puUtfeZiduu81q-jrXnv4LLIypcUn7Wev73w/viewform?usp=dialog",
+        quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc8AtOXrvpHM2puUtfeZiduu81q-jrXnv4LLIypcUn7Wev73w/view?usp=dialog",
       },
     },
     {
@@ -76,22 +73,30 @@ const course = {
         workbookPdf: "https://drive.google.com/file/d/1Ulztrb-SaZpg2q9rDDOP8iz6ZhYS0jhX/view?usp=sharing",
         starStudentsPdf: "#",
         recordingUrl: "https://youtu.be/fJinIUcrxtU?si=8LZbyn76tYO6lvCc",
-        quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc-fZ21fuGMHsHvHlCpNWUMUNZ2E2pe6cyICTgwwRjdt7u3Pw/viewform?usp=dialog",
+        quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc-fZ21fuGMHsHvHlCpNWUMUNZ2E2pe6cyICTgwwRjdt7u3Pw/view?usp=dialog",
       },
     },
   ],
 };
 /* ========= STOP EDIT ========= */
 
-function el(id){ return document.getElementById(id); }
+function safeLink(v){
+  return (v && v !== "#") ? v : null;
+}
 
-function buildStars(){
-  const wrap = el("courseStars");
+function buildPeople(list, targetId){
+  const wrap = el(targetId);
   if (!wrap) return;
-  wrap.innerHTML = course.stars.map(s => `
+
+  if (!Array.isArray(list) || list.length === 0){
+    wrap.innerHTML = `<div class="portal-empty">Coming soon</div>`;
+    return;
+  }
+
+  wrap.innerHTML = list.map(item => `
     <div class="star">
-      <img class="star__img" src="${s.img}" alt="${s.name}">
-      <div class="star__name">${s.name}</div>
+      <img class="star__img" src="${item.img}" alt="${item.name}">
+      <div class="star__name">${item.name}</div>
     </div>
   `).join("");
 }
@@ -100,84 +105,75 @@ function buildDays(){
   const wrap = el("daysList");
   if (!wrap) return;
 
-  wrap.innerHTML = course.days.map((d, idx) => {
+  const days = Array.isArray(course.days) ? course.days : [];
+
+  if (days.length === 0){
+    wrap.innerHTML = `<div class="portal-empty">Days will be uploaded soon.</div>`;
+    return;
+  }
+
+  wrap.innerHTML = days.map((d, idx) => {
     const r = d.resources || {};
-    const safe = (v) => (v && v !== "#") ? v : null;
-
-    const wb = safe(r.workbookPdf);
-    const ss = safe(r.starStudentsPdf);
-    const rec = safe(r.recordingUrl);
-    const quiz = safe(r.quizUrl);
-
-    // Optional: show workbook PDF preview when available
-    const preview = wb ? `
-      
-      ` : "";
+    const wb = safeLink(r.workbookPdf);
+    const ss = safeLink(r.starStudentsPdf);
+    const rec = safeLink(r.recordingUrl);
+    const quiz = safeLink(r.quizUrl);
 
     return `
       <div class="day" data-index="${idx}">
         <button class="day__btn" type="button" aria-expanded="false">
-          <span>${d.label}</span>
+          <span>${d.label || `Day ${idx + 1}`}</span>
           <span class="day__chev">˅</span>
         </button>
 
-       <div class="day__panel" role="region">
-  <div class="day__resources">
+        <div class="day__panel" role="region">
+          <div class="resgrid">
 
-    <div class="resgrid">
+            <div class="rescard">
+              <img class="rescard__img" src="${course.resourceImages.workbook}" alt="Workbook" />
+              <div class="rescard__title">Journal</div>
+              ${wb
+                ? `<a class="rescard__btn" href="${wb}" target="_blank" rel="noopener">Open</a>`
+                : `<span class="rescard__btn rescard__btn--disabled" aria-disabled="true">Not uploaded</span>`
+              }
+            </div>
 
-      <div class="rescard">
-        <img class="rescard__img" src="${course.resourceImages.workbook}" alt="Workbook" />
-        <div class="rescard__title">Journal</div>
-        ${wb
-          ? `<a class="rescard__btn rescard__btn--primary" href="${wb}" target="_blank" rel="noopener">Open</a>`
-          : `<span class="rescard__btn rescard__btn--disabled" aria-disabled="true">Not uploaded</span>`
-        }
-      </div>
+            <div class="rescard">
+              <img class="rescard__img" src="${course.resourceImages.star}" alt="Star Students" />
+              <div class="rescard__title">Star Students List</div>
+              ${ss
+                ? `<a class="rescard__btn" href="${ss}" target="_blank" rel="noopener">Open</a>`
+                : `<span class="rescard__btn rescard__btn--disabled" aria-disabled="true">Not uploaded</span>`
+              }
+            </div>
 
-      <div class="rescard">
-        <img class="rescard__img" src="${course.resourceImages.star}" alt="Star Students" />
-        <div class="rescard__title">Star Students List</div>
-        ${ss
-          ? `<a class="rescard__btn" href="${ss}" target="_blank" rel="noopener">Open</a>`
-          : `<span class="rescard__btn rescard__btn--disabled" aria-disabled="true">Not uploaded</span>`
-        }
-      </div>
+            <div class="rescard">
+              <img class="rescard__img" src="${course.resourceImages.recording}" alt="Recording" />
+              <div class="rescard__title">Class Recording</div>
+              ${rec
+                ? `<a class="rescard__btn" href="${rec}" target="_blank" rel="noopener">Watch</a>`
+                : `<span class="rescard__btn rescard__btn--disabled" aria-disabled="true">Not uploaded</span>`
+              }
+            </div>
 
-      <div class="rescard">
-        <img class="rescard__img" src="${course.resourceImages.recording}" alt="Recording" />
-        <div class="rescard__title">Class Recording</div>
-        ${rec
-          ? `<a class="rescard__btn" href="${rec}" target="_blank" rel="noopener">Watch</a>`
-          : `<span class="rescard__btn rescard__btn--disabled" aria-disabled="true">Not uploaded</span>`
-        }
-      </div>
+            <div class="rescard">
+              <img class="rescard__img" src="${course.resourceImages.quiz}" alt="Quiz" />
+              <div class="rescard__title">Quiz</div>
+              ${quiz
+                ? `<a class="rescard__btn" href="${quiz}" target="_blank" rel="noopener">Open</a>`
+                : `<span class="rescard__btn rescard__btn--disabled" aria-disabled="true">Not uploaded</span>`
+              }
+            </div>
 
-      <div class="rescard">
-        <img class="rescard__img" src="${course.resourceImages.quiz}" alt="Quiz" />
-        <div class="rescard__title">Quiz</div>
-        ${quiz
-          ? `<a class="rescard__btn rescard__btn--primary" href="${quiz}" target="_blank" rel="noopener">Open</a>`
-          : `<span class="rescard__btn rescard__btn--disabled" aria-disabled="true">Not uploaded</span>`
-        }
-      </div>
-
-    </div>
-
-    ${preview}
-
-  </div>
-</div>
-
+          </div>
+        </div>
       </div>
     `;
   }).join("");
 
-  // Accordion behavior
+  // Accordion
   wrap.querySelectorAll(".day").forEach(dayEl => {
     const btn = dayEl.querySelector(".day__btn");
-    const panel = dayEl.querySelector(".day__panel");
-
     btn.addEventListener("click", () => {
       const open = dayEl.classList.toggle("is-open");
       btn.setAttribute("aria-expanded", open ? "true" : "false");
@@ -186,35 +182,25 @@ function buildDays(){
 }
 
 function initPortal(){
-  if (el("courseTitle")) el("courseTitle").textContent = course.title;
-  if (el("courseHeroImg")) el("courseHeroImg").src = course.heroImg;
+  if (el("courseTitle")) el("courseTitle").textContent = course.title || "";
+  if (el("courseHeroImg")) el("courseHeroImg").src = course.heroImg || "";
+
   const descEl = el("courseDesc");
-if (descEl) {
-  // Split by new lines into bullet points
-  const points = (course.description || "")
-    .split("\n")
-    .map(s => s.trim())
-    .filter(Boolean);
+  if (descEl){
+    const points = (course.description || "")
+      .split("\n")
+      .map(s => s.trim())
+      .filter(Boolean);
 
-  descEl.innerHTML = points.map(p => `<li>${p}</li>`).join("");
-}
+    descEl.innerHTML = points.map(p => `<li>${p}</li>`).join("");
+  }
 
-  buildPills();
-buildStars();
-buildSyllabus();
-buildDays();
+  // Teachers + Syllabus
+  buildPeople(course.stars, "courseStars");
+  buildPeople(course.syllabusItems, "courseSyllabus");
 
+  // Days
+  buildDays();
 }
 
 document.addEventListener("DOMContentLoaded", initPortal);
-function buildSyllabus(){
-  const wrap = el("courseSyllabus");
-  if (!wrap) return;
-
-  wrap.innerHTML = course.syllabusItems.map(item => `
-    <div class="star">
-      <img class="star__img" src="${item.img}" alt="${item.name}">
-      <div class="star__name">${item.name}</div>
-    </div>
-  `).join("");
-}

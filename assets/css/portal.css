@@ -124,7 +124,16 @@
   display: block;
 }
 
-.desc-media .info-card__img{ height: 220px; }
+/* Bigger description image (all portals) */
+.desc-media .info-card__img{
+  height: clamp(260px, 32vw, 420px);
+  object-fit: contain;
+}
+
+.desc-media{
+  display:flex;
+  justify-content:center;
+}
 
 .desc-heading{
   margin: 0 0 10px;

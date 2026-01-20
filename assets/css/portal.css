@@ -261,7 +261,8 @@
 }
 
 .day[data-index="1"],
-.day[data-index="3"]{
+.day[data-index="3"],
+.day[data-index="5"]{
   background: #FFC08A;
   border-color: #fff;
   border-width: thick;

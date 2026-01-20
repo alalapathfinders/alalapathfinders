@@ -16,8 +16,7 @@
 }
 
 /* Page wrapper (both pages use <main class="...-page">) */
-.proactiveme-page,
-.littlequest-page{
+.portal-page{
   background: var(--bg);
   color: var(--text);
 }

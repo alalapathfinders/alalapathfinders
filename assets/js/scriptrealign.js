@@ -85,16 +85,6 @@ const course = {
 
 function el(id){ return document.getElementById(id); }
 
-function buildPills(){
-  const wrap = el("coursePills");
-  if (!wrap) return;
-  wrap.innerHTML = course.pills.map(p => `
-    <span class="portal-pill">
-      <i class="fa-solid ${p.icon}"></i> ${p.text}
-    </span>
-  `).join("");
-}
-
 function buildStars(){
   const wrap = el("courseStars");
   if (!wrap) return;

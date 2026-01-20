@@ -21,10 +21,10 @@
     tags: ["13-15", "16-18"],
     desc: "Illuminate your faith and character by understanding the qualities of ideal Muslims and gaining wisdom from inspiring Islamic stories.",
     img: "assets/images/TEH.png",
-    portal: "https://example.com/enlightened-heart"
+    portal: "https://alalapathfinders.github.io/alalapathfinders/theenlightenedheart.html"
   },
   {
-    title: "The Little Seekers",
+    title: "Little Seekers",
     days: 6,
     age: "6-10",
     tags: ["4-6", "7-9", "10-12"],

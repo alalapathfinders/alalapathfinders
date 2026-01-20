@@ -30,7 +30,7 @@
     tags: ["4-6", "7-9", "10-12"],
     desc: "Grow closer to Allah while learning His names, exploring Islamic heroes, and enjoying engaging, hands-on faith adventures.",
     img: "assets/images/LSK.png",
-    portal: "https://example.com/little-seekers"
+    portal: "https://alalapathfinders.github.io/alalapathfinders/littleseekers.html"
   },
   {
     title: "The Little Quest",

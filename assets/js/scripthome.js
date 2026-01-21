@@ -26,7 +26,7 @@
 
   const animate = (el) => {
     const target = parseInt(el.dataset.count || "0", 10);
-    const duration = 900;
+    const duration = 3000;
     const start = performance.now();
 
     function frame(now) {

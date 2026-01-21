@@ -282,6 +282,61 @@
   text-align:center;
 }
 
+/* =========================================================
+   FORCE ALL CARDS SAME WIDTH + HEIGHT
+   (Put this at the END of styleteam.css)
+========================================================= */
+
+/* Choose your universal size */
+:root{
+  --team-card-w: 460px;
+  --team-card-h: 520px;
+}
+
+/* Applies to ALL .card (mentor, featured, lead, core, secretariat) */
+.card{
+  width: min(var(--team-card-w), 100%) !important;
+  min-height: var(--team-card-h) !important;
+  height: var(--team-card-h) !important;
+
+  /* keep content nicely aligned */
+  align-content: start;
+  justify-items: center;
+  text-align: center;
+}
+
+/* Make the “big” cards NOT bigger anymore */
+.card--mentor,
+.card--featured{
+  width: min(var(--team-card-w), 100%) !important;
+}
+
+/* Prevent long text from breaking height */
+.card-quote{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;      /* adjust lines */
+  -webkit-box-orient: vertical;
+}
+
+/* Optional: keep tags/role area consistent */
+.card-role{ min-height: 22px; }
+
+/* Member cards same width + height */
+:root{
+  --member-card-w: 190px;
+  --member-card-h: 260px;
+}
+
+.member-card{
+  width: min(var(--member-card-w), 100%) !important;
+  height: var(--member-card-h) !important;
+  min-height: var(--member-card-h) !important;
+  align-content: start;
+}
+
+
+
 /* =========================
   RESPONSIVE
 ========================= */

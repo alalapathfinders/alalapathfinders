@@ -241,7 +241,6 @@
   width: min(190px, 100%);
   border-radius: 22px;
   border: 1px solid rgba(15,23,42,.10);
-  background: rgba(251,191,36,.07);
   box-shadow: var(--shadow2);
   padding: 16px 14px;
   display:grid;
@@ -266,15 +265,14 @@
 }
 .member-name{
   margin:0;
-  font-weight: 900;
-  letter-spacing: -0.2px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: clamp(18px, 2.2vw, 28px);
+  letter-spacing: -0.6px;
+  line-height: 1.12;
 }
 .member-role{
   margin-top: 2px;
   color: rgba(15,23,42,.70);
-  font-weight: 700;
-  font-size: 13px;
 }
 
 /* Empty placeholder */
@@ -332,8 +330,8 @@
 
 /* Member cards same width + height */
 :root{
-  --member-card-w: 190px;
-  --member-card-h: 260px;
+  --member-card-w: 460px;
+  --member-card-h: 480px;
 }
 
 .member-card{

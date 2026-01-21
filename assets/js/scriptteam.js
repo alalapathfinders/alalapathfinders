@@ -12,14 +12,30 @@
   const membersByDept = {
     ops: [
       { name: "XYZ", role: "Operations Team Member", pos: "Grade X Student", img: "assets/images/team/members/ops-1.png" },
+      { name: "XYZ", role: "Operations Team Member", pos: "Grade X Student", img: "assets/images/team/members/ops-1.png" },
+      { name: "XYZ", role: "Operations Team Member", pos: "Grade X Student", img: "assets/images/team/members/ops-1.png" },
+      { name: "XYZ", role: "Operations Team Member", pos: "Grade X Student", img: "assets/images/team/members/ops-1.png" },
+      { name: "XYZ", role: "Operations Team Member", pos: "Grade X Student", img: "assets/images/team/members/ops-1.png" },
     ],
     pub: [
+      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/pub-1.png" },
+      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/pub-1.png" },
+      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/pub-1.png" },
+      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/pub-1.png" },
       { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/pub-1.png" },
     ],
     gfx: [
       { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/gfx-1.png" },
+      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/gfx-1.png" },
+      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/gfx-1.png" },
+      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/gfx-1.png" },
+      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/gfx-1.png" },
     ],
     media: [
+      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/media-1.png" },
+      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/media-1.png" },
+      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/media-1.png" },
+      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/media-1.png" },
       { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/media-1.png" },
     ],
   };

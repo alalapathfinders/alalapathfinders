@@ -11,16 +11,16 @@
   // EDIT THIS DATA anytime (add/remove members freely)
   const membersByDept = {
     ops: [
-      // { name: "Name", role: "Team Member", img: "assets/images/team/members/ops-1.png" },
+      { name: "XYZ", role: "Operations Team Member", pos: "Grade X Student", img: "assets/images/team/members/ops-1.png" },
     ],
     pub: [
-      // { name: "Name", role: "Team Member", img: "assets/images/team/members/pub-1.png" },
+      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/pub-1.png" },
     ],
     gfx: [
-      // { name: "Name", role: "Team Member", img: "assets/images/team/members/gfx-1.png" },
+      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/gfx-1.png" },
     ],
     media: [
-      // { name: "Name", role: "Team Member", img: "assets/images/team/members/media-1.png" },
+      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/media-1.png" },
     ],
   };
 
@@ -28,6 +28,7 @@ function memberCard(m) {
   const img = m.img || "assets/images/team/placeholder.png";
   const role = m.role || "Team Member";
   const name = m.name || "Name";
+  const pos = m.pos || "Position"
 
   return `
     <article class="member-card">
@@ -37,6 +38,7 @@ function memberCard(m) {
       <div>
         <h5 class="member-name">${name}</h5>
         <div class="member-role">${role}</div>
+        <div class="member-role">${pos}</div>
       </div>
     </article>
   `;

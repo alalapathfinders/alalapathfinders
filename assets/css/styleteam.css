@@ -298,7 +298,7 @@
 /* Choose your universal size */
 :root{
   --team-card-w: 460px;
-  --team-card-h: 520px;
+  --team-card-h: 480px;
 }
 
 /* Applies to ALL .card (mentor, featured, lead, core, secretariat) */

@@ -24,23 +24,23 @@
     ],
   };
 
-  function memberCard(m) {
-    const img = m.img || "assets/images/team/placeholder.png";
-    const role = m.role || "Team Member";
-    const name = m.name || "Name";
+function memberCard(m) {
+  const img = m.img || "assets/images/team/placeholder.png";
+  const role = m.role || "Team Member";
+  const name = m.name || "Name";
 
-    return `
-      <article class="member-card">
-        <div class="member-avatar">
-          <img src="${img}" alt="${name}" />
-        </div>
-        <div>
-          <h5 class="member-name">${name}</h5>
-          <div class="member-role">${role}</div>
-        </div>
-      </article>
-    `;
-  }
+  return `
+    <article class="member-card">
+      <div class="member-avatar">
+        <img src="${img}" alt="${name}" />
+      </div>
+      <div>
+        <h5 class="member-name">${name}</h5>
+        <div class="member-role">${role}</div>
+      </div>
+    </article>
+  `;
+}
 
   memberGrids.forEach((grid) => {
     const key = grid.getAttribute("data-members");
@@ -60,20 +60,4 @@
     grid.innerHTML = arr.map(memberCard).join("");
   });
 
-  // Add tiny style for empty note (once)
-  if (!document.getElementById("team-empty-style")) {
-    const s = document.createElement("style");
-    s.id = "team-empty-style";
-    s.textContent = `
-      .empty-note{
-        border: 1px dashed rgba(15,23,42,.18);
-        background: rgba(2,6,23,.02);
-        border-radius: 18px;
-        padding: 14px;
-        color: rgba(15,23,42,.65);
-        font-weight: 700;
-      }
-    `;
-    document.head.appendChild(s);
-  }
 })();

@@ -1,19 +1,14 @@
 /* ======================================================================
-  STYLETEAM.CSS — Our Team page only
-  - Uses global.css tokens + container + gradient-title
+  STYLETEAM.CSS — Our Team page only (Centered + fixed card widths)
 ====================================================================== */
 
-.team-page{
-  background: var(--bg);
-  color: var(--text);
-}
+.team-page{ background: var(--bg); color: var(--text); }
 
 /* HERO */
 .team-hero{
   text-align: center;
   padding: clamp(26px, 4vw, 40px) 0 clamp(14px, 3vw, 22px);
 }
-
 .team-sub{
   margin: 16px auto 0;
   max-width: 72ch;
@@ -22,14 +17,15 @@
   font-weight: 600;
 }
 
-/* Section heading */
-.team-section{ padding-top: clamp(18px, 3vw, 28px); }
+/* headings */
+.team-section{ padding-top: clamp(16px, 3vw, 26px); }
 
 .section-head{
   display: grid;
   gap: 8px;
   margin-bottom: 18px;
 }
+.section-head.center{ text-align:center; justify-items:center; }
 
 .section-title{
   margin: 0;
@@ -38,7 +34,6 @@
   line-height: 1.08;
   color: #111827;
 }
-
 .section-desc{
   margin: 0;
   color: rgba(15,23,42,.70);
@@ -46,13 +41,17 @@
   max-width: 80ch;
 }
 
+/* subhead */
 .subhead{
-  margin: 18px 0 10px;
+  margin: 18px 0 12px;
+  text-align: center;
   font-size: clamp(18px, 2.2vw, 26px);
   letter-spacing: -0.4px;
 }
 
-/* Card base */
+/* =========================
+  CARD SYSTEM (fixed widths, centered)
+========================= */
 .card{
   background: #fff;
   border: 1px solid rgba(15,23,42,.10);
@@ -61,27 +60,13 @@
   padding: clamp(18px, 2.8vw, 26px);
   display: grid;
   gap: 14px;
+  width: min(560px, 100%); /* IMPORTANT: not full screen */
+  margin-inline: auto;     /* center */
 }
 
-.card--mentor{
-  grid-template-columns: 180px 1fr;
-  align-items: center;
-}
+.center-card{ text-align:center; justify-items:center; }
 
-.card--featured{
-  border-width: 2px;
-  border-color: rgba(249,115,22,.20);
-  background:
-    radial-gradient(700px 260px at 15% 20%, rgba(251,191,36,.18), transparent 60%),
-    radial-gradient(700px 320px at 88% 28%, rgba(249,115,22,.14), transparent 62%),
-    #ffffff;
-}
-
-.card--lead{
-  border-color: rgba(34,197,94,.20);
-}
-
-.card-body{ display: grid; gap: 6px; }
+.card-body{ display:grid; gap: 6px; }
 
 .card-name{
   margin: 0;
@@ -89,13 +74,11 @@
   letter-spacing: -0.6px;
   line-height: 1.12;
 }
-
 .card-role{
   color: rgba(15,23,42,.72);
   font-weight: 800;
   letter-spacing: -0.2px;
 }
-
 .card-tag{
   display: inline-flex;
   width: fit-content;
@@ -110,7 +93,6 @@
   border: 1px solid rgba(34,197,94,.24);
   margin-top: 6px;
 }
-
 .card-quote{
   margin-top: 8px;
   color: rgba(15,23,42,.70);
@@ -118,47 +100,87 @@
   line-height: 1.8;
 }
 
-/* Avatar */
+/* Mentor & featured */
+.card--mentor{
+  width: min(860px, 100%);
+  grid-template-columns: 1fr;
+  text-align:center;
+  justify-items:center;
+}
+.card--featured{
+  border-width: 2px;
+  border-color: rgba(249,115,22,.20);
+  background:
+    radial-gradient(700px 260px at 15% 20%, rgba(251,191,36,.18), transparent 60%),
+    radial-gradient(700px 320px at 88% 28%, rgba(249,115,22,.14), transparent 62%),
+    #ffffff;
+}
+.card--lead{
+  border-color: rgba(34,197,94,.20);
+}
+
+/* =========================
+  BIG UNIFORM AVATARS (same size everywhere)
+========================= */
 .avatar{
-  width: 96px;
-  height: 96px;
+  width: 150px;
+  height: 150px;
   border-radius: 999px;
   overflow: hidden;
   border: 2px solid rgba(15,23,42,.10);
   background: rgba(251,191,36,.10);
   box-shadow: var(--shadow2);
 }
-
-.avatar--lg{ width: 120px; height: 120px; }
-.avatar--xl{ width: 160px; height: 160px; }
-
+.avatar--big{ width: 170px; height: 170px; } /* for leads if you want slightly bigger */
 .avatar img{
-  width: 100%;
-  height: 100%;
+  width:100%;
+  height:100%;
   object-fit: cover;
-  display: block;
+  display:block;
 }
 
-/* Grids */
+/* =========================
+  GRIDS (centered, fixed card widths)
+========================= */
 .grid{
   display: grid;
   gap: 16px;
+  justify-items: center; /* center every card */
 }
 
 .grid--leads{
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 980px;
+  margin: 0 auto;
 }
-
-/* Make Dua (first card) full width on desktop per layout note */
+.grid--leads > .card{
+  width: min(460px, 100%);
+  text-align:center;
+  justify-items:center;
+}
 .grid--leads > .card:nth-child(1){
   grid-column: 1 / -1;
+  width: min(560px, 100%);
 }
 
+/* Secretariat: 2 cards centered, not full width */
 .grid--secretariat{
-  grid-template-columns: 1.2fr 0.8fr;
-  align-items: start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 980px;
+  margin: 0 auto;
+}
+.grid--secretariat > .card{
+  width: min(460px, 100%);
+  text-align:center;
+  justify-items:center;
+}
+.grid--secretariat > .card.card--featured{
+  width: min(520px, 100%);
 }
 
+/* =========================
+  DEPARTMENTS (lead row then members row below)
+========================= */
 .dept{
   margin-top: 18px;
   padding: clamp(18px, 2.8vw, 24px);
@@ -167,89 +189,79 @@
   background: rgba(2,6,23,.02);
 }
 
-.dept + .dept{ margin-top: 18px; }
-
 .dept-head{
-  display: grid;
+  display:grid;
   gap: 6px;
   margin-bottom: 14px;
 }
+.dept-head.center{ text-align:center; justify-items:center; }
 
 .dept-title{
-  margin: 0;
+  margin:0;
   font-size: clamp(20px, 2.6vw, 34px);
   letter-spacing: -0.6px;
 }
-
 .dept-desc{
-  margin: 0;
+  margin:0;
   color: rgba(15,23,42,.70);
   font-weight: 600;
   max-width: 85ch;
 }
 
-.dept-grid{
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 16px;
-  align-items: start;
+/* Lead row centered */
+.dept-row--lead{
+  display:grid;
+  justify-items:center;
+  margin-top: 10px;
 }
 
-/* Members */
-.members{
-  background: #fff;
-  border: 1px solid rgba(15,23,42,.10);
-  box-shadow: var(--shadow2);
-  border-radius: 26px;
-  padding: clamp(16px, 2.6vw, 22px);
-}
-
-.members-title{
-  margin: 0 0 10px;
-  font-size: clamp(16px, 2vw, 22px);
-  letter-spacing: -0.3px;
+/* Members row: centered grid below */
+.dept-row--members{
+  margin-top: 16px;
 }
 
 .members-grid{
-  display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  display:grid;
+  gap: 14px;
+  grid-template-columns: repeat(5, minmax(0, 1fr)); /* up to 5 */
+  max-width: 980px;
+  margin: 0 auto;
+  justify-items: center;
 }
 
 .member-card{
-  border-radius: 20px;
+  width: min(190px, 100%);
+  border-radius: 22px;
   border: 1px solid rgba(15,23,42,.10);
   background: rgba(251,191,36,.07);
-  padding: 14px;
-  display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: 12px;
-  align-items: center;
+  box-shadow: var(--shadow2);
+  padding: 16px 14px;
+  display:grid;
+  gap: 10px;
+  justify-items:center;
+  text-align:center;
 }
 
 .member-avatar{
-  width: 56px;
-  height: 56px;
+  width: 120px;
+  height: 120px;
   border-radius: 999px;
-  overflow: hidden;
+  overflow:hidden;
   border: 2px solid rgba(15,23,42,.10);
   background: #fff;
 }
-
 .member-avatar img{
-  width: 100%;
-  height: 100%;
+  width:100%;
+  height:100%;
   object-fit: cover;
-  display: block;
+  display:block;
 }
-
 .member-name{
-  margin: 0;
+  margin:0;
   font-weight: 900;
   letter-spacing: -0.2px;
   line-height: 1.2;
 }
-
 .member-role{
   margin-top: 2px;
   color: rgba(15,23,42,.70);
@@ -257,29 +269,36 @@
   font-size: 13px;
 }
 
-/* Responsive */
+/* Empty placeholder */
+.empty-note{
+  border: 1px dashed rgba(15,23,42,.18);
+  background: rgba(2,6,23,.02);
+  border-radius: 18px;
+  padding: 14px;
+  color: rgba(15,23,42,.65);
+  font-weight: 700;
+  max-width: 980px;
+  margin: 0 auto;
+  text-align:center;
+}
+
+/* =========================
+  RESPONSIVE
+========================= */
 @media (max-width: 980px){
-  .card--mentor{
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-  }
-  .card--mentor .card-tag{ margin-left: auto; margin-right: auto; }
-  .grid--secretariat{ grid-template-columns: 1fr; }
-  .dept-grid{ grid-template-columns: 1fr; }
-}
-
-@media (max-width: 720px){
-  .grid--leads{ grid-template-columns: 1fr; }
+  .grid--leads, .grid--secretariat{ grid-template-columns: 1fr; }
   .grid--leads > .card:nth-child(1){ grid-column: auto; }
+  .members-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
-@media (max-width: 520px){
-  .members{ padding: 16px; }
-  .member-card{
-    grid-template-columns: 52px 1fr;
-    padding: 12px;
-    border-radius: 18px;
-  }
-  .member-avatar{ width: 52px; height: 52px; }
+@media (max-width: 640px){
+  .members-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .avatar{ width: 140px; height: 140px; }
+  .avatar--big{ width: 150px; height: 150px; }
+  .member-avatar{ width: 110px; height: 110px; }
+}
+
+@media (max-width: 420px){
+  .members-grid{ grid-template-columns: 1fr; }
+  .member-card{ width: min(320px, 100%); }
 }

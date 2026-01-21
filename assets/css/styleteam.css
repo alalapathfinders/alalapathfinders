@@ -1,8 +1,23 @@
 /* ======================================================================
-  STYLETEAM.CSS — Our Team page only (Centered + fixed card widths)
+  STYLETEAM.CSS — Our Team page only
+  GOALS (your requirements):
+  - Everything centered
+  - Big same-size circular images
+  - Cards NOT full screen width (fixed max widths)
+  - Department lead on top, members below (side-by-side grid)
+  - Easy to expand later
 ====================================================================== */
 
-.team-page{ background: var(--bg); color: var(--text); }
+.team-page{
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ---------- PAGE WIDTH CONTROL (important) ---------- */
+.team-wrap{
+  width: min(1100px, calc(100% - 40px)); /* not full screen */
+  margin: 0 auto;
+}
 
 /* HERO */
 .team-hero{
@@ -11,22 +26,23 @@
 }
 .team-sub{
   margin: 16px auto 0;
-  max-width: 72ch;
+  max-width: 70ch;
   color: rgba(15,23,42,.70);
   font-size: clamp(16px, 1.9vw, 20px);
   font-weight: 600;
 }
 
-/* headings */
-.team-section{ padding-top: clamp(16px, 3vw, 26px); }
-
+/* Section heading */
+.team-section{
+  padding-top: clamp(16px, 3vw, 26px);
+}
 .section-head{
   display: grid;
   gap: 8px;
   margin-bottom: 18px;
+  text-align: center;
+  justify-items: center;
 }
-.section-head.center{ text-align:center; justify-items:center; }
-
 .section-title{
   margin: 0;
   font-size: clamp(26px, 3.5vw, 44px);
@@ -38,10 +54,9 @@
   margin: 0;
   color: rgba(15,23,42,.70);
   font-weight: 600;
-  max-width: 80ch;
+  max-width: 85ch;
 }
 
-/* subhead */
 .subhead{
   margin: 18px 0 12px;
   text-align: center;
@@ -50,7 +65,26 @@
 }
 
 /* =========================
-  CARD SYSTEM (fixed widths, centered)
+  BIG UNIFORM AVATARS (same everywhere)
+========================= */
+.avatar{
+  width: 170px;
+  height: 170px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 2px solid rgba(15,23,42,.10);
+  background: rgba(251,191,36,.10);
+  box-shadow: var(--shadow2);
+}
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+}
+
+/* =========================
+  CARD SYSTEM (fixed widths + centered)
 ========================= */
 .card{
   background: #fff;
@@ -58,13 +92,15 @@
   box-shadow: var(--shadow2);
   border-radius: 26px;
   padding: clamp(18px, 2.8vw, 26px);
+
   display: grid;
   gap: 14px;
-  width: min(560px, 100%); /* IMPORTANT: not full screen */
-  margin-inline: auto;     /* center */
-}
 
-.center-card{ text-align:center; justify-items:center; }
+  width: min(560px, 100%);   /* not full screen */
+  margin: 0 auto;            /* centered */
+  text-align: center;
+  justify-items: center;
+}
 
 .card-body{ display:grid; gap: 6px; }
 
@@ -100,13 +136,12 @@
   line-height: 1.8;
 }
 
-/* Mentor & featured */
+/* Mentor slightly wider but still centered */
 .card--mentor{
   width: min(860px, 100%);
-  grid-template-columns: 1fr;
-  text-align:center;
-  justify-items:center;
 }
+
+/* Featured style */
 .card--featured{
   border-width: 2px;
   border-color: rgba(249,115,22,.20);
@@ -115,71 +150,43 @@
     radial-gradient(700px 320px at 88% 28%, rgba(249,115,22,.14), transparent 62%),
     #ffffff;
 }
+
+/* Department lead border */
 .card--lead{
-  border-color: rgba(34,197,94,.20);
+  border-color: rgba(34,197,94,.22);
 }
 
 /* =========================
-  BIG UNIFORM AVATARS (same size everywhere)
-========================= */
-.avatar{
-  width: 150px;
-  height: 150px;
-  border-radius: 999px;
-  overflow: hidden;
-  border: 2px solid rgba(15,23,42,.10);
-  background: rgba(251,191,36,.10);
-  box-shadow: var(--shadow2);
-}
-.avatar--big{ width: 170px; height: 170px; } /* for leads if you want slightly bigger */
-.avatar img{
-  width:100%;
-  height:100%;
-  object-fit: cover;
-  display:block;
-}
-
-/* =========================
-  GRIDS (centered, fixed card widths)
+  GRIDS (centered + fixed card widths)
 ========================= */
 .grid{
   display: grid;
-  gap: 16px;
-  justify-items: center; /* center every card */
-}
-
-.grid--leads{
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  max-width: 980px;
+  gap: 18px;
+  justify-items: center;
   margin: 0 auto;
 }
-.grid--leads > .card{
-  width: min(460px, 100%);
-  text-align:center;
-  justify-items:center;
+
+/* Team Leads: Dua top, 2 below (as you want) */
+.grid--leads{
+  width: min(980px, 100%);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+.grid--leads > .card{ width: min(460px, 100%); }
 .grid--leads > .card:nth-child(1){
   grid-column: 1 / -1;
   width: min(560px, 100%);
 }
 
-/* Secretariat: 2 cards centered, not full width */
+/* Secretariat: 2 side-by-side, centered */
 .grid--secretariat{
+  width: min(980px, 100%);
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  max-width: 980px;
-  margin: 0 auto;
 }
-.grid--secretariat > .card{
-  width: min(460px, 100%);
-  text-align:center;
-  justify-items:center;
-}
-.grid--secretariat > .card.card--featured{
-  width: min(520px, 100%);
-}
+.grid--secretariat > .card{ width: min(460px, 100%); }
+.grid--secretariat > .card.card--featured{ width: min(520px, 100%); }
 
 /* =========================
-  DEPARTMENTS (lead row then members row below)
+  DEPARTMENTS (lead on top, members below)
 ========================= */
 .dept{
   margin-top: 18px;
@@ -193,8 +200,9 @@
   display:grid;
   gap: 6px;
   margin-bottom: 14px;
+  text-align: center;
+  justify-items: center;
 }
-.dept-head.center{ text-align:center; justify-items:center; }
 
 .dept-title{
   margin:0;
@@ -208,27 +216,31 @@
   max-width: 85ch;
 }
 
-/* Lead row centered */
+/* Lead row */
 .dept-row--lead{
   display:grid;
   justify-items:center;
   margin-top: 10px;
 }
 
-/* Members row: centered grid below */
+/* Members row (below) */
 .dept-row--members{
   margin-top: 16px;
 }
 
+/* Members grid: up to 5 in a row on wide screens */
 .members-grid{
-  display:grid;
-  gap: 14px;
-  grid-template-columns: repeat(5, minmax(0, 1fr)); /* up to 5 */
-  max-width: 980px;
+  width: min(980px, 100%);
   margin: 0 auto;
+
+  display: grid;
+  gap: 16px;
   justify-items: center;
+
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
+/* Member cards: fixed width, centered, big circle */
 .member-card{
   width: min(190px, 100%);
   border-radius: 22px;
@@ -236,6 +248,7 @@
   background: rgba(251,191,36,.07);
   box-shadow: var(--shadow2);
   padding: 16px 14px;
+
   display:grid;
   gap: 10px;
   justify-items:center;
@@ -243,8 +256,8 @@
 }
 
 .member-avatar{
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 999px;
   overflow:hidden;
   border: 2px solid rgba(15,23,42,.10);
@@ -256,6 +269,7 @@
   object-fit: cover;
   display:block;
 }
+
 .member-name{
   margin:0;
   font-weight: 900;
@@ -263,7 +277,6 @@
   line-height: 1.2;
 }
 .member-role{
-  margin-top: 2px;
   color: rgba(15,23,42,.70);
   font-weight: 700;
   font-size: 13px;
@@ -271,14 +284,15 @@
 
 /* Empty placeholder */
 .empty-note{
+  width: min(980px, 100%);
+  margin: 0 auto;
+
   border: 1px dashed rgba(15,23,42,.18);
   background: rgba(2,6,23,.02);
   border-radius: 18px;
   padding: 14px;
   color: rgba(15,23,42,.65);
   font-weight: 700;
-  max-width: 980px;
-  margin: 0 auto;
   text-align:center;
 }
 
@@ -286,16 +300,25 @@
   RESPONSIVE
 ========================= */
 @media (max-width: 980px){
-  .grid--leads, .grid--secretariat{ grid-template-columns: 1fr; }
-  .grid--leads > .card:nth-child(1){ grid-column: auto; }
-  .members-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .grid--leads, .grid--secretariat{
+    grid-template-columns: 1fr;
+  }
+  .grid--leads > .card:nth-child(1){
+    grid-column: auto;
+  }
+
+  .members-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px){
-  .members-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .avatar{ width: 140px; height: 140px; }
-  .avatar--big{ width: 150px; height: 150px; }
-  .member-avatar{ width: 110px; height: 110px; }
+  .members-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .avatar{ width: 155px; height: 155px; }
+  .member-avatar{ width: 120px; height: 120px; }
 }
 
 @media (max-width: 420px){

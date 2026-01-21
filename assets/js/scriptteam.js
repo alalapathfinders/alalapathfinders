@@ -24,35 +24,40 @@
     ],
   };
 
-  function memberCard(m) {
-    const img = m.img || "assets/images/team/placeholder.png";
-    const role = m.role || "Team Member";
-    const name = m.name || "Name";
+function memberCard(m) {
+  const img = m.img || "assets/images/team/placeholder.png";
+  const role = m.role || "Team Member";
+  const name = m.name || "Name";
 
-    return `
-      <article class="member-card">
-        <div class="member-avatar">
-          <img src="${img}" alt="${name}" loading="lazy" />
-        </div>
+  return `
+    <article class="member-card">
+      <div class="member-avatar">
+        <img src="${img}" alt="${name}" />
+      </div>
+      <div>
         <h5 class="member-name">${name}</h5>
         <div class="member-role">${role}</div>
-      </article>
-    `;
-  }
+      </div>
+    </article>
+  `;
+}
 
   memberGrids.forEach((grid) => {
     const key = grid.getAttribute("data-members");
     const arr = membersByDept[key] || [];
 
     if (!arr.length) {
+      // Clean placeholder when empty (keeps layout nice)
       grid.innerHTML = `
         <div class="empty-note">
           <em>Member cards will be added here.</em>
         </div>
       `;
+      // tiny inline styles via CSS class already? We'll add minimal rule by injecting once.
       return;
     }
 
     grid.innerHTML = arr.map(memberCard).join("");
   });
+
 })();

@@ -2,7 +2,6 @@
   ourteam.html
   - Uses global header/footer partials
   - Consistent heading style with Courses/Events (gradient-title)
-  - Everything centered + fixed widths (styleteam.css)
 ========================= -->
 <!DOCTYPE html>
 <html lang="en">
@@ -29,37 +28,44 @@
   <main class="team-page" id="main">
     <!-- HERO -->
     <section class="team-hero section">
-      <div class="team-wrap">
+      <div class="container">
         <h1 class="gradient-title">Meet the Pathfinders</h1>
-        <p class="team-sub">The students, mentors, and leaders behind Al-Ala Pathfinders.</p>
+        <p class="team-sub">
+          The students, mentors, and leaders behind Al-Ala Pathfinders.
+        </p>
       </div>
     </section>
 
     <!-- MENTOR -->
     <section class="team-section section" aria-label="Mentor section">
-      <div class="team-wrap">
+      <div class="container">
         <div class="section-head">
           <h2 class="section-title">Guided With Care</h2>
           <p class="section-desc">Our mentor helps us stay focused, respectful, and purposeful in everything we do.</p>
         </div>
 
-        <article class="card card--mentor">
-          <div class="avatar">
+        <div class="card card--mentor">
+          <div class="avatar avatar--xl">
+            <!-- replace src with real image -->
             <img src="assets/images/team/mentor.png" alt="Ma’am Tayyiba Imtiaz" />
           </div>
+
           <div class="card-body">
             <h3 class="card-name">Ma’am Tayyiba Imtiaz</h3>
             <div class="card-role">Managing Director, Al-Ala International Islamic School</div>
             <div class="card-tag">Mentor &amp; Supervisor</div>
-            <p class="card-quote"><em>Short statement: (To be added)</em></p>
+
+            <p class="card-quote">
+              <em>Short statement: (To be added)</em>
+            </p>
           </div>
-        </article>
+        </div>
       </div>
     </section>
 
     <!-- CORE TEAM -->
     <section class="team-section section" aria-label="Core team section">
-      <div class="team-wrap">
+      <div class="container">
         <div class="section-head">
           <h2 class="section-title">Our Core Team</h2>
           <p class="section-desc">Student leaders who plan, guide, and keep the team moving forward.</p>
@@ -67,8 +73,8 @@
 
         <h3 class="subhead">Team Leads</h3>
 
+        <!-- Layout rule: Dua on top row, Minahil + Madha below -->
         <div class="grid grid--leads">
-          <!-- Dua (top) -->
           <article class="card">
             <div class="avatar">
               <img src="assets/images/team/dua.png" alt="Dua Azfar" />
@@ -80,7 +86,6 @@
             </div>
           </article>
 
-          <!-- Minahil (bottom left) -->
           <article class="card">
             <div class="avatar">
               <img src="assets/images/team/minahil.png" alt="Minahil Khan" />
@@ -92,7 +97,6 @@
             </div>
           </article>
 
-          <!-- Madha (bottom right) -->
           <article class="card">
             <div class="avatar">
               <img src="assets/images/team/madha.png" alt="Madha Zia" />
@@ -109,7 +113,7 @@
 
     <!-- SECRETARIAT -->
     <section class="team-section section" aria-label="Board of secretariat section">
-      <div class="team-wrap">
+      <div class="container">
         <div class="section-head">
           <h2 class="section-title">Board of Secretariat</h2>
           <p class="section-desc">A clear leadership layer that represents the team and helps departments stay aligned.</p>
@@ -117,7 +121,7 @@
 
         <div class="grid grid--secretariat">
           <article class="card card--featured">
-            <div class="avatar">
+            <div class="avatar avatar--lg">
               <img src="assets/images/team/secretariat-main.png" alt="Main Head" />
             </div>
             <div class="card-body">
@@ -129,7 +133,7 @@
           </article>
 
           <article class="card">
-            <div class="avatar">
+            <div class="avatar avatar--lg">
               <img src="assets/images/team/secretariat-co.png" alt="Co-Head" />
             </div>
             <div class="card-body">
@@ -144,115 +148,129 @@
     </section>
 
     <!-- DEPARTMENTS -->
-    <section class="team-section section" aria-label="Departments section">
-      <div class="team-wrap">
-        <div class="section-head">
-          <h2 class="section-title">Departments</h2>
-          <p class="section-desc">Each department has a lead and a growing team. Easy to expand anytime.</p>
-        </div>
+    <!-- DEPARTMENTS -->
+<section class="team-section section" aria-label="Departments section">
+  <div class="container">
+    <div class="section-head center">
+      <h2 class="section-title">Departments</h2>
+      <p class="section-desc">
+        Each department has a lead and a growing team. Easy to expand anytime.
+      </p>
+    </div>
 
-        <!-- Operations -->
-        <section class="dept" aria-label="Operations Department">
-          <div class="dept-head">
-            <h3 class="dept-title">Operations Department</h3>
-            <p class="dept-desc">Handles planning, coordination, scheduling, and making sure activities run smoothly.</p>
+    <!-- Operations -->
+    <section class="dept">
+      <div class="dept-head center">
+        <h3 class="dept-title">Operations Department</h3>
+        <p class="dept-desc">
+          Handles planning, coordination, scheduling, and making sure activities run smoothly.
+        </p>
+      </div>
+
+      <!-- Lead row (TOP) -->
+      <div class="dept-row dept-row--lead">
+        <article class="card card--lead center-card">
+          <div class="avatar avatar--big">
+            <img src="assets/images/team/ops-lead.png" alt="Operations Lead" />
           </div>
-
-          <div class="dept-row--lead">
-            <article class="card card--lead">
-              <div class="avatar">
-                <img src="assets/images/team/ops-lead.png" alt="Operations Lead" />
-              </div>
-              <div class="card-body">
-                <h4 class="card-name">Name</h4>
-                <div class="card-role">Department Team Lead</div>
-                <p class="card-quote"><em>Quote to be added</em></p>
-              </div>
-            </article>
+          <div class="card-body">
+            <h4 class="card-name">Name</h4>
+            <div class="card-role">Department Team Lead</div>
+            <p class="card-quote"><em>Quote to be added</em></p>
           </div>
+        </article>
+      </div>
 
-          <div class="dept-row--members">
-            <div class="members-grid" data-members="ops"></div>
-          </div>
-        </section>
-
-        <!-- Publications -->
-        <section class="dept" aria-label="Publications Department">
-          <div class="dept-head">
-            <h3 class="dept-title">Publications Department</h3>
-            <p class="dept-desc">Prepares written content, announcements, captions, and helps shape the team’s message.</p>
-          </div>
-
-          <div class="dept-row--lead">
-            <article class="card card--lead">
-              <div class="avatar">
-                <img src="assets/images/team/pub-lead.png" alt="Publications Lead" />
-              </div>
-              <div class="card-body">
-                <h4 class="card-name">Name</h4>
-                <div class="card-role">Department Team Lead</div>
-                <p class="card-quote"><em>Quote to be added</em></p>
-              </div>
-            </article>
-          </div>
-
-          <div class="dept-row--members">
-            <div class="members-grid" data-members="pub"></div>
-          </div>
-        </section>
-
-        <!-- Graphics -->
-        <section class="dept" aria-label="Graphics Department">
-          <div class="dept-head">
-            <h3 class="dept-title">Graphics Department</h3>
-            <p class="dept-desc">Designs posters, banners, thumbnails, and visual layouts for events and courses.</p>
-          </div>
-
-          <div class="dept-row--lead">
-            <article class="card card--lead">
-              <div class="avatar">
-                <img src="assets/images/team/gfx-lead.png" alt="Graphics Lead" />
-              </div>
-              <div class="card-body">
-                <h4 class="card-name">Name</h4>
-                <div class="card-role">Department Team Lead</div>
-                <p class="card-quote"><em>Quote to be added</em></p>
-              </div>
-            </article>
-          </div>
-
-          <div class="dept-row--members">
-            <div class="members-grid" data-members="gfx"></div>
-          </div>
-        </section>
-
-        <!-- Media -->
-        <section class="dept" aria-label="Media Department">
-          <div class="dept-head">
-            <h3 class="dept-title">Media Department</h3>
-            <p class="dept-desc">Captures photos/videos, manages uploads, and supports recording/editing for content.</p>
-          </div>
-
-          <div class="dept-row--lead">
-            <article class="card card--lead">
-              <div class="avatar">
-                <img src="assets/images/team/media-lead.png" alt="Media Lead" />
-              </div>
-              <div class="card-body">
-                <h4 class="card-name">Name</h4>
-                <div class="card-role">Department Team Lead</div>
-                <p class="card-quote"><em>Quote to be added</em></p>
-              </div>
-            </article>
-          </div>
-
-          <div class="dept-row--members">
-            <div class="members-grid" data-members="media"></div>
-          </div>
-        </section>
-
+      <!-- Members row (BELOW) -->
+      <div class="dept-row dept-row--members">
+        <div class="members-grid" data-members="ops"></div>
       </div>
     </section>
+
+    <!-- Publications -->
+    <section class="dept">
+      <div class="dept-head center">
+        <h3 class="dept-title">Publications Department</h3>
+        <p class="dept-desc">
+          Prepares written content, announcements, captions, and helps shape the team’s message.
+        </p>
+      </div>
+
+      <div class="dept-row dept-row--lead">
+        <article class="card card--lead center-card">
+          <div class="avatar avatar--big">
+            <img src="assets/images/team/pub-lead.png" alt="Publications Lead" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-name">Name</h4>
+            <div class="card-role">Department Team Lead</div>
+            <p class="card-quote"><em>Quote to be added</em></p>
+          </div>
+        </article>
+      </div>
+
+      <div class="dept-row dept-row--members">
+        <div class="members-grid" data-members="pub"></div>
+      </div>
+    </section>
+
+    <!-- Graphics -->
+    <section class="dept">
+      <div class="dept-head center">
+        <h3 class="dept-title">Graphics Department</h3>
+        <p class="dept-desc">
+          Designs posters, banners, thumbnails, and visual layouts for events and courses.
+        </p>
+      </div>
+
+      <div class="dept-row dept-row--lead">
+        <article class="card card--lead center-card">
+          <div class="avatar avatar--big">
+            <img src="assets/images/team/gfx-lead.png" alt="Graphics Lead" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-name">Name</h4>
+            <div class="card-role">Department Team Lead</div>
+            <p class="card-quote"><em>Quote to be added</em></p>
+          </div>
+        </article>
+      </div>
+
+      <div class="dept-row dept-row--members">
+        <div class="members-grid" data-members="gfx"></div>
+      </div>
+    </section>
+
+    <!-- Media -->
+    <section class="dept">
+      <div class="dept-head center">
+        <h3 class="dept-title">Media Department</h3>
+        <p class="dept-desc">
+          Captures photos/videos, manages uploads, and supports recording/editing for content.
+        </p>
+      </div>
+
+      <div class="dept-row dept-row--lead">
+        <article class="card card--lead center-card">
+          <div class="avatar avatar--big">
+            <img src="assets/images/team/media-lead.png" alt="Media Lead" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-name">Name</h4>
+            <div class="card-role">Department Team Lead</div>
+            <p class="card-quote"><em>Quote to be added</em></p>
+          </div>
+        </article>
+      </div>
+
+      <div class="dept-row dept-row--members">
+        <div class="members-grid" data-members="media"></div>
+      </div>
+    </section>
+
+  </div>
+</section>
+
   </main>
 
   <div id="siteFooter"></div>

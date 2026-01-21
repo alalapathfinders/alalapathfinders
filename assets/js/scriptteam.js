@@ -34,9 +34,6 @@
     media: [
       { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/media-1.png" },
       { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/media-1.png" },
-      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/media-1.png" },
-      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/media-1.png" },
-      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/media-1.png" },
     ],
   };
 

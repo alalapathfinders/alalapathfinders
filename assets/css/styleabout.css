@@ -49,6 +49,7 @@
   line-height: 1.75;
   color: rgba(15,23,42,.78);
   text-align: left;           /* ✅ important */
+  font-weight: 600;
 }
 
 .story-highlight{

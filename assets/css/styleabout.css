@@ -9,7 +9,7 @@
   text-align:center;
 }
 .about-hero-sub{
-  margin-top: 16px auto 0;
+  margin: 16px auto 0;
   max-width: 72ch;
   font-size: clamp(16px, 1.9vw, 20px);
   color: rgba(15,23,42,.70);
@@ -24,7 +24,7 @@
   align-items:center;
 }
 
-.story-text .section-title{
+.story-text {
     margin: 0;
     font-size: var(--fs-h2);
     font-weight: 700;
@@ -32,6 +32,15 @@
     color: rgba(15, 23, 42, .92);
     text-align: center;
 }
+
+ .section-title{
+    margin: 0;
+    font-size: var(--fs-h2);
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: rgba(15, 23, 42, .92);
+    text-align: center;
+ }
 
 .story-lines{
   display:grid;
@@ -42,7 +51,7 @@
 
 .story-highlight{
   margin-top: 14px;
-  font-weight: 800;
+  font-weight: 700;
   color: #0f172a;
   border-left: 4px solid var(--orange);
   padding-left: 14px;
@@ -64,15 +73,20 @@
 }
 
 .purpose-text{
+    margin-bottom: 10px;
+    margin-top: 10px;
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 h4{
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.purpose-p{
+    text-align: center;
 }
 
 .values-grid{

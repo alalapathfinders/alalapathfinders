@@ -41,12 +41,14 @@
     text-align: center;
  }
 
+/* Story paragraphs */
 .story-lines{
-  display:grid;
-  gap: 12px;
-  font-weight: 600;
-
+  display: grid;
+  gap: 14px;
+  font-size: clamp(15px, 1.6vw, 17px); /* ✅ readable */
+  line-height: 1.75;
   color: rgba(15,23,42,.78);
+  text-align: left;           /* ✅ important */
 }
 
 .story-highlight{
@@ -56,6 +58,11 @@
   border-left: 4px solid var(--orange);
   padding-left: 14px;
 }
+
+.story-lines p{
+  max-width: 58ch;   /* perfect reading width */
+}
+
 
 /* PURPOSE & VALUES */
 .about-values{

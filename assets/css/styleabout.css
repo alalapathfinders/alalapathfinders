@@ -9,11 +9,11 @@
   text-align:center;
 }
 .about-hero-sub{
-  margin-top: 16px;
-  max-width: 70ch;
-  font-size: clamp(16px, 1.8vw, 20px);
+  margin-top: 16px auto 0;
+  max-width: 72ch;
+  font-size: clamp(16px, 1.9vw, 20px);
   color: rgba(15,23,42,.70);
-  font-weight: 600;
+  text-align: center;
 }
 
 /* STORY */
@@ -24,18 +24,13 @@
   align-items:center;
 }
 
-.story-images{
-  display:grid;
-  gap: 16px;
-}
-.story-images img{
-  border-radius: 22px;
-  box-shadow: var(--shadow2);
-  border: 1px solid rgba(15,23,42,.10);
-}
-
 .story-text .section-title{
-  margin-bottom: 18px;
+    margin: 0;
+    font-size: var(--fs-h2);
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: rgba(15, 23, 42, .92);
+    text-align: center;
 }
 
 .story-lines{
@@ -66,6 +61,18 @@
   padding: 22px;
   box-shadow: var(--shadow2);
   border:1px solid rgba(15,23,42,.10);
+}
+
+.purpose-text{
+    text-align: center;
+    font-weight: 600;
+}
+
+h4{
+    text-align: center;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .values-grid{
@@ -101,26 +108,6 @@
   margin-top: 22px;
 }
 
-/* CTA */
-.about-cta{
-  background: linear-gradient(
-    90deg,
-    rgba(249,115,22,.12),
-    rgba(251,191,36,.14)
-  );
-}
-.cta-title{
-  font-size: clamp(28px, 4vw, 48px);
-  font-weight: 900;
-}
-
-.cta-buttons{
-  margin-top: 18px;
-  display:flex;
-  gap: 14px;
-  justify-content:center;
-  flex-wrap: wrap;
-}
 
 /* RESPONSIVE */
 @media (max-width: 900px){

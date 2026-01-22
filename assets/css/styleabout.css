@@ -26,7 +26,6 @@
 
 .story-text {
     margin: 0;
-    font-size: var(--fs-h2);
     font-weight: 700;
     letter-spacing: -1px;
     color: rgba(15, 23, 42, .92);
@@ -46,6 +45,7 @@
   display:grid;
   gap: 12px;
   font-weight: 600;
+
   color: rgba(15,23,42,.78);
 }
 

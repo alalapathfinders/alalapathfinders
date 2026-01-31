@@ -48,8 +48,8 @@
     // Row 3 (3)
     { name: "Khairun Nisa", role: "Alumni", pos: "Class of 2024", img: "assets/images/team/placeholder.png" },
     { name: "Mahjabeen Sajad", role: "Alumni", pos: "Class of 2022", img: "assets/images/team/placeholder.png" },
-    { name: "Walija Khalid", role: "Alumni", pos: "Class of 2026", img: "assets/images/team/placeholder.png" },
-    
+    { name: "Walija Khalid", role: "Alumni", pos: "Class of 2026", img: "assets/images/team/walija.png" },
+
     // Row 4 (2 centered)
     { name: "Zomaha Shahzad", role: "Alumni", pos: "Class of 2022", img: "assets/images/team/placeholder.png" },
   ];

@@ -1,5 +1,5 @@
 /* ======================================================================
-  STYLETEAM.CSS — Our Team page only (Centered + fixed card widths)
+  STYLETEAM.CSS — Our Team page only
 ====================================================================== */
 
 .team-page{ background: var(--bg); color: var(--text); }
@@ -41,80 +41,60 @@
   text-align: center;
 }
 
-/* subhead */
-.subhead{
-  margin: 18px 0 12px;
-  text-align: center;
-  font-size: clamp(18px, 2.2vw, 26px);
-  letter-spacing: -0.4px;
+/* =========================
+  CARD SYSTEM
+========================= */
+
+:root{
+  --team-card-w: 460px;
+  --team-card-h: 370px;
+
+  --member-card-w: 240px;
+  --member-card-h: 320px;
 }
 
-/* =========================
-  CARD SYSTEM (fixed widths, centered)
-========================= */
 .card{
   background: #fff;
   border: 1px solid rgba(15,23,42,.10);
   box-shadow: var(--shadow2);
   border-radius: 26px;
-  padding: clamp(18px, 2.8vw, 26px);
+  padding: 22px;
   display: grid;
   gap: 14px;
-  width: min(560px, 100%); /* IMPORTANT: not full screen */
-  margin-inline: auto;     /* center */
-}
 
-.center-card{ text-align:center; justify-items:center; }
+  width: min(var(--team-card-w), 100%);
+  height: var(--team-card-h);
+
+  margin-inline: auto;
+  justify-items: center;
+  text-align: center;
+  align-content: start;
+}
 
 .card-body{ display:grid; gap: 6px; }
 
 .card-name{
   margin: 0;
-  font-size: clamp(18px, 2.2vw, 28px);
-  letter-spacing: -0.6px;
-  line-height: 1.12;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  line-height: 1.2;
   font-weight: 700;
 }
+
 .card-role{
   color: rgba(15,23,42,.72);
   letter-spacing: -0.2px;
-}
-.card-tag{
-  display: inline-flex;
-  width: fit-content;
-  gap: 8px;
-  align-items: center;
-  padding: 8px 12px;
-  border-radius: 999px;
-  font-weight: 800;
-  font-size: 13px;
-  color: #064e3b;
-  background: rgba(34,197,94,.16);
-  border: 1px solid rgba(34,197,94,.24);
-  margin-top: 6px;
-}
-.card-quote{
-  margin-top: 8px;
-  color: rgba(15,23,42,.70);
-  font-weight: 600;
-  line-height: 1.8;
+  font-size: 14px;
+  line-height: 1.25;
 }
 
-/* Mentor & featured */
-.card--mentor{
-  width: min(860px, 100%);
-  grid-template-columns: 1fr;
-  text-align:center;
-  justify-items:center;
+/* ✅ Mentor cards: add space between them */
+.mentor-stack{
+  display: grid;
+  gap: 18px;             /* THIS FIXES POINT #1 */
+  justify-items: center;
 }
 
-.card--lead{
-  border-color: rgba(34,197,94,.20);
-}
-
-/* =========================
-  BIG UNIFORM AVATARS (same size everywhere)
-========================= */
 /* Bigger profile pictures (main cards) */
 .avatar{
   width: 200px;
@@ -125,29 +105,25 @@
   background: rgba(251,191,36,.10);
   box-shadow: var(--shadow2);
 }
-.avatar--big{
-  width: 220px;
-  height: 220px;
-}
+.avatar--xl{ width: 220px; height: 220px; }
+.avatar--lg{ width: 200px; height: 200px; }
+.avatar--big{ width: 220px; height: 220px; }
 
-/* Bigger member pictures (department members) */
-.member-avatar{
-  width: 150px;
-  height: 150px;
-  border-radius: 999px;
-  overflow:hidden;
-  border: 2px solid rgba(15,23,42,.10);
-  background: #fff;
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
 }
-
 
 /* =========================
-  GRIDS (centered, fixed card widths)
+  TOP GRIDS
 ========================= */
+
 .grid{
   display: grid;
   gap: 16px;
-  justify-items: center; /* center every card */
+  justify-items: center;
 }
 
 .grid--leads{
@@ -155,37 +131,20 @@
   max-width: 980px;
   margin: 0 auto;
 }
-.grid--leads > .card{
-  width: min(460px, 100%);
-  text-align:center;
-  justify-items:center;
-}
-.grid--leads > .card:nth-child(1){
-  grid-column: 1 / -1;
-  width: min(560px, 100%);
-}
 
-/* Secretariat: 2 cards centered, not full width */
 .grid--secretariat{
   grid-template-columns: repeat(2, minmax(0, 1fr));
   max-width: 980px;
   margin: 0 auto;
 }
-.grid--secretariat > .card{
-  width: min(460px, 100%);
-  text-align:center;
-  justify-items:center;
-}
-.grid--secretariat > .card.card--featured{
-  width: min(520px, 100%);
-}
 
 /* =========================
-  DEPARTMENTS (lead row then members row below)
+  DEPARTMENTS
 ========================= */
+
 .dept{
   margin-top: 18px;
-  padding: clamp(18px, 2.8vw, 24px);
+  padding: 22px;
   border-radius: 30px;
   background: rgba(2,6,23,.02);
 }
@@ -209,42 +168,49 @@
   max-width: 85ch;
 }
 
-/* Lead row centered */
 .dept-row--lead{
   display:grid;
   justify-items:center;
   margin-top: 10px;
 }
 
-/* Members row: centered grid below */
 .dept-row--members{
   margin-top: 16px;
 }
 
-.members-grid{
-  display:grid;
+/* ✅ KEY FIX: auto-fit grid so 4 cards / 2 cards stay CENTERED */
+.members-grid,
+.alumni-grid{
+  display: grid;
   gap: 14px;
-  grid-template-columns: repeat(5, minmax(0, 1fr)); /* up to 5 */
+
+  grid-template-columns: repeat(auto-fit, minmax(var(--member-card-w), var(--member-card-w)));
+  justify-content: center;     /* centers rows */
   max-width: 980px;
   margin: 0 auto;
-  justify-items: center;
 }
 
+/* Member cards bigger so text never comes out */
 .member-card{
-  width: min(190px, 100%);
+  width: var(--member-card-w);
+  height: var(--member-card-h);
+
   border-radius: 22px;
   border: 1px solid rgba(15,23,42,.10);
   box-shadow: var(--shadow2);
+  background: #fff;
   padding: 16px 14px;
+
   display:grid;
   gap: 10px;
   justify-items:center;
   text-align:center;
+  align-content: start;
 }
 
 .member-avatar{
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 999px;
   overflow:hidden;
   border: 2px solid rgba(15,23,42,.10);
@@ -256,17 +222,37 @@
   object-fit: cover;
   display:block;
 }
+
+.member-text{ display: grid; gap: 4px; }
+
 .member-name{
   margin:0;
-  font-weight: 700;
-  font-size: clamp(18px, 2.2vw, 28px);
-  letter-spacing: -0.6px;
-  line-height: 1.12;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 1.15;
 }
-.member-role{
-  margin-top: 2px;
+
+.member-role,
+.member-pos{
+  margin: 0;
   color: rgba(15,23,42,.70);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.2;
 }
+
+/* ✅ prevent overflow even if text is long */
+.member-name,
+.member-role,
+.member-pos{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.member-name{ -webkit-line-clamp: 2; }
+.member-role{ -webkit-line-clamp: 2; }
+.member-pos{ -webkit-line-clamp: 1; }
 
 /* Empty placeholder */
 .empty-note{
@@ -281,78 +267,32 @@
   text-align:center;
 }
 
-/* =========================================================
-   FORCE ALL CARDS SAME WIDTH + HEIGHT
-   (Put this at the END of styleteam.css)
-========================================================= */
-
-/* Choose your universal size */
-:root{
-  --team-card-w: 460px;
-  --team-card-h: 370px;
-}
-
-/* Applies to ALL .card (mentor, featured, lead, core, secretariat) */
-.card{
-  width: min(var(--team-card-w), 100%) !important;
-  min-height: var(--team-card-h) !important;
-  height: var(--team-card-h) !important;
-
-  /* keep content nicely aligned */
-  align-content: start;
-  justify-items: center;
-  text-align: center;
-}
-
-/* Make the “big” cards NOT bigger anymore */
-.card--mentor,
-.card--featured{
-  width: min(var(--team-card-w), 100%) !important;
-}
-
-/* Prevent long text from breaking height */
-.card-quote{
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;      /* adjust lines */
-  -webkit-box-orient: vertical;
-}
-
-/* Optional: keep tags/role area consistent */
-.card-role{ min-height: 22px; }
-
-/* Member cards same width + height */
-:root{
-  --member-card-w: 280px;
-  --member-card-h: 280px;
-}
-
-.member-card{
-  width: min(var(--member-card-w), 100%) !important;
-  height: var(--member-card-h) !important;
-  min-height: var(--member-card-h) !important;
-  align-content: start;
-}
-
-
-
 /* =========================
   RESPONSIVE
 ========================= */
+
 @media (max-width: 980px){
   .grid--leads, .grid--secretariat{ grid-template-columns: 1fr; }
-  .grid--leads > .card:nth-child(1){ grid-column: auto; }
-  .members-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 640px){
-  .members-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .avatar{ width: 170px; height: 170px; }
-  .avatar--big{ width: 190px; height: 190px; }
+  :root{
+    --team-card-w: 420px;
+    --team-card-h: 360px;
+
+    --member-card-w: 220px;
+    --member-card-h: 310px;
+  }
+
+  .avatar{ width: 180px; height: 180px; }
+  .avatar--xl{ width: 200px; height: 200px; }
+
   .member-avatar{ width: 130px; height: 130px; }
 }
 
 @media (max-width: 420px){
-  .members-grid{ grid-template-columns: 1fr; }
-  .member-card{ width: min(320px, 100%); }
+  :root{
+    --member-card-w: 300px;
+    --member-card-h: 320px;
+  }
 }

@@ -49,8 +49,8 @@
   --team-card-w: 460px;
   --team-card-h: 370px;
 
-  --member-card-w: 240px;
-  --member-card-h: 320px;
+  --member-card-w: 300px;
+  --member-card-h: 260px;
 }
 
 .card{
@@ -84,7 +84,7 @@
 .card-role{
   color: rgba(15,23,42,.72);
   letter-spacing: -0.2px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.25;
 }
 
@@ -127,10 +127,19 @@
 }
 
 .grid--leads{
+  display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
   max-width: 980px;
   margin: 0 auto;
+  justify-items: center;
 }
+
+/* ✅ Dua card on full top row */
+.grid--leads > .card:first-child{
+  grid-column: 1 / -1;
+}
+
 
 .grid--secretariat{
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -179,16 +188,17 @@
 }
 
 /* ✅ KEY FIX: auto-fit grid so 4 cards / 2 cards stay CENTERED */
+/* ✅ FLEX grids (centers last row automatically) */
 .members-grid,
 .alumni-grid{
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* centers last row */
   gap: 14px;
-
-  grid-template-columns: repeat(auto-fit, minmax(var(--member-card-w), var(--member-card-w)));
-  justify-content: center;     /* centers rows */
   max-width: 980px;
   margin: 0 auto;
 }
+
 
 /* Member cards bigger so text never comes out */
 .member-card{
@@ -227,8 +237,8 @@
 
 .member-name{
   margin:0;
-  font-weight: 800;
-  font-size: 15px;
+  font-weight: 700;
+  font-size: 20px;
   line-height: 1.15;
 }
 
@@ -236,8 +246,7 @@
 .member-pos{
   margin: 0;
   color: rgba(15,23,42,.70);
-  font-weight: 700;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.2;
 }
 
@@ -280,8 +289,8 @@
     --team-card-w: 420px;
     --team-card-h: 360px;
 
-    --member-card-w: 220px;
-    --member-card-h: 310px;
+    --member-card-w: 280px;
+    --member-card-h: 250px;
   }
 
   .avatar{ width: 180px; height: 180px; }

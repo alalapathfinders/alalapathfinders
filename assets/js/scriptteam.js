@@ -11,31 +11,31 @@
   // EDIT THIS DATA anytime (add/remove members freely)
   const membersByDept = {
     ops: [
-      { name: "XYZ", role: "Operations Team Member", pos: "Grade X Student", img: "assets/images/team/members/ops-1.png" },
-      { name: "XYZ", role: "Operations Team Member", pos: "Grade X Student", img: "assets/images/team/members/ops-1.png" },
-      { name: "XYZ", role: "Operations Team Member", pos: "Grade X Student", img: "assets/images/team/members/ops-1.png" },
-      { name: "XYZ", role: "Operations Team Member", pos: "Grade X Student", img: "assets/images/team/members/ops-1.png" },
-      { name: "XYZ", role: "Operations Team Member", pos: "Grade X Student", img: "assets/images/team/members/ops-1.png" },
+      { name: "Hadiyah Asim", role: "Operations Team Member", pos: "Grade 7 Student", img: "assets/images/team/members/ops-1.png" },
+      { name: "Manha Ali", role: "Operations Team Member", pos: "Grade 7 Student", img: "assets/images/team/members/ops-1.png" },
+      { name: "Maryam Idrees", role: "Operations Team Member", pos: "Senior 2 Student", img: "assets/images/team/members/ops-1.png" },
+      { name: "Shumaim Zuberi", role: "Operations Team Member", pos: "Grade 7 Student", img: "assets/images/team/members/ops-1.png" },
+      { name: "Syeda Qaswa", role: "Operations Team Member", pos: "Grade 7 Student", img: "assets/images/team/members/ops-1.png" },
     ],
     pub: [
-      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/pub-1.png" },
-      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/pub-1.png" },
-      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/pub-1.png" },
-      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/pub-1.png" },
-      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/pub-1.png" },
+      { name: "Eshaal Sheikh", role: "Publications Team Member", pos: "Grade 7 Student", img: "assets/images/team/members/pub-1.png" },
+      { name: "Hareem Toor", role: "Publications Team Member", pos: "Grade 7 Student", img: "assets/images/team/members/pub-1.png" },
+      { name: "Sarah Farooqui", role: "Publications Team Member", pos: "Grade 8 Student", img: "assets/images/team/members/pub-1.png" },
+      { name: "Zohaa Iftikhar", role: "Publications Team Member", pos: "Grade 7 Student", img: "assets/images/team/members/pub-1.png" },
+//      { name: "Name", role: "Publications Team Member", pos: "Grade X Student", img: "assets/images/team/members/pub-1.png" },
     ],
     gfx: [
-      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/gfx-1.png" },
-      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/gfx-1.png" },
-      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/gfx-1.png" },
-      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/gfx-1.png" },
-      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/gfx-1.png" },
+      { name: "Rumaisa Shahid", role: "Graphics & Media Team Member", pos: "Senior 1 Student", img: "assets/images/team/members/gfx-1.png" },
+      { name: "Azwa Fatima", role: "Graphics & Media Team Member", pos: "Senior 1 Student", img: "assets/images/team/members/gfx-1.png" },
+   //   { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/gfx-1.png" },
+   //   { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/gfx-1.png" },
+   //   { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/gfx-1.png" },
     ],
-    media: [
-      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/media-1.png" },
-      { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/media-1.png" },
-    ],
-  };
+ //   media: [
+   //   { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/media-1.png" },
+    //  { name: "Name", role: "Team Member", pos: "Grade X Student", img: "assets/images/team/members/media-1.png" },
+//    ],
+ };
 
 function memberCard(m) {
   const img = m.img || "assets/images/team/placeholder.png";

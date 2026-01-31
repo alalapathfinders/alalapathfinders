@@ -36,23 +36,22 @@
   // -----------------------------
   const alumni = [
     // Row 1 (3)
-    { name: "Alumni Name 1", role: "Alumni", pos: "Class of 2021", img: "assets/images/team/placeholder.png" },
-    { name: "Alumni Name 2", role: "Alumni", pos: "Class of 2021", img: "assets/images/team/placeholder.png" },
-    { name: "Alumni Name 3", role: "Alumni", pos: "Class of 2021", img: "assets/images/team/placeholder.png" },
+    { name: "Aafia Azfar", role: "Alumni", pos: "Class of 2023", img: "assets/images/team/placeholder.png" },
+    { name: "Aiman Abdullah", role: "Alumni", pos: "Class of 2024", img: "assets/images/team/placeholder.png" },
+    { name: "Arwa Fatima", role: "Alumni", pos: "Class of 2022", img: "assets/images/team/placeholder.png" },
 
     // Row 2 (3)
-    { name: "Alumni Name 4", role: "Alumni", pos: "Class of 2022", img: "assets/images/team/placeholder.png" },
-    { name: "Alumni Name 5", role: "Alumni", pos: "Class of 2022", img: "assets/images/team/placeholder.png" },
-    { name: "Alumni Name 6", role: "Alumni", pos: "Class of 2022", img: "assets/images/team/placeholder.png" },
+    { name: "Ayesha Farooqui", role: "Alumni", pos: "Class of 2022", img: "assets/images/team/placeholder.png" },
+    { name: "Inaya Shahzad", role: "Alumni", pos: "Class of 2026", img: "assets/images/team/placeholder.png" },
+    { name: "Kashmala Waqas", role: "Alumni", pos: "Class of 2024", img: "assets/images/team/placeholder.png" },
 
     // Row 3 (3)
-    { name: "Alumni Name 7", role: "Alumni", pos: "Class of 2023", img: "assets/images/team/placeholder.png" },
-    { name: "Alumni Name 8", role: "Alumni", pos: "Class of 2023", img: "assets/images/team/placeholder.png" },
-    { name: "Alumni Name 9", role: "Alumni", pos: "Class of 2023", img: "assets/images/team/placeholder.png" },
-
+    { name: "Khairun Nisa", role: "Alumni", pos: "Class of 2024", img: "assets/images/team/placeholder.png" },
+    { name: "Mahjabeen Sajad", role: "Alumni", pos: "Class of 2022", img: "assets/images/team/placeholder.png" },
+    { name: "Walija Khalid", role: "Alumni", pos: "Class of 2026", img: "assets/images/team/placeholder.png" },
+    
     // Row 4 (2 centered)
-    { name: "Alumni Name 10", role: "Alumni", pos: "Class of 2024", img: "assets/images/team/placeholder.png" },
-    { name: "Alumni Name 11", role: "Alumni", pos: "Class of 2024", img: "assets/images/team/placeholder.png" },
+    { name: "Zomaha Shahzad", role: "Alumni", pos: "Class of 2022", img: "assets/images/team/placeholder.png" },
   ];
 
   function personCard(m) {

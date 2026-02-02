@@ -40,7 +40,7 @@
 }
 
 .hero__accent{
-  background: linear-gradient(90deg, #f97316, #fbbf24);
+  background: linear-gradient(90deg, #3E4095, #fbbe24);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -82,7 +82,7 @@
 }
 
 .hero__btn--primary{
-  background: linear-gradient(90deg, #f97316, #fbbf24);
+  background: linear-gradient(90deg, #3E4095, #fbbe24);
   color: #111827;
   border: none;
 }

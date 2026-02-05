@@ -12,21 +12,38 @@
   1) THEME TOKENS
 ========================= */
 :root{
-  /* Core */
-  --bg:#ffffff;
-  --text:#0f172a;
-  --muted:#64748b;
-  --border:#e5e7eb;
+  /* =========================
+     AL-ALA PALETTE (YOUR CHOICE)
+  ========================= */
+  --ink-black: #000814ff;
+  --prussian-blue: #001d3dff;
+  --regal-navy: #003566ff;
+  --school-bus-yellow: #ffc300ff;
+  --gold: #ffd60aff;
 
-  /* Brand accents (same as your current system) */
-  --yellow:#fbbf24;
-  --orange:#f97316;
-  --amber:#f59e0b;
-  --green:#22c55e;
+  /* =========================
+     Core UI tokens (mapped)
+  ========================= */
+  --bg: #ffffff;
+  --text: var(--ink-black);
+  --muted: rgba(0, 8, 20, .70);
+  --border: rgba(0, 29, 61, .14);
+
+  /* Brand tokens (use everywhere) */
+  --brand: var(--regal-navy);           /* primary */
+  --brand-dark: var(--prussian-blue);   /* deeper */
+  --highlight: var(--school-bus-yellow);
+  --highlight2: var(--gold);
+
+  /* Backward compatibility (so old CSS still works) */
+  --yellow: var(--school-bus-yellow);
+  --amber: var(--gold);
+  --orange: var(--regal-navy);  /* IMPORTANT: old orange areas become BLUE */
+  --green: var(--gold);         /* if any old green used, it becomes gold accent */
 
   /* Shadows / Radius */
-  --shadow: 0 18px 50px rgba(2, 6, 23, .10);
-  --shadow2: 0 12px 24px rgba(2, 6, 23, .08);
+  --shadow: 0 18px 50px rgba(0, 29, 61, .14);
+  --shadow2: 0 12px 24px rgba(0, 29, 61, .10);
   --radius: 18px;
 
   /* Layout */
@@ -43,7 +60,7 @@
   --space-md: clamp(16px, 3vw, 22px);
   --space-lg: clamp(24px, 5vw, 40px);
 
-  /* Breakpoints (keep consistent with your JS resize close at 900px) */
+  /* Breakpoints */
   --bp-nav: 900px;
 }
 
@@ -68,7 +85,7 @@ button{ font: inherit; }
 
 /* Accessibility: visible focus */
 :focus-visible{
-  outline: 3px solid rgba(249,115,22,.45);
+  outline: 3px solid rgba(255, 195, 0, .55);
   outline-offset: 3px;
   border-radius: 12px;
 }
@@ -123,30 +140,27 @@ p{ margin: 0; }
 }
 
 /* Shared gradient heading used by Events/Courses */
-.gradient-title{
+.gradient-title,
+.events-title{
   margin: 14px 0 0;
   font-weight: 900;
   letter-spacing: -1px;
   line-height: 1.05;
   font-size: clamp(44px, 6vw, 84px);
-  background: linear-gradient(90deg, #f97316 0%, #ff9a1a 30%, #ffc21f 70%, #fbbf24 100%);
+
+  /* Eye-catching school gradient */
+  background: linear-gradient(
+    90deg,
+    var(--brand-dark) 0%,
+    var(--brand) 45%,
+    var(--highlight) 78%,
+    var(--highlight2) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* If you already use .events-title in pages, map it */
-.events-title{ /* fallback actual styles */
-  margin: 14px 0 0;
-  font-weight: 900;
-  letter-spacing: -1px;
-  line-height: 1.05;
-  font-size: clamp(44px, 6vw, 84px);
-  background: linear-gradient(90deg, #f97316 0%, #ff9a1a 30%, #ffc21f 70%, #fbbf24 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
 
 /* =========================
   4) NAVBAR + MOBILE DRAWER
@@ -205,13 +219,18 @@ p{ margin: 0; }
   border-radius: 14px;
   transition: background .15s ease, transform .15s ease;
 }
-.nav-link:hover{ background: rgba(251,191,36,.55); }
+.nav-link:hover{
+  background: rgba(255, 195, 0, .28);
+  box-shadow: 0 10px 22px rgba(0, 29, 61, .10);
+}
+
 .nav-link:active{ transform: translateY(1px); }
 
 /* active page (your JS sets aria-current="page") */
 .nav-link[aria-current="page"]{
-  background: rgba(249,115,22,.18);
-  border: 1px solid rgba(249,115,22,.22);
+  background: rgba(0, 53, 102, .10);
+  border: 1px solid rgba(0, 53, 102, .22);
+  color: var(--brand);
 }
 
 /* Burger */
@@ -298,7 +317,7 @@ p{ margin: 0; }
 ========================= */
 .site-footer{
   margin-top: 70px;
-  background: #0b1411;
+  background: linear-gradient(180deg, var(--brand-dark), var(--ink-black));
   color: #e5e7eb;
   padding: 46px 0 18px;
 }
@@ -375,9 +394,10 @@ p{ margin: 0; }
   text-decoration:none;
 }
 .social-btn:hover{
-  color:white;
-  background: rgba(251, 190, 36, 0.67);
-  border-color: white;
+  color: var(--ink-black);
+  background: rgba(255, 195, 0, .95);
+  border-color: rgba(255, 214, 10, .85);
+  box-shadow: 0 14px 28px rgba(0, 29, 61, .25);
 }
 
 .footer-bottom{

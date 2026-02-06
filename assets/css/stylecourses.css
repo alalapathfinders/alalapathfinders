@@ -132,7 +132,7 @@
   font-weight: 700;
   font-size: clamp(16px, 2vw, 22px);
 
-  background: linear-gradient(90deg, var(--orange), var(--yellow));
+  background: var(--yellow);
   border: 1px solid rgba(15,23,42,.06);
   box-shadow: 0 16px 30px rgba(249,115,22,.18);
 
@@ -367,10 +367,8 @@
   text-decoration: none;
   font-weight: 700;
 
-  color: #111827;
-  background: linear-gradient(90deg, var(--orange), var(--yellow));
-  border: 1px solid rgba(15,23,42,.06);
-  box-shadow: 0 16px 32px rgba(249,115,22,.18);
+  color: #ffffff;
+  background: var(--brand);
 
   transition: transform .15s ease, box-shadow .15s ease;
 }

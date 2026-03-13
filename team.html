@@ -1,8 +1,3 @@
-<!-- =========================
-  ourteam.html
-  - Uses global header/footer partials
-  - Consistent heading style with Courses/Events (gradient-title)
-========================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +21,6 @@
   <div id="siteHeader"></div>
 
   <main class="team-page" id="main">
-    <!-- HERO -->
     <section class="team-hero section">
       <div class="container">
         <h1 class="gradient-title">Meet the Pathfinders</h1>
@@ -36,40 +30,33 @@
       </div>
     </section>
 
-<!-- MENTOR -->
-<section class="team-section section" aria-label="Mentor section">
-  <div class="container">
-    <div class="section-head">
-      <h2 class="section-title">Under Institutional Guidance</h2>
-      <p class="section-desc">Ensuring every initiative reflects our values, vision, and commitment to excellence.</p>
-    </div>
+    <!-- MENTOR -->
+    <section class="team-section section" aria-label="Mentor section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Under Institutional Guidance</h2>
+          <p class="section-desc">Ensuring every initiative reflects our values, vision, and commitment to excellence.</p>
+        </div>
 
-    <!-- NEW WRAPPER FOR GAP -->
-    <div class="mentor-stack">
-      <div class="card card--mentor">
-        <!-- <div class="avatar avatar--xl">
-         <img src="assets/images/team/maam.PNG" alt="Ma’am Tayyiba Imtiaz" />
-        </div>-->
-        <div class="card-body">
-          <h3 class="card-name">Ma’am Tayyiba Imtiaz</h3>
-          <div class="card-role">Managing Director, Al-Ala International Islamic School</div>
-          <div class="card-role">Mentor & Supervisor</div>
+        <div class="mentor-stack">
+          <div class="card card--mentor text-card">
+            <div class="card-body">
+              <h3 class="card-name">Ma’am Tayyiba Imtiaz</h3>
+              <div class="card-role">Managing Director, Al-Ala International Islamic School</div>
+              <div class="card-role">Mentor &amp; Supervisor</div>
+            </div>
+          </div>
+
+          <div class="card card--mentor text-card">
+            <div class="card-body">
+              <h3 class="card-name">Miss Azka Tariq</h3>
+              <div class="card-role">Administration, Al-Ala International Islamic School</div>
+              <div class="card-role">Supervisor</div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="card card--mentor">
-        <div class="avatar avatar--xl">
-          <img src="assets/images/team/missazka.png" alt="Miss Azka" />
-        </div>
-        <div class="card-body">
-          <h3 class="card-name">Miss Azka Tariq</h3>
-          <div class="card-role">Administration, Al-Ala International Islamic School</div>
-          <div class="card-role">Supervisor</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- CORE TEAM -->
     <section class="team-section section" aria-label="Core team section">
@@ -79,34 +66,22 @@
           <p class="section-desc">Providing support and leadership behind the scenes.</p>
         </div>
 
-        <h3 class="subhead"></h3>
-
-        <!-- Layout rule: Dua on top row, Minahil + Madha below -->
         <div class="grid grid--leads">
-          <article class="card">
-            <div class="avatar">
-              <img src="assets/images/team/dua.png" alt="Dua Azfar" />
-            </div>
+          <article class="card text-card">
             <div class="card-body">
               <h4 class="card-name">Dua Azfar</h4>
               <div class="card-role">Alumni (Class of 2021)</div>
             </div>
           </article>
 
-          <article class="card">
-            <div class="avatar">
-              <img src="assets/images/team/minahil.png" alt="Minahil Khan" />
-            </div>
+          <article class="card text-card">
             <div class="card-body">
               <h4 class="card-name">Minahil Khan</h4>
               <div class="card-role">Alumni (Class of 2023)</div>
             </div>
           </article>
 
-          <article class="card">
-            <div class="avatar">
-              <img src="assets/images/team/madha.png" alt="Madha Zia" />
-            </div>
+          <article class="card text-card">
             <div class="card-body">
               <h4 class="card-name">Madha Zia</h4>
               <div class="card-role">Alumni (Class of 2023)</div>
@@ -125,10 +100,7 @@
         </div>
 
         <div class="grid grid--secretariat">
-          <article class="card card--featured">
-            <div class="avatar avatar--lg">
-              <img src="assets/images/team/ezzah.png" alt="Main Head" />
-            </div>
+          <article class="card text-card">
             <div class="card-body">
               <h4 class="card-name">Ezzah Jahangir</h4>
               <div class="card-role">President</div>
@@ -136,10 +108,7 @@
             </div>
           </article>
 
-          <article class="card">
-            <div class="avatar avatar--lg">
-              <img src="assets/images/team/fizza.PNG" alt="Co-Head" />
-            </div>
+          <article class="card text-card">
             <div class="card-body">
               <h4 class="card-name">Fizza Sheraz</h4>
               <div class="card-role">Vice President</div>
@@ -151,130 +120,88 @@
     </section>
 
     <!-- DEPARTMENTS -->
-<section class="team-section section" aria-label="Departments section">
-  <div class="container">
-    <div class="section-head center">
-      <h2 class="section-title">Departments</h2>
-    </div>
+    <section class="team-section section" aria-label="Departments section">
+      <div class="container">
+        <div class="section-head center">
+          <h2 class="section-title">Departments</h2>
+        </div>
 
-    <!-- Operations -->
-    <section class="dept">
-      <div class="dept-head center">
-        <h3 class="dept-title">Operations</h3>
-        <p class="dept-desc">Organizing people, plans, and projects that keep us moving.</p>
-      </div>
-
-      <!-- Lead row (TOP) -->
-      <div class="dept-row dept-row--lead">
-        <article class="card card--lead center-card">
-          <div class="avatar avatar--big">
-            <img src="assets/images/team/ops-lead.png" alt="Operations Lead" />
+        <section class="dept">
+          <div class="dept-head center">
+            <h3 class="dept-title">Operations</h3>
+            <p class="dept-desc">Organizing people, plans, and projects that keep us moving.</p>
           </div>
-          <div class="card-body">
-            <h4 class="card-name">Eshaal Naeem</h4>
-            <div class="card-role">Operations Team Leader</div>
-            <div class="card-role">Grade 8 Student</div>
-          </div>
-        </article>
-      </div>
 
-      <!-- Members row (BELOW) -->
-      <div class="dept-row dept-row--members">
-        <div class="members-grid" data-members="ops"></div>
+          <div class="dept-row dept-row--lead">
+            <article class="card card--lead text-card">
+              <div class="card-body">
+                <h4 class="card-name">Eshaal Naeem</h4>
+                <div class="card-role">Operations Team Leader</div>
+                <div class="card-role">Grade 8 Student</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="dept-row dept-row--members">
+            <div class="members-grid" data-members="ops"></div>
+          </div>
+        </section>
+
+        <section class="dept">
+          <div class="dept-head center">
+            <h3 class="dept-title">Publications</h3>
+            <p class="dept-desc">Turning ideas into words and stories that inspire.</p>
+          </div>
+
+          <div class="dept-row dept-row--lead">
+            <article class="card card--lead text-card">
+              <div class="card-body">
+                <h4 class="card-name">Tayyaba Khan</h4>
+                <div class="card-role">Publications Team Leader</div>
+                <div class="card-role">Senior 1 Student</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="dept-row dept-row--members">
+            <div class="members-grid" data-members="pub"></div>
+          </div>
+        </section>
+
+        <section class="dept">
+          <div class="dept-head center">
+            <h3 class="dept-title">Graphics &amp; Media</h3>
+            <p class="dept-desc">Bringing creativity and colors to life.</p>
+          </div>
+
+          <div class="dept-row dept-row--lead">
+            <article class="card card--lead text-card">
+              <div class="card-body">
+                <h4 class="card-name">Rumaisa Shahid</h4>
+                <div class="card-role">Graphics &amp; Media Team Leader</div>
+                <div class="card-role">Senior 1 Student</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="dept-row dept-row--members">
+            <div class="members-grid" data-members="gfx"></div>
+          </div>
+        </section>
       </div>
     </section>
 
-    <!-- Publications -->
-    <section class="dept">
-      <div class="dept-head center">
-        <h3 class="dept-title">Publications</h3>
-        <p class="dept-desc">Turning ideas into words and stories that inspire.</p>
-      </div>
+    <!-- ALUMNI -->
+    <section class="team-section section" aria-label="Alumni section">
+      <div class="container">
+        <div class="section-head center">
+          <h2 class="section-title">Alumni</h2>
+          <p class="section-desc">Those who helped build the path — and continue to inspire from beyond the team.</p>
+        </div>
 
-      <div class="dept-row dept-row--lead">
-        <article class="card card--lead center-card">
-          <div class="avatar avatar--big">
-            <img src="assets/images/team/pub-lead.png" alt="Publications Lead" />
-          </div>
-          <div class="card-body">
-            <h4 class="card-name">Tayyaba Khan</h4>
-            <div class="card-role">Publications Team Leader</div>
-            <div class="card-role">Senior 1 Student</div>
-          </div>
-        </article>
-      </div>
-
-      <div class="dept-row dept-row--members">
-        <div class="members-grid" data-members="pub"></div>
+        <div class="alumni-grid" data-alumni="true"></div>
       </div>
     </section>
-
-    <!-- Graphics -->
-    <section class="dept">
-      <div class="dept-head center">
-        <h3 class="dept-title">Graphics & Media</h3>
-        <p class="dept-desc">Bringing creativity and colors to life.</p>
-      </div>
-
-      <div class="dept-row dept-row--lead">
-        <article class="card card--lead center-card">
-          <div class="avatar avatar--big">
-            <img src="assets/images/team/" alt="Graphics Lead" />
-          </div>
-          <div class="card-body">
-            <h4 class="card-name">Rumaisa Shahid</h4>
-            <div class="card-role">Graphics & Media Team Leader</div>
-            <div class="card-role">Senior 1 Student</div>
-          </div>
-        </article>
-      </div>
-
-      <div class="dept-row dept-row--members">
-        <div class="members-grid" data-members="gfx"></div>
-      </div>
-    </section>
-
-    <!-- Media -->
-    <!-- <section class="dept">
-      <div class="dept-head center">
-        <h3 class="dept-title">Media</h3>
-        <p class="dept-desc">Capturing moments, sharing stories, and spreading the word.</p>
-      </div>
-
-      <div class="dept-row dept-row--lead">
-        <article class="card card--lead center-card">
-          <div class="avatar avatar--big">
-            <img src="assets/images/team/media-lead.png" alt="Media Lead" />
-          </div>
-          <div class="card-body">
-            <h4 class="card-name">Name</h4>
-            <div class="card-role">Media Team Leader</div>
-            <div class="card-role">Senior X Student</div>
-          </div>
-        </article>
-      </div>
-
-      <div class="dept-row dept-row--members">
-        <div class="members-grid" data-members="media"></div>
-      </div>
-    </section>
-  -->
-  </div>
-</section>
-
-<!-- ================= ALUMNI ================= -->
-<section class="team-section section" aria-label="Alumni section">
-  <div class="container">
-    <div class="section-head center">
-      <h2 class="section-title">Alumni</h2>
-      <p class="section-desc">Those who helped build the path — and continue to inspire from beyond the team.</p>
-    </div>
-
-    <div class="alumni-grid" data-alumni="true"></div>
-  </div>
-</section>
-
-
   </main>
 
   <div id="siteFooter"></div>

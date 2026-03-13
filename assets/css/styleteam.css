@@ -1,14 +1,19 @@
 /* ======================================================================
   STYLETEAM.CSS — Our Team page only
+  TEXT-ONLY VERSION (no images)
 ====================================================================== */
 
-.team-page{ background: var(--bg); color: var(--text); }
+.team-page{
+  background: var(--bg);
+  color: var(--text);
+}
 
 /* HERO */
 .team-hero{
   text-align: center;
   padding: clamp(26px, 4vw, 40px) 0 clamp(14px, 3vw, 22px);
 }
+
 .team-sub{
   margin: 16px auto 0;
   max-width: 72ch;
@@ -17,14 +22,20 @@
 }
 
 /* headings */
-.team-section{ padding-top: clamp(16px, 3vw, 26px); }
+.team-section{
+  padding-top: clamp(16px, 3vw, 26px);
+}
 
 .section-head{
   display: grid;
   gap: 8px;
   margin-bottom: 18px;
 }
-.section-head.center{ text-align:center; justify-items:center; }
+
+.section-head.center{
+  text-align:center;
+  justify-items:center;
+}
 
 .section-title{
   margin: 0;
@@ -35,6 +46,7 @@
   color: #0f172a;
   text-align: center;
 }
+
 .section-desc{
   margin: 0;
   color: rgba(15,23,42,.70);
@@ -44,13 +56,9 @@
 /* =========================
   CARD SYSTEM
 ========================= */
-
 :root{
   --team-card-w: 460px;
-  --team-card-h: 370px;
-
   --member-card-w: 300px;
-  --member-card-h: 260px;
 }
 
 .card{
@@ -58,24 +66,26 @@
   border: 1px solid rgba(15,23,42,.10);
   box-shadow: var(--shadow2);
   border-radius: 26px;
-  padding: 22px;
+  padding: 26px 22px;
   display: grid;
   gap: 14px;
-
   width: min(var(--team-card-w), 100%);
-  height: var(--team-card-h);
-
+  min-height: unset;
+  height: auto;
   margin-inline: auto;
   justify-items: center;
   text-align: center;
   align-content: start;
 }
 
-.card-body{ display:grid; gap: 6px; }
+.card-body{
+  display:grid;
+  gap: 8px;
+}
 
 .card-name{
   margin: 0;
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: -0.4px;
   line-height: 1.2;
   font-weight: 700;
@@ -85,41 +95,23 @@
   color: rgba(15,23,42,.72);
   letter-spacing: -0.2px;
   font-size: 16px;
-  line-height: 1.25;
+  line-height: 1.35;
 }
 
-/* ✅ Mentor cards: add space between them */
+.text-card{
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+
 .mentor-stack{
   display: grid;
-  gap: 18px;             /* THIS FIXES POINT #1 */
+  gap: 18px;
   justify-items: center;
-}
-
-/* Bigger profile pictures (main cards) */
-.avatar{
-  width: 200px;
-  height: 200px;
-  border-radius: 999px;
-  overflow: hidden;
-  border: 2px solid rgba(15,23,42,.10);
-  background: rgba(251,191,36,.10);
-  box-shadow: var(--shadow2);
-}
-.avatar--xl{ width: 220px; height: 220px; }
-.avatar--lg{ width: 200px; height: 200px; }
-.avatar--big{ width: 220px; height: 220px; }
-
-.avatar img{
-  width:100%;
-  height:100%;
-  object-fit: cover;
-  display:block;
 }
 
 /* =========================
   TOP GRIDS
 ========================= */
-
 .grid{
   display: grid;
   gap: 16px;
@@ -135,22 +127,22 @@
   justify-items: center;
 }
 
-/* ✅ Dua card on full top row */
 .grid--leads > .card:first-child{
   grid-column: 1 / -1;
 }
 
-
 .grid--secretariat{
+  display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
   max-width: 980px;
   margin: 0 auto;
+  justify-items: center;
 }
 
 /* =========================
   DEPARTMENTS
 ========================= */
-
 .dept{
   margin-top: 18px;
   padding: 22px;
@@ -163,7 +155,11 @@
   gap: 6px;
   margin-bottom: 14px;
 }
-.dept-head.center{ text-align:center; justify-items:center; }
+
+.dept-head.center{
+  text-align:center;
+  justify-items:center;
+}
 
 .dept-title{
   margin:0;
@@ -171,6 +167,7 @@
   letter-spacing: -0.6px;
   font-weight: 600;
 }
+
 .dept-desc{
   margin:0;
   color: rgba(15,23,42,.70);
@@ -187,59 +184,53 @@
   margin-top: 16px;
 }
 
-/* ✅ KEY FIX: auto-fit grid so 4 cards / 2 cards stay CENTERED */
-/* ✅ FLEX grids (centers last row automatically) */
+/* centered wrapping rows */
 .members-grid,
 .alumni-grid{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;  /* centers last row */
+  justify-content: center;
   gap: 14px;
   max-width: 980px;
   margin: 0 auto;
 }
 
-
-/* Member cards bigger so text never comes out */
+/* =========================
+  MEMBER / ALUMNI CARDS
+========================= */
 .member-card{
-  width: var(--member-card-w);
-  height: var(--member-card-h);
-
+  width: min(var(--member-card-w), 100%);
+  min-height: 170px;
+  height: auto;
   border-radius: 22px;
   border: 1px solid rgba(15,23,42,.10);
   box-shadow: var(--shadow2);
   background: #fff;
-  padding: 16px 14px;
-
+  padding: 22px 18px;
   display:grid;
   gap: 10px;
   justify-items:center;
   text-align:center;
-  align-content: start;
+  align-content: center;
 }
 
-.member-avatar{
-  width: 140px;
-  height: 140px;
-  border-radius: 999px;
-  overflow:hidden;
-  border: 2px solid rgba(15,23,42,.10);
-  background: #fff;
-}
-.member-avatar img{
-  width:100%;
-  height:100%;
-  object-fit: cover;
-  display:block;
+.member-card--text{
+  padding-top: 26px;
+  padding-bottom: 26px;
 }
 
-.member-text{ display: grid; gap: 4px; }
+.member-text{
+  display: grid;
+  gap: 6px;
+}
 
 .member-name{
   margin:0;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  font-size: 21px;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  overflow-wrap: anywhere;
 }
 
 .member-role,
@@ -247,21 +238,9 @@
   margin: 0;
   color: rgba(15,23,42,.70);
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
 }
-
-/* ✅ prevent overflow even if text is long */
-.member-name,
-.member-role,
-.member-pos{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-}
-.member-name{ -webkit-line-clamp: 2; }
-.member-role{ -webkit-line-clamp: 2; }
-.member-pos{ -webkit-line-clamp: 1; }
 
 /* Empty placeholder */
 .empty-note{
@@ -279,29 +258,34 @@
 /* =========================
   RESPONSIVE
 ========================= */
-
 @media (max-width: 980px){
-  .grid--leads, .grid--secretariat{ grid-template-columns: 1fr; }
+  .grid--leads,
+  .grid--secretariat{
+    grid-template-columns: 1fr;
+  }
+
+  .grid--leads > .card:first-child{
+    grid-column: auto;
+  }
 }
 
 @media (max-width: 640px){
   :root{
     --team-card-w: 420px;
-    --team-card-h: 360px;
-
     --member-card-w: 280px;
-    --member-card-h: 250px;
   }
-
-  .avatar{ width: 180px; height: 180px; }
-  .avatar--xl{ width: 200px; height: 200px; }
-
-  .member-avatar{ width: 130px; height: 130px; }
 }
 
 @media (max-width: 420px){
   :root{
-    --member-card-w: 300px;
-    --member-card-h: 320px;
+    --member-card-w: 100%;
+  }
+
+  .dept{
+    padding: 16px;
+  }
+
+  .member-card{
+    min-height: 160px;
   }
 }

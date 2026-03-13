@@ -52,6 +52,9 @@
   color: rgba(15,23,42,.70);
   text-align: center;
 }
+.gradient-title{
+  background: linear-gradient(45deg, var(--brand-dark) 0%, var(--brand) 45%, var(--highlight) 67%, var(--highlight2) 104%);
+}
 
 /* =========================
   CARD SYSTEM

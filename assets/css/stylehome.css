@@ -322,11 +322,12 @@
 }
 
 .timeline__sub{
-  margin: 12px auto 0;
-  max-width: 70ch;
-  color: rgba(15,23,42,.70);
-  font-size: clamp(16px, 1.5vw, 18px);
-  font-weight: 400;
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--brand);
+  font-weight: 500;
 }
 
 .timeline__rail{

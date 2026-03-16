@@ -200,10 +200,10 @@
 }
 
 .courses-list__accent{
-  background: linear-gradient(90deg, #f97316 0%, #ff9a1a 30%, #ffc21f 70%, #fbbf24 100%);
+  color: rgba(15,23,42,.92);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  
 }
 
 .courses-list__sub{

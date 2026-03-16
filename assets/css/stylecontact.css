@@ -200,7 +200,13 @@
 }
 
 .btn--primary{
-  background: var(--orange);
+  background: var(--brand);
+  color: #ffffff;
+}
+
+.btn--primary,
+.btn--primary i{
+  color: #ffffff;
 }
 
 .btn:active{

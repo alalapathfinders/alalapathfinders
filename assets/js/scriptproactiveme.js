@@ -47,7 +47,7 @@ const course = {
       resources: {
         workbookPdf: "https://drive.google.com/file/d/1-saOPqV8ZblI2HlVmanj5kKoqggmsuvO/view?usp=sharing",
         starStudentsPdf: "https://drive.google.com/file/d/1FLUqaQZWlwfcSsRJ8SSQDuwngr3xV2eM/view?usp=sharing",
-        recordingUrl: "#",      // or Google Drive share link
+        recordingUrl: "https://drive.google.com/file/d/14bOBKZmn473J4teuF7-NA3WnnpUtoEZQ/view?usp=sharing",      // or Google Drive share link
         quizUrl: "#",             // Google Form
       },
     },
@@ -56,7 +56,7 @@ const course = {
       resources: {
         workbookPdf: "https://drive.google.com/file/d/1x6QGE3hJefk7Aa2_5I-nrIbyq-CUHZyP/view?usp=sharing",
         starStudentsPdf: "https://drive.google.com/file/d/1LETGr8D8RReLmBJvjPqLb-NeFYdRTHp3/view?usp=sharing",
-        recordingUrl: "#",
+        recordingUrl: "https://drive.google.com/file/d/1hQ9Tzp8KRdLD6dtyYAZZro-bgePmBAnN/view?usp=sharing",
         quizUrl: "#",
       },
     },
@@ -65,7 +65,7 @@ const course = {
       resources: {
         workbookPdf: "https://drive.google.com/file/d/1o1rWUOxekpWxpwf8UIyMreujIvOv0iMi/view?usp=sharing",
         starStudentsPdf: "https://drive.google.com/file/d/1W7bviDJVdHoLmis37Ynus3xYl0lheYOW/view?usp=sharing",
-        recordingUrl: "#",
+        recordingUrl: "https://drive.google.com/file/d/1W_PO22BnHxBDmnsU6ysqdARz9ascZhKh/view?usp=sharing",
         quizUrl: "#",
       },
     },
@@ -74,7 +74,7 @@ const course = {
       resources: {
         workbookPdf: "https://drive.google.com/file/d/1ItgXVAAdK1ZK-ALaJ_oHa3PBUmP5Xjyl/view?usp=sharing",
         starStudentsPdf: "https://drive.google.com/file/d/1o3OG0GdDKtQPajpcPL5LH1Khg3H2YP6R/view?usp=sharing",
-        recordingUrl: "#",
+        recordingUrl: "https://drive.google.com/file/d/1X2QX5WRuM3fQoxkXiOKiuxVfbt_g0B-a/view?usp=sharing",
         quizUrl: "#",
       },
     },

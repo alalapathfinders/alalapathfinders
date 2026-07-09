@@ -50,6 +50,15 @@
     img: "assets/images/RLN.png",
     portal: "https://alalapathfinders.github.io/alalapathfinders/realign.html"
   },
+  {
+    title: "Super Muslims",
+    days: 5,
+    age: "8-11",
+    tags: ["7-9", "10-12"],
+    desc: "Learn beautiful manners, discover inspiring stories from Islam, and understand the goal every Muslim works towards.",
+    img: "assets/images/SM.png",
+    portal: "https://alalapathfinders.github.io/alalapathfinders/supermuslims.html"
+  },
 ];
 
   const grid = document.getElementById("coursesGrid");

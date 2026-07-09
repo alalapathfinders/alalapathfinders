@@ -46,7 +46,7 @@ const course = {
         workbookPdf: "https://drive.google.com/file/d/12yywC51AC-2t4sSmteAn8GQY4dRbETxp/view?usp=sharing",
         starStudentsPdf: "https://drive.google.com/file/d/1M31tFcGIiQVv1sH8a4eS0AGgC4c3WZx4/view?usp=sharing",
         recordingUrl: "https://youtu.be/JtPEjcjvGWo?si=RMKnWkFthEpG37f-",
-        quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSffLMld27_ktN8aiyZKc3jo9PZ-2bJsllMv1cxlwCvob0bBxQ/viewform?usp=header",
+        quizUrl: "https://forms.gle/KqU2kFeYbfk7gYbf7",
       },
     },
     {
@@ -55,7 +55,7 @@ const course = {
         workbookPdf: "https://drive.google.com/file/d/1jjd2M4KulumsJ_xWyaI9wdZ0qRlKn1z9/view?usp=sharing",
         starStudentsPdf: "https://drive.google.com/file/d/1NMPMooLav8h5el72e78Z3WacWC53I3Li/view?usp=sharing",
         recordingUrl: "https://youtu.be/19hf8QcWA04?si=iU_HiLfJ5CVEojbF",
-        quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLScRzEOlkruuIpHdj-dyK-j1-6eNQsibLqCi2JZsmyGZ9CFctw/viewform?usp=header",
+        quizUrl: "https://forms.gle/MpFGfhJ3AJz99M5y7",
       },
     },
     {
@@ -64,7 +64,7 @@ const course = {
         workbookPdf: "https://drive.google.com/file/d/1bUoPGTSTT_IP9ojh7Q4i-15440AAtPfe/view?usp=sharing",
         starStudentsPdf: "https://drive.google.com/file/d/1sih4BWhdprLqWcPXRGtjZl3GCuVRoS2g/view?usp=sharing",
         recordingUrl: "https://youtu.be/_9TFEii696E?si=cSDAG3lApzvCuA9Q",
-        quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc8AtOXrvpHM2puUtfeZiduu81q-jrXnv4LLIypcUn7Wev73w/viewform?usp=header",
+        quizUrl: "https://forms.gle/CCNP9yXXFSHA6uom8",
       },
     },
     {
@@ -73,7 +73,7 @@ const course = {
         workbookPdf: "https://drive.google.com/file/d/1Ulztrb-SaZpg2q9rDDOP8iz6ZhYS0jhX/view?usp=sharing",
         starStudentsPdf: "#",
         recordingUrl: "https://youtu.be/fJinIUcrxtU?si=8LZbyn76tYO6lvCc",
-        quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc-fZ21fuGMHsHvHlCpNWUMUNZ2E2pe6cyICTgwwRjdt7u3Pw/viewform?usp=header",
+        quizUrl: "https://forms.gle/oUiAt972M2w2gM5cA",
       },
     },
   ],

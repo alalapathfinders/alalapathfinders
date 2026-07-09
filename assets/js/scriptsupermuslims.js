@@ -14,8 +14,8 @@ window.addEventListener("load", () => {
 
 /* ========= EDIT THIS COURSE OBJECT ========= */
 const course = {
-  title: "Super Muslims",
-  heroImg: "assets/images/PMEBanner.jpg", // your top banner image
+  title: " ",
+  heroImg: "assets/images/SMBanner.png", // your top banner image
   description:
   "Build noble character and manners through Islamic teachings.\n\n" +
   "Discover how great Muslims contributed to science, education, leadership, and society.\n\n" +

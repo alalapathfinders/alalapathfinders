@@ -59,6 +59,15 @@
     img: "assets/images/SM.png",
     portal: "https://alalapathfinders.github.io/alalapathfinders/supermuslims.html"
   },
+  {
+    title: "The Blueprint",
+    days: 5,
+    age: "12-19",
+    tags: ["10-12", "13-15", "16-18"],
+    desc: "Strengthen your understanding of Islam, learn valuable lessons from those who came before us, and explore important skills relevant in today’s world.",
+    img: "assets/images/TB.png",
+    portal: "https://alalapathfinders.github.io/alalapathfinders/theblueprint.html"
+  },
 ];
 
   const grid = document.getElementById("coursesGrid");

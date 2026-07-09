@@ -46,7 +46,7 @@ const course = {
     {
       label: "Day 1 (15 July 2025)",
       resources: {
-        workbookPdf: "#",
+        workbookPdf: "https://drive.google.com/file/d/1iBDMKnLaKzHUY4zgAXR2Jv8M6bPzfEFB/view?usp=sharing",
         starStudentsPdf: "#",
         recordingUrl: "https://www.youtube.com/watch?v=jIavNT0XTOE",      // Youtube share link
         quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeFpCiwc-HW8ctw_fHZ2ZiLmiC4OVlQHJOgNS6_Ec12fUXFmg/viewform?usp=dialog",             // Google Form
@@ -58,7 +58,7 @@ const course = {
     {
       label: "Day 2 (16 July 2025)",
       resources: {
-        workbookPdf: "#",
+        workbookPdf: "https://drive.google.com/file/d/1w94VVJzHtSjaMFYPvaTGrDT1kShuT_eg/view?usp=sharing",
         starStudentsPdf: "#",
         recordingUrl: "https://www.youtube.com/watch?v=qrcYKsPwBqA",
         quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfsZEEaWfLU5bYKoXlwE4ecu_iBY9qOBYLp8hRZY6Lvp8PaZQ/viewform?usp=dialog",
@@ -70,7 +70,7 @@ const course = {
     {
       label: "Day 3 (17 July 2025)",
       resources: {
-        workbookPdf: "#",
+        workbookPdf: "https://drive.google.com/file/d/1st8XrMuOZ2TrUnZHMXVazRFtFtr_pG0m/view?usp=sharing",
         starStudentsPdf: "#",
         recordingUrl: "https://www.youtube.com/watch?v=XmLb21WgUqs&t=1s",
         quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdwuS1zkg2arnKg9guAJuRpAlCikCMbqXUkMKaEhMXYM4DFVw/viewform?usp=dialog",
@@ -82,11 +82,11 @@ const course = {
     {
       label: "Day 4 (18 July 2025)",
       resources: {
-        workbookPdf: "#",
+        workbookPdf: "https://drive.google.com/file/d/1DSbY7mmJIFfoP7BDzD8-70FBi-G__Pdy/view?usp=sharing",
         starStudentsPdf: "#",
         recordingUrl: "https://youtu.be/ZMI_1o1fiSw?si=4HMwxwELg8ws6rsf",
         quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdjHBWS6p-VJzXowacYPjustepxhQDIhR0YKipKMb6N8eDIsg/viewform?usp=dialog",
-        activityPdf: "assets/pdfs/Day 4 Activity.pdf",
+        activityPdf: "https://drive.google.com/file/d/1W_HbLfgKQEkjV8UyCGpaD27ehlox-zrI/view?usp=sharing",
         puppetShowUrl: "#",
 
       },
@@ -94,7 +94,7 @@ const course = {
     {
       label: "Day 5 (19 July 2025)",
       resources: {
-        workbookPdf: "#",
+        workbookPdf: "https://drive.google.com/file/d/1R9Bul46ILgYXX9Yb0QqYkKseViiO6mfD/view?usp=sharing",
         starStudentsPdf: "#",
         recordingUrl: "https://www.youtube.com/watch?v=hyZv6CLtvCw",
         quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdV8cIQnO9mgpZMcn1o-57zofUcFjEd5g89K7eedcndk6MUBA/viewform?usp=dialog",

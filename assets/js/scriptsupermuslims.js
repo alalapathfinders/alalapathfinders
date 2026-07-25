@@ -84,7 +84,7 @@ const course = {
         workbookPdf: "https://drive.google.com/file/d/1XMJSWZgKzgqjU3j_F26yji432_hbV3vK/view?usp=sharing",
         starStudentsPdf: "#",
         recordingUrl: "https://youtu.be/lcw8C26Evys",      // or Google Drive share link
-        quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLScz6ouAcqhzXxew3dRF-ssh9L93JGrGdmk-fbRPahOB_IOYAg/viewform,              // Google Form
+        quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLScz6ouAcqhzXxew3dRF-ssh9L93JGrGdmk-fbRPahOB_IOYAg/viewform",              // Google Form
       },
     },
   ],

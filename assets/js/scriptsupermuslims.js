@@ -46,7 +46,7 @@ const course = {
       label: "Day 1 (20 July 2026)",
       resources: {
         workbookPdf: "https://drive.google.com/file/d/1BahiwPW9TNlls-bMzBkD3AKlerit4hCO/view?usp=sharing",
-        starStudentsPdf: "https://drive.google.com/file/d/1eD5I-N6iQj-s6LtDKEUyJ3A4FNTzgBYT/view?usp=sharing",
+        starStudentsPdf: "https://drive.google.com/file/d/1e24NJ503FgSbAZTpkco02z50IafVMNdj/view?usp=sharing",
         recordingUrl: "https://youtu.be/E1DHwN_qy-0",      // or Google Drive share link
         quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeAHaklu9_sGqEErv5NEYRloIxoTh0ar7GiUI5rgFd2VE30Cg/viewform",             // Google Form
       },
@@ -55,7 +55,7 @@ const course = {
       label: "Day 2 (21 July 2026)",
       resources: {
         workbookPdf: "https://drive.google.com/file/d/1jYf_217BeDkDOehWsgArRmfIPTWWt_N9/view?usp=sharing",
-        starStudentsPdf: "https://drive.google.com/file/d/1YLG6pJAr0DM8qXypaR1FQlXRtLNZL5FM/view?usp=sharing",
+        starStudentsPdf: "https://drive.google.com/file/d/1ELj0PuqNzNl3TlRH4MUJM_SCdCo40u5H/view?usp=sharing",
         recordingUrl: "https://youtu.be/NqWpKlYpygc",      // or Google Drive share link
         quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLScxtf_ucokm6wkoZT357bmFKACnAFBY2fhAQv5-nLtxOzt4oQ/viewform",             // Google Form
       },
@@ -64,7 +64,7 @@ const course = {
       label: "Day 3 (22 July 2026)",
       resources: {
         workbookPdf: "https://drive.google.com/file/d/1KqJA1J_c6gCAXOvWKaRoLTj1qsie6Bji/view?usp=sharing",
-        starStudentsPdf: "https://drive.google.com/file/d/1FQy91KFlHfR1oz7md7i1po9PvYmS128E/view?usp=sharing",
+        starStudentsPdf: "https://drive.google.com/file/d/1xos_pEj25Ghwm-xw0ve5tH6lllWmaJdE/view?usp=sharing",
         recordingUrl: "https://youtu.be/jGBccJlG69A",      // or Google Drive share link
         quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfx5EE_dXlu2UeoM6HgBtHYBPY-tc8lLOCZ4UtLySh_EC7h7w/viewform",             // Google Form
       },
@@ -73,7 +73,7 @@ const course = {
       label: "Day 4 (23 July 2026)",
       resources: {
         workbookPdf: "https://drive.google.com/file/d/1EqlJuv6bOsGYFXw7F8CA7VtvnNh7CDH7/view?usp=sharing",
-        starStudentsPdf: "https://drive.google.com/file/d/1X3Qq4-aycXp2SkWKJp3xt7sD6bjBviJF/view?usp=sharing",
+        starStudentsPdf: "https://drive.google.com/file/d/1xeJD4tnP4Gk0KwAcihaO5P3HVddVNIay/view?usp=sharing",
         recordingUrl: "https://youtu.be/5auYQ4Q8SQs",      // or Google Drive share link
         quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSemAZqeAaw53Fnm0eXJpCRdGGIb_vOBGXE882Da_VGGLLRm3A/viewform",             // Google Form
       },
@@ -82,7 +82,7 @@ const course = {
       label: "Day 5 (24 July 2026)",
       resources: {
         workbookPdf: "https://drive.google.com/file/d/1XMJSWZgKzgqjU3j_F26yji432_hbV3vK/view?usp=sharing",
-        starStudentsPdf: "#",
+        starStudentsPdf: "https://drive.google.com/file/d/1IL3-Fos6RhhJNklKf_rPcFwTmeSNTS58/view?usp=sharing",
         recordingUrl: "https://youtu.be/lcw8C26Evys",      // or Google Drive share link
         quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLScz6ouAcqhzXxew3dRF-ssh9L93JGrGdmk-fbRPahOB_IOYAg/viewform",              // Google Form
       },

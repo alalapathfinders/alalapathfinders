@@ -45,10 +45,10 @@ const course = {
     {
       label: "Day 1 (27 July 2026)",
       resources: {
-        workbookPdf: "#",
+        workbookPdf: "https://drive.google.com/file/d/1pCCcG5c4QqdMFt6snashrE0xqhqlgvTB/view?usp=sharing",
         starStudentsPdf: "#",
-        recordingUrl: "#",      // or Google Drive share link
-        quizUrl: "#",             // Google Form
+        recordingUrl: "https://youtu.be/TLU0Cmn8Dl8",      // or Google Drive share link
+        quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdVY_bxCPF88EOtEpEN1DdWczWwGAQSejsipzgLlgoC8tLLuQ/viewform",             // Google Form
       },
     },
     {

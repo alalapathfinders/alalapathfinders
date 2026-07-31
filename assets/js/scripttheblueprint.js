@@ -74,8 +74,8 @@ const course = {
       resources: {
         workbookPdf: "https://drive.google.com/file/d/155VjXWR1dJJmsK01VGzF6b7ZZQ7nInVl/view?usp=sharing",
         starStudentsPdf: "#",
-        recordingUrl: "#",      // or Google Drive share link
-        quizUrl: "#",             // Google Form
+        recordingUrl: "https://youtu.be/D5ldF-3KjvM?si=8jxbLVvtF6_VuqJP",      // or Google Drive share link
+        quizUrl: "https://docs.google.com/forms/d/e/1FAIpQLSear4FQoj_N8gaBDc1tZFYOM0nKAvOQvvbG5m5kn8_59eyB0A/viewform?usp=send_form",             // Google Form
       },
     },
     {
